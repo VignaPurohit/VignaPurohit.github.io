@@ -19,10 +19,10 @@ CHECKLIST FOR THIS PAGE:
 
 
 <div class="hero">
-  <img src="assets/images/profile.png" alt="[YOUR NAME]" class="profile-photo">
-  <h1>[YOUR NAME]</h1>
-  <p><strong>[YOUR JOB TITLE]</strong></p>
-  <p><em>[YOUR TAGLINE — e.g., Turning spatial data into insights | GIS | Remote Sensing | Python]</em></p>
+  <img src="assets/images/profile.png" alt="Vigna" class="profile-photo">
+  <h1>Vigna Purohit</h1>
+  <p><strong>GIS Professional</strong></p>
+  <p><em>Spatial feels special to me</em></p>
 </div>
 
 ---
@@ -40,7 +40,7 @@ I am a geospatial data scientist with a background in remote sensing and machine
 I work on extracting actionable insights from satellite imagery and large spatial datasets
 using Python, Google Earth Engine, and open-source GIS tools. I am passionate about applying
 GeoAI techniques to real-world challenges in land use mapping, climate monitoring, and urban
-planning. I am currently seeking opportunities in [YOUR TARGET ROLE] in [YOUR TARGET LOCATION].
+planning. I am currently seeking opportunities in Remote Sensing and GIS in Tallinn,Estonia.
 
 </div>
 
@@ -53,7 +53,7 @@ planning. I am currently seeking opportunities in [YOUR TARGET ROLE] in [YOUR TA
 ---
 
 [View My Projects :material-arrow-right:](projects/index.md){ .md-button .md-button--primary }
-[Download CV :material-download:](assets/[YOUR-NAME]-CV.pdf){ .md-button }
+[Download CV :material-download:](assets/Vigna-CV.pdf){ .md-button }
 
 
 ---
@@ -118,5 +118,5 @@ planning. I am currently seeking opportunities in [YOUR TARGET ROLE] in [YOUR TA
 
 ## Connect
 
-[GitHub](https://github.com/[YOUR-GITHUB-USERNAME]){ .md-button }
-[LinkedIn](https://linkedin.com/in/[YOUR-LINKEDIN-USERNAME]){ .md-button }
+[GitHub](https://github.com/VignaPurohit){ .md-button }
+[LinkedIn](https://linkedin.com/in/vigna-purohit-666838150/){ .md-button }
