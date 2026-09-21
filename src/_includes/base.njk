@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or site.name }}{% if title %} · {{ site.name }}{% endif %}</title>
+  <meta name="description" content="{{ description or 'Portfolio of ' + site.name + ', ' + site.eyebrow + '.' }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="brand">
+          <span class="brand-name">{{ site.name | upper }}</span>
+          <span class="brand-tag">{{ site.eyebrow }}</span>
+        </a>
+
+        <ul class="nav-links">
+          {% for item in site.nav %}
+          <li><a href="{{ item.url }}" {% if item.url === page.url %}aria-current="page"{% endif %}>{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <div class="nav-social">
+          {% include "social-icons.njk" %}
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu">
+        {% for item in site.nav %}
+        <a href="{{ item.url }}">{{ item.text }}</a>
+        {% endfor %}
+        <div class="nav-social">
+          {% include "social-icons.njk" %}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; {{ "" | year }} {{ site.name }} — Built with Eleventy.</p>
+      <div class="footer-social">
+        {% include "social-icons.njk" %}
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById("nav-toggle");
+      var menu = document.getElementById("mobile-menu");
+      if (!btn || !menu) return;
+      btn.addEventListener("click", function () {
+        var isOpen = menu.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>

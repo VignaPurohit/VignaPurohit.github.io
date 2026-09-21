@@ -1,0 +1,79 @@
+---
+layout: base.njk
+title: Experience
+description: "Vigna Purohit's professional experience across Spatial Thoughts, Genesys International, and NEERI."
+---
+<section class="page-hero">
+  <div class="container">
+    <span class="section-rule"></span>
+    <span class="eyebrow">Professional journey</span>
+    <h1>Experience</h1>
+    <p class="lede">Seven-plus years across a research institute, a geospatial solutions company, and a modern geospatial training platform — spanning field research, production tooling, and teaching.</p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="timeline">
+
+      <article class="timeline-item">
+        <h2 class="role">Training Associate</h2>
+        <p class="org">Spatial Thoughts LLP · Ahmedabad, India</p>
+        <p class="meta"><span>10/2022 – Present</span></p>
+        <ul>
+          <li>Create and test training material for courses spanning Google Earth Engine (basic to advanced), Spatial Analysis with Python, QGIS, and command-line tools like GDAL.</li>
+          <li>Manage course logistics and provide technical support to participants.</li>
+          <li>Contribute to consultancy projects and research &amp; development for new course material.</li>
+        </ul>
+
+        <div class="gallery-strip">
+          {% set gallery = [
+            { file: "workshop-01", alt: "Vigna Purohit leading a hands-on GIS training session" },
+            { file: "workshop-02", alt: "Vigna Purohit presenting with a lapel microphone to workshop participants" },
+            { file: "workshop-03", alt: "Vigna Purohit conversing with participants during a conference break" },
+            { file: "workshop-04", alt: "Vigna Purohit working through a geospatial notebook on a laptop" }
+          ] %}
+          {% for g in gallery %}
+          <a href="/assets/images/gallery/{{ g.file }}.jpg" target="_blank" rel="noopener">
+            <picture>
+              <source srcset="/assets/images/gallery/{{ g.file }}.webp" type="image/webp">
+              <img src="/assets/images/gallery/{{ g.file }}.jpg" alt="{{ g.alt }}" loading="lazy">
+            </picture>
+          </a>
+          {% endfor %}
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <h2 class="role">Software Engineer</h2>
+        <p class="org">Genesys International Corporation Limited · Mumbai, India</p>
+        <p class="meta"><span>10/2021 – 09/2022</span></p>
+        <ul>
+          <li>Member of the development team building tools and scripts within QGIS using Python.</li>
+          <li>Automated spatial analysis and data-processing workflows for production use.</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item">
+        <h2 class="role">Project Associate</h2>
+        <p class="org">National Environmental Engineering and Research Institute (NEERI) · Nagpur, India</p>
+        <p class="meta"><span>02/2019 – 07/2021</span></p>
+        <p>A constituent laboratory of CSIR working toward innovative and effective solutions for environmentally sustainable development. Managed and contributed to significant projects, showcasing versatility and project-coordination skills — including LULC classification, waterbody identification and mapping, and aquaculture pond extraction.</p>
+
+        <div class="pub-list">
+          <h4>Reports &amp; Publications</h4>
+          <ul>
+            <li>"RISK-PiNET: GIS-based Risk Assessment Modelling Tool for Water Distribution System"</li>
+            <li>"Environment Impact Assessment studies for IOCL Panipat refinery"</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <a class="cv-download" href="/assets/Vigna-CV.pdf" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 21h14"/></svg>
+      Download full CV (PDF)
+    </a>
+  </div>
+</section>
