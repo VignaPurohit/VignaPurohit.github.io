@@ -266,56 +266,69 @@ p { margin: 0 0 1em; }
 
 .hero-open-label .eyebrow { color: var(--text-muted); }
 
-/* Photo collage */
+/* Photo collage — CSS grid for pixel-exact alignment (no drifting
+   percentage-based absolute positioning). Each photo gets an opaque
+   cream frame so overlapping edges stay crisp instead of letting a
+   tinted shadow bleed into whatever warm tone sits underneath. */
 .hero-collage {
   position: relative;
-  min-height: 420px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  align-items: start;
+  padding-top: 70px;
 }
 
 .collage-photo {
-  position: absolute;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  background: var(--card-bg);
+  position: relative;
+  padding: 6px;
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 16px 32px -14px rgba(20, 24, 22, 0.28);
 }
 
-.collage-photo img { width: 100%; height: 100%; object-fit: cover; }
+.collage-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+  display: block;
+}
 
 .collage-main {
-  top: 0;
-  right: 4%;
-  width: 62%;
+  grid-column: 2;
+  grid-row: 1;
   aspect-ratio: 3 / 4;
-  z-index: 3;
+  z-index: 1;
 }
 
 .collage-speaking {
-  top: 46%;
-  left: 0;
-  width: 40%;
+  grid-column: 1;
+  grid-row: 2;
   aspect-ratio: 4 / 5;
+  margin-top: -56px;
   z-index: 2;
 }
 
 .collage-laptop {
-  top: 56%;
-  right: 6%;
-  width: 38%;
+  grid-column: 2;
+  grid-row: 2;
   aspect-ratio: 4 / 5;
-  z-index: 4;
+  margin-top: -72px;
+  z-index: 2;
 }
 
 .collage-deco-dots {
   position: absolute;
-  top: 2%;
-  right: 0;
-  width: 90px;
-  height: 90px;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 76px;
   background-image: radial-gradient(circle, var(--line) 1.4px, transparent 1.6px);
   background-size: 14px 14px;
-  opacity: 0.7;
-  z-index: 1;
+  opacity: 0.8;
+  z-index: 0;
 }
 
 /* Hero art band */
@@ -403,6 +416,10 @@ main { padding-bottom: 80px; }
   color: var(--text-muted);
   margin-bottom: 8px;
 }
+
+.pub-list li { margin-bottom: 10px; font-size: 0.94rem; }
+.pub-list li:last-child { margin-bottom: 0; }
+.pub-list a { color: var(--olive); font-weight: 600; border-bottom: 1px solid var(--olive); }
 
 /* Skills grid */
 .skills-grid {
