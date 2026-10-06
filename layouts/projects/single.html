@@ -8,10 +8,11 @@
       <div class="tag-row">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>
       {{ end }}
       <div class="project-title-row">
-        {{ with .Params.logo }}
-        <img class="project-logo" src="{{ . }}" alt="{{ $.Title }} logo" loading="eager">
-        {{ end }}
+        {{ if .Params.logo }}
+        <h1><img class="project-logo-title" src="{{ .Params.logo }}" alt="{{ .Title }}" loading="eager"></h1>
+        {{ else }}
         <h1>{{ .Title }}</h1>
+        {{ end }}
       </div>
       <p class="lede">{{ .Params.description }}</p>
 
