@@ -15,10 +15,11 @@
         {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2006" }}</span>{{ end }}
       </p>
 
-      {{ if or .Params.official_url .Params.documentary_url .Params.github_url .Params.live_url }}
+      {{ if or .Params.official_url .Params.documentary_url .Params.preprint_url .Params.github_url .Params.live_url }}
       <div class="project-links project-detail-links">
         {{ with .Params.official_url }}<a href="{{ . }}" target="_blank" rel="noopener">Visit Official Project →</a>{{ end }}
         {{ with .Params.documentary_url }}<a href="{{ . }}" target="_blank" rel="noopener">Watch Documentary →</a>{{ end }}
+        {{ with .Params.preprint_url }}<a href="{{ . }}" target="_blank" rel="noopener">Read Preprint →</a>{{ end }}
         {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub repository →</a>{{ end }}
         {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live demo →</a>{{ end }}
       </div>
@@ -30,7 +31,7 @@
     <div class="container prose prose-grid">
       <div class="case-sections">
         {{ .Content }}
-        {{ if .Store.Get "caseSectionOpen" }}</div>{{ end }}
+        {{ if .Store.Get "caseSectionOpen" }}</div><button class="case-read-more" type="button" aria-expanded="false">Read more</button></div>{{ end }}
       </div>
     </div>
   </section>

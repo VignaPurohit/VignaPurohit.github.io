@@ -647,12 +647,22 @@ main { padding-bottom: 80px; }
 
 .case-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .case-sections { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .case-sections { grid-template-columns: repeat(3, 1fr); }
 }
 
 .case-section {
+  display: flex;
+  flex-direction: column;
   background: var(--card-bg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -665,6 +675,39 @@ main { padding-bottom: 80px; }
   padding-top: 0;
   border-top: none;
 }
+
+/* Clamp every card's body to a uniform 12 lines so cards in the same
+   row match in height regardless of how much a section has to say;
+   .case-read-more (shown only when content actually overflows, via
+   the small script in baseof.html) expands it in place. */
+.case-section-body {
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.case-section.is-expanded .case-section-body {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.case-read-more {
+  display: none;
+  align-self: flex-start;
+  margin-top: 14px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--olive);
+  cursor: pointer;
+}
+
+.case-read-more.is-visible { display: inline-flex; }
+.case-read-more:hover { color: var(--olive-dark); }
 .prose p { color: var(--text); }
 .prose ul, .prose ol { padding-left: 1.3em; margin-bottom: 1em; }
 .prose li { margin-bottom: 6px; }

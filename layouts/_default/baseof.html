@@ -23,5 +23,26 @@
       });
     })();
   </script>
+
+  <script>
+    // Project case-study cards: only show "Read more" on cards whose
+    // 12-line-clamped body actually overflows, and expand in place.
+    (function () {
+      var sections = document.querySelectorAll(".case-section");
+      sections.forEach(function (section) {
+        var body = section.querySelector(".case-section-body");
+        var btn = section.querySelector(".case-read-more");
+        if (!body || !btn) return;
+        if (body.scrollHeight > body.clientHeight + 1) {
+          btn.classList.add("is-visible");
+        }
+        btn.addEventListener("click", function () {
+          var expanded = section.classList.toggle("is-expanded");
+          btn.textContent = expanded ? "Show less" : "Read more";
+          btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

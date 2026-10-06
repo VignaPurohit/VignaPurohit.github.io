@@ -7,6 +7,7 @@ tags: ["GIS Risk Modelling", "QGIS", "Water Infrastructure", "Decision Support"]
 featured: true
 official_url: "https://riskpinet.wordpress.com/"
 documentary_url: "https://www.youtube.com/watch?v=_wOkgtaXMxM&t=7s"
+preprint_url: "https://doi.org/10.21203/rs.3.rs-8786519/v1"
 github_url: ""
 live_url: ""
 project_status: "Completed"
@@ -35,7 +36,3 @@ I contributed to the GIS-based risk assessment workflow within the project team,
 The work was later formalised and submitted as a peer-reviewed preprint, **"Integrated Risk Assessment of Water Distribution Systems: A Decision Support Framework for Pipe Vulnerability and Contamination Hazard"** (Sharma, Lodhi, **Purohit**, Mopati, Patil, Nasim & Sargaonkar, 2026), currently under journal review on Research Square.
 
 *Source code and detailed implementation materials cannot be shared due to organisational confidentiality requirements.*
-
-## Links
-
-- [Read the preprint on Research Square →](https://doi.org/10.21203/rs.3.rs-8786519/v1)
