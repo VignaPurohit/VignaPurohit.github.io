@@ -1,0 +1,15 @@
+{{/*
+  Reusable WebP+JPEG <picture> element for assets in static/assets/images/.
+  Params: src (path without extension, e.g. "/assets/images/hero-profile"),
+           alt, class, width, height, loading ("lazy" default or "eager")
+*/}}
+<picture>
+  <source srcset="{{ .src }}.webp" type="image/webp">
+  <img
+    src="{{ .src }}.jpg"
+    alt="{{ .alt }}"
+    {{ with .class }}class="{{ . }}"{{ end }}
+    {{ with .width }}width="{{ . }}"{{ end }}
+    {{ with .height }}height="{{ . }}"{{ end }}
+    loading="{{ .loading | default "lazy" }}">
+</picture>

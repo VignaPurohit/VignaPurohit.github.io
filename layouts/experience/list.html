@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <span class="section-rule"></span>
+    <span class="eyebrow">{{ .Params.eyebrow }}</span>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ .Params.lede }}</p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="timeline">
+      {{ range .Params.jobs }}
+      <article class="timeline-item">
+        <h2 class="role">{{ .role }}</h2>
+        <p class="org">{{ .org }}</p>
+        <p class="meta"><span>{{ .dates }}</span></p>
+
+        {{ with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
+
+        {{ with .bullets }}
+        <ul>
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+
+        {{ with .gallery }}
+        <div class="gallery-strip">
+          {{ range . }}
+          <a href="/assets/images/gallery/{{ .file }}.jpg" target="_blank" rel="noopener">
+            {{ partial "picture.html" (dict "src" (printf "/assets/images/gallery/%s" .file) "alt" .alt) }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{ with .publications }}
+        <div class="pub-list">
+          <h4>Publications</h4>
+          <ul>
+            {{ range . }}
+            {{ $pub := . }}
+            <li>{{ $pub.citation }} <em>{{ $pub.journal }}</em>{{ with $pub.detail }}, {{ . }}{{ end }}{{ with $pub.url }} <a href="{{ . }}" target="_blank" rel="noopener">{{ $pub.url_text | default . }}</a>{{ end }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+
+    {{ partial "button.html" (dict "href" site.Params.cv "text" "Download full CV (PDF)" "style" "outline" "icon" "download" "external" true) }}
+  </div>
+</section>
+{{ end }}

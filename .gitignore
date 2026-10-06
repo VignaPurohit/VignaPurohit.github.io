@@ -1,4 +1,9 @@
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# Node (only used by scripts/build-images.js)
 node_modules/
-_site/
+
 .DS_Store
-.cache/

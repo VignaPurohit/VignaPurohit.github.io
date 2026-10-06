@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="section-rule"></span>
+        <h1>Spatial Thinking<br>for a Brighter<br><span class="line-sage">Tomorrow</span></h1>
+
+        <p>Based between India and Tallinn, Estonia, I work at the intersection of geospatial analysis, Earth observation, and data analytics, with 7+ years of experience using spatial data to solve real-world problems.</p>
+
+        <p>My work spans the full journey of a geospatial problem — from understanding the question and exploring the data, to designing analytical approaches, developing reproducible workflows, interpreting results, and communicating insights through clear and meaningful visualizations.</p>
+
+        {{ partial "button.html" (dict "href" "/projects/" "text" "Explore My Work" "style" "primary" "icon" "arrow") }}
+
+        <div class="hero-open-label">
+          <span class="section-rule"></span>
+          <span class="eyebrow">Open to global collaborations</span>
+        </div>
+      </div>
+
+      <div class="hero-collage">
+        <div class="collage-deco-dots" aria-hidden="true"></div>
+        <div class="collage-photo collage-main">
+          {{ partial "picture.html" (dict "src" "/assets/images/hero-profile" "alt" "Vigna Purohit smiling outdoors" "width" 800 "height" 1066 "loading" "eager") }}
+        </div>
+        <div class="collage-photo collage-speaking">
+          {{ partial "picture.html" (dict "src" "/assets/images/hero-speaking" "alt" "Vigna Purohit presenting with a lapel microphone at a workshop" "width" 700 "height" 817) }}
+        </div>
+        <div class="collage-photo collage-laptop">
+          {{ partial "picture.html" (dict "src" "/assets/images/hero-laptop" "alt" "Vigna Purohit working on a laptop at a conference" "width" 700 "height" 988) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-band">
+    {{ partial "picture.html" (dict "src" "/assets/images/hero-band" "alt" "" "class" "hero-band-art" "width" 1024 "height" 631) }}
+  </div>
+</section>
+{{ end }}

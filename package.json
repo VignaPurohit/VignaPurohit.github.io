@@ -1,16 +1,12 @@
 {
-  "name": "vigna-purohit-portfolio",
+  "name": "gis-portfolio-image-tools",
   "version": "1.0.0",
-  "description": "GIS & geospatial analytics portfolio of Vigna Purohit",
   "private": true,
+  "description": "Optional Node/sharp helper to regenerate static/assets/images from the original source photos. Not required to build or run the Hugo site.",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
     "images": "node scripts/build-images.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^4.0.2",
     "sharp": "^0.33.5"
   }
 }

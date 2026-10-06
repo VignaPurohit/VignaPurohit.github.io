@@ -1,7 +1,10 @@
 /*
  * One-off / re-runnable image pipeline.
  * Reads large source photos from ../portfolio_material and produces
- * cropped, resized, WebP+JPG pairs into src/assets/images/.
+ * cropped, resized, WebP+JPG pairs into static/assets/images/.
+ * This is a Node/sharp helper script, separate from Hugo itself —
+ * Hugo doesn't need it to build or serve the site, only to regenerate
+ * these pre-built images from the original source photos.
  *
  * Run with: npm run images
  */
@@ -10,9 +13,9 @@ const fs = require("fs");
 const sharp = require("sharp");
 
 const SRC = path.join(__dirname, "..", "..", "portfolio_material");
-const OUT_IMG = path.join(__dirname, "..", "src", "assets", "images");
+const OUT_IMG = path.join(__dirname, "..", "static", "assets", "images");
 const OUT_GALLERY = path.join(OUT_IMG, "gallery");
-const OUT_ASSETS = path.join(__dirname, "..", "src", "assets");
+const OUT_ASSETS = path.join(__dirname, "..", "static", "assets");
 const OUT_NOTEBOOKS = path.join(OUT_ASSETS, "notebooks");
 
 fs.mkdirSync(OUT_IMG, { recursive: true });

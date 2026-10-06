@@ -1,0 +1,66 @@
+baseURL = "https://vignapurohit.github.io/"
+locale = "en-us"
+title = "Vigna Purohit — Geospatial & Data Analytics Professional"
+enableRobotsTXT = true
+summarylength = 40
+disableKinds = ["taxonomy", "term"]
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  name = "Vigna Purohit"
+  eyebrow = "Geospatial & Data Analytics Professional"
+  description = "Portfolio of Vigna Purohit — geospatial analysis, Earth observation, and data analytics, based between India and Tallinn, Estonia."
+  email = "vignapurohit9@gmail.com"
+  linkedin = "https://www.linkedin.com/in/vigna-purohit-666838150/"
+  github = "https://github.com/VignaPurohit"
+  cv = "/assets/Vigna-CV.pdf"
+  # Used for Open Graph / Twitter card fallback image
+  ogImage = "/assets/images/hero-profile.jpg"
+
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menus.main]]
+  name = "Education"
+  url = "/education/"
+  weight = 20
+
+[[menus.main]]
+  name = "Experience"
+  url = "/experience/"
+  weight = 30
+
+[[menus.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 40
+
+[[menus.main]]
+  name = "Workshops"
+  url = "/workshops/"
+  weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+  [markup.highlight]
+    style = "github"
+    noClasses = true
+    lineNos = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5

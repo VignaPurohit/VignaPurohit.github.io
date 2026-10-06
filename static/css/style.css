@@ -127,7 +127,7 @@ p { margin: 0 0 1em; }
 
 .nav-links {
   display: none;
-  gap: 30px;
+  gap: 22px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -178,7 +178,7 @@ p { margin: 0 0 1em; }
   color: var(--navy);
 }
 
-@media (min-width: 860px) {
+@media (min-width: 960px) {
   .nav-links, .nav-social { display: flex; }
   .nav-toggle { display: none; }
 }
@@ -202,7 +202,7 @@ p { margin: 0 0 1em; }
 
 .mobile-menu .nav-social { display: flex; padding-top: 6px; }
 
-@media (min-width: 860px) {
+@media (min-width: 960px) {
   .mobile-menu { display: none !important; }
 }
 
@@ -555,3 +555,109 @@ main { padding-bottom: 80px; }
 .footer-social { display: flex; gap: 16px; }
 .footer-social a { color: var(--navy); display: inline-flex; }
 .footer-social svg { width: 18px; height: 18px; }
+
+/* ==========================================================================
+   Project detail / case-study pages
+   ========================================================================== */
+.back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.back-link:hover { color: var(--olive); }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+
+.project-detail-hero .lede { max-width: 70ch; }
+
+.project-meta span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+}
+
+.project-detail-links { margin-top: 18px; }
+
+.project-detail-image {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px 8px;
+}
+
+.project-detail-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Prose: typographic rules for rendered Markdown content (case studies,
+   workshop write-ups) — headings/paragraphs/lists/code get the site's
+   design tokens instead of browser defaults. */
+.prose { max-width: 72ch; }
+.prose h2 {
+  font-size: 1.4rem;
+  margin-top: 2.2em;
+  padding-top: 0.6em;
+  border-top: 1px solid var(--line);
+}
+.prose h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.prose h3 { font-size: 1.1rem; margin-top: 1.6em; color: var(--sage-dark); }
+.prose p { color: var(--text); }
+.prose ul, .prose ol { padding-left: 1.3em; margin-bottom: 1em; }
+.prose li { margin-bottom: 6px; }
+.prose a { color: var(--olive); font-weight: 600; border-bottom: 1px solid var(--olive); }
+.prose strong { color: var(--navy); }
+.prose code {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.88em;
+}
+/* Chroma (Hugo's syntax highlighter, "github" style) sets its own
+   background/colors inline; we only lay out the block. */
+.prose pre {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.2em 0;
+}
+.prose pre code { padding: 0; border: none; background: none; }
+
+/* ==========================================================================
+   Workshops
+   ========================================================================== */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+}
+
+@media (min-width: 640px) {
+  .workshop-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.workshop-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.workshop-card-media { display: block; aspect-ratio: 16/10; }
+.workshop-card-media img { width: 100%; height: 100%; object-fit: cover; }
+
+.workshop-card-body { padding: 20px 22px 22px; }
+.workshop-card-body .meta {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.workshop-card-body h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.workshop-card-body h3 a { color: var(--navy); }
+.workshop-card-body p:last-child { color: var(--text-muted); font-size: 0.94rem; margin-bottom: 0; }

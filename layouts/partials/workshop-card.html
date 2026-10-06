@@ -1,0 +1,13 @@
+{{/* Workshop card for the Workshops list page. Expects a Page (.) */}}
+<article class="workshop-card">
+  {{ with .Params.cover }}
+  <a href="{{ $.Permalink }}" class="workshop-card-media">
+    {{ partial "picture.html" (dict "src" . "alt" $.Params.cover_alt "loading" "lazy") }}
+  </a>
+  {{ end }}
+  <div class="workshop-card-body">
+    {{ with .Params.date }}<p class="meta">{{ .Format "January 2006" }}</p>{{ end }}
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Params.description | default .Summary }}</p>
+  </div>
+</article>

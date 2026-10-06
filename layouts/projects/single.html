@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article>
+  <section class="page-hero project-detail-hero">
+    <div class="container">
+      <a href="/projects/" class="back-link">← All projects</a>
+      <span class="section-rule"></span>
+      {{ with .Params.tags }}
+      <div class="tag-row">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>
+      {{ end }}
+      <h1>{{ .Title }}</h1>
+      <p class="lede">{{ .Params.description }}</p>
+
+      <p class="meta project-meta">
+        {{ with .Params.project_status }}<span>{{ . }}</span>{{ end }}
+        {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2006" }}</span>{{ end }}
+      </p>
+
+      {{ if or .Params.github_url .Params.live_url }}
+      <div class="project-links project-detail-links">
+        {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub repository →</a>{{ end }}
+        {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live demo →</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.image }}
+  <div class="project-detail-image">
+    {{ partial "picture.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "loading" "eager") }}
+  </div>
+  {{ end }}
+
+  <section class="page-section">
+    <div class="container prose">
+      {{ .Content }}
+    </div>
+  </section>
+</article>
+{{ end }}

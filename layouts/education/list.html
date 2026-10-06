@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <span class="section-rule"></span>
+    <span class="eyebrow">{{ .Params.eyebrow }}</span>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ .Params.lede }}</p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="timeline">
+      {{ range .Params.degrees }}
+      <article class="timeline-item">
+        <h2 class="role">{{ .role }}</h2>
+        <p class="org">{{ .org }}</p>
+        <p class="meta"><span>{{ .dates }}</span></p>
+
+        {{ range .sub_blocks }}
+        <div class="sub-block">
+          <h4>{{ .heading }}</h4>
+          {{ .body | markdownify }}
+        </div>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <span class="section-rule"></span>
+    <span class="eyebrow">Technical skills</span>
+    <h2>Tools &amp; Technologies</h2>
+
+    <div class="skills-grid">
+      {{ range .Params.skills }}
+      <div class="skills-group">
+        <h4>{{ .group }}</h4>
+        <ul class="pill-list">
+          {{ range .items }}<li class="pill">{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
