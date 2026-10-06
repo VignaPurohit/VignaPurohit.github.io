@@ -8,11 +8,11 @@
   </div>
 </section>
 
-<section class="page-section">
+<section class="page-section page-section--flush">
   <div class="container">
-    <div class="card-grid">
-      {{ range .Pages.ByDate.Reverse }}
-        {{ partial "project-card.html" . }}
+    <div class="project-entries">
+      {{ range $index, $p := .Pages.ByDate.Reverse }}
+        {{ partial "project-entry.html" (dict "page" $p "number" (add $index 1) "reverse" (eq (mod $index 2) 1)) }}
       {{ end }}
     </div>
   </div>

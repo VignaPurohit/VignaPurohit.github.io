@@ -1,47 +1,66 @@
 {{ define "main" }}
-<article>
-  <section class="page-hero project-detail-hero">
-    <div class="container">
-      <a href="/projects/" class="back-link">← All projects</a>
+{{ $pages := .CurrentSection.Pages.ByDate.Reverse }}
+{{ $total := len $pages }}
+{{ $myIndex := 0 }}
+{{ range $i, $p := $pages }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $myIndex = $i }}{{ end }}{{ end }}
+{{ $number := add $myIndex 1 }}
+{{ $next := index $pages (mod (add $myIndex 1) $total) }}
 
-      <div class="project-detail-centered">
+<article>
+  <header class="case-hero">
+    <div class="container">
+      <a href="/projects/" class="back-link">&larr; All work</a>
+
+      <div class="case-kicker reveal">
+        <span class="index-number">{{ printf "%02d" $number }}</span>
         {{ with .Params.tags }}
         <div class="tag-row">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>
         {{ end }}
-        <div class="project-title-row">
-          {{ if .Params.logo }}
-          <h1><img class="project-logo-title" src="{{ .Params.logo }}" alt="{{ .Title }}" loading="eager"></h1>
-          {{ else }}
-          <h1>{{ .Title }}</h1>
-          {{ end }}
-        </div>
-        <p class="lede">{{ .Params.intro | default .Params.description }}</p>
+      </div>
 
-        <p class="meta project-meta">
-          {{ with .Params.project_status }}<span>{{ . }}</span>{{ end }}
-          {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2006" }}</span>{{ end }}
-        </p>
+      <h1 class="reveal">{{ .Title }}</h1>
+      <p class="lede reveal">{{ .Params.intro | default .Params.description }}</p>
 
+      <div class="case-meta reveal">
+        {{ with .Params.project_status }}
+        <div class="meta-item"><span class="label eyebrow">Status</span><span class="value">{{ . }}</span></div>
+        {{ end }}
+        {{ if not .Date.IsZero }}
+        <div class="meta-item"><span class="label eyebrow">Date</span><span class="value">{{ .Date.Format "January 2006" }}</span></div>
+        {{ end }}
         {{ if or .Params.official_url .Params.documentary_url .Params.preprint_url .Params.github_url .Params.live_url }}
-        <div class="project-links project-detail-links">
-          {{ with .Params.official_url }}<a href="{{ . }}" target="_blank" rel="noopener">Visit Official Project →</a>{{ end }}
-          {{ with .Params.documentary_url }}<a href="{{ . }}" target="_blank" rel="noopener">Watch Documentary →</a>{{ end }}
-          {{ with .Params.preprint_url }}<a href="{{ . }}" target="_blank" rel="noopener">Read Preprint →</a>{{ end }}
-          {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub repository →</a>{{ end }}
-          {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live demo →</a>{{ end }}
+        <div class="case-links">
+          {{ with .Params.official_url }}<a class="text-link" href="{{ . }}" target="_blank" rel="noopener">Official Project &rarr;</a>{{ end }}
+          {{ with .Params.documentary_url }}<a class="text-link" href="{{ . }}" target="_blank" rel="noopener">Documentary &rarr;</a>{{ end }}
+          {{ with .Params.preprint_url }}<a class="text-link" href="{{ . }}" target="_blank" rel="noopener">Preprint &rarr;</a>{{ end }}
+          {{ with .Params.github_url }}<a class="text-link" href="{{ . }}" target="_blank" rel="noopener">GitHub &rarr;</a>{{ end }}
+          {{ with .Params.live_url }}<a class="text-link" href="{{ . }}" target="_blank" rel="noopener">Live demo &rarr;</a>{{ end }}
         </div>
         {{ end }}
       </div>
     </div>
-  </section>
+  </header>
+
+  {{ with .Params.image }}
+  <figure class="case-hero-visual container reveal">
+    {{ partial "picture.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "loading" "eager") }}
+    {{ with $.Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+  {{ end }}
 
   <section class="page-section">
-    <div class="container prose prose-grid">
-      <div class="case-sections">
+    <div class="container">
+      <div class="case-body reveal">
         {{ .Content }}
-        {{ if .Store.Get "caseSectionOpen" }}</div><button class="case-read-more" type="button" aria-expanded="false">Read more</button></div>{{ end }}
       </div>
     </div>
   </section>
+
+  <a class="case-next" href="{{ $next.Permalink }}">
+    <div class="container">
+      <span class="eyebrow">Next Project</span>
+      <h3>{{ $next.Title }} &rarr;</h3>
+    </div>
+  </a>
 </article>
 {{ end }}

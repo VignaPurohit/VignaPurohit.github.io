@@ -1,8 +1,21 @@
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p>&copy; {{ now.Format "2006" }} {{ site.Params.name }}. Built with Hugo.</p>
-    <div class="footer-social">
-      {{ partial "social-icons.html" . }}
+  <div class="footer-motif">{{ partial "spatial-motif.html" (dict "variant" "route" "class" "footer-motif-svg") }}</div>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">{{ site.Params.name }}</div>
+        <div class="footer-location">Tallinn, Estonia &middot; India &middot; Global</div>
+      </div>
+      <a class="footer-cta" href="/contact/">Get in touch
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-inner">
+      <p>&copy; {{ now.Format "2006" }} {{ site.Params.name }}. Built with Hugo.</p>
+      <div class="footer-social">
+        {{ partial "social-icons.html" . }}
+      </div>
     </div>
   </div>
 </footer>

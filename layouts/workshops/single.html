@@ -2,21 +2,25 @@
 <article>
   <section class="page-hero">
     <div class="container">
-      <a href="/workshops/" class="back-link">← All workshops</a>
-      <span class="section-rule"></span>
-      {{ with .Params.location }}<span class="eyebrow">{{ . }}</span>{{ end }}
-      <h1>{{ .Title }}</h1>
-      <p class="lede">{{ .Params.description }}</p>
-      {{ if not .Date.IsZero }}<p class="meta"><span>{{ .Date.Format "January 2006" }}</span></p>{{ end }}
+      <a href="/workshops/" class="back-link">&larr; All workshops</a>
+      <span class="index-number reveal">Field Notes</span>
+      <h1 class="reveal">{{ .Title }}</h1>
+      <p class="lede reveal">{{ .Params.description }}</p>
+      <p class="meta eyebrow">
+        {{ with .Params.location }}{{ . }}{{ end }}
+        {{ if not .Date.IsZero }} &middot; {{ .Date.Format "January 2006" }}{{ end }}
+      </p>
     </div>
   </section>
 
   <section class="page-section">
-    <div class="container prose">
-      {{ .Content }}
+    <div class="container">
+      <div class="case-body reveal">
+        {{ .Content }}
+      </div>
 
       {{ with .Params.gallery }}
-      <div class="gallery-strip">
+      <div class="gallery-strip gallery-strip--narrow reveal">
         {{ range . }}
         <a href="/assets/images/gallery/{{ .file }}.jpg" target="_blank" rel="noopener">
           {{ partial "picture.html" (dict "src" (printf "/assets/images/gallery/%s" .file) "alt" .alt) }}

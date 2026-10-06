@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <span class="section-rule"></span>
+    <span class="eyebrow">About</span>
+    <p class="about-statement reveal">&ldquo;{{ .Params.statement }}&rdquo;</p>
+  </div>
+</section>
+
+<section class="page-section page-section--flush">
+  <div class="container about-grid">
+    {{ with .Params.photo }}
+    <div class="about-photo reveal">
+      {{ partial "picture.html" (dict "src" . "alt" ($.Params.photo_alt | default $.Title) "loading" "eager") }}
+    </div>
+    {{ end }}
+    <div class="case-body reveal">
+      {{ $.Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

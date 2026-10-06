@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="contact-hero">
+  <div class="container">
+    <span class="section-rule"></span>
+    <span class="eyebrow">Get in touch</span>
+    <h1 class="reveal">Let's work<br><em>with spatial data.</em></h1>
+    <p class="lede reveal">Open to geospatial analysis, Earth observation, and data engineering work — consulting, collaborations, or training. Based in Tallinn, Estonia; happy to work with teams anywhere.</p>
+
+    <div class="contact-list reveal">
+      <a href="mailto:{{ site.Params.email }}">
+        <span class="label eyebrow">Email</span>
+        <span>{{ site.Params.email }}</span>
+      </a>
+      <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener">
+        <span class="label eyebrow">LinkedIn</span>
+        <span>Connect &rarr;</span>
+      </a>
+      <a href="{{ site.Params.github }}" target="_blank" rel="noopener">
+        <span class="label eyebrow">GitHub</span>
+        <span>Follow &rarr;</span>
+      </a>
+      <a href="{{ site.Params.cv }}" target="_blank" rel="noopener">
+        <span class="label eyebrow">CV</span>
+        <span>Download PDF &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,28 @@
+{{/*
+  Editorial project entry — alternating image/text composition driven
+  purely by position, so adding a project never requires layout work.
+  Params: page (the Page), number (int), reverse (bool)
+*/}}
+{{ $p := .page }}
+<article class="project-entry{{ if .reverse }} project-entry--reverse{{ end }} reveal">
+  <div class="project-entry-media">
+    {{ with $p.Params.image }}
+      {{ partial "picture.html" (dict "src" . "alt" ($p.Params.image_alt | default $p.Title) "loading" "lazy") }}
+    {{ else }}
+      <div class="project-entry-media-placeholder">{{ partial "spatial-motif.html" (dict "variant" "nodes") }}</div>
+    {{ end }}
+  </div>
+  <div class="project-entry-body">
+    <span class="index-number">{{ printf "%02d" .number }}{{ with $p.Params.project_status }} &middot; {{ . }}{{ end }}</span>
+    <h3>{{ $p.Title }}</h3>
+    <p class="project-entry-desc">{{ $p.Params.description | default $p.Summary }}</p>
+    {{ with $p.Params.tags }}
+    <div class="project-entry-meta">
+      {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    <a class="project-entry-link" href="{{ $p.Permalink }}">View Case Study
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</article>
