@@ -24,18 +24,20 @@ project_status: "Completed"
 
 Water distribution networks fail in places that are hard to predict from pipe age or material alone — vulnerability and contamination risk depend on where a pipe sits in the network, what's around it, and how a failure there would ripple outward. RISK-PiNET asked: can a GIS-based decision support tool rank pipe segments by combined vulnerability and contamination hazard, so utilities can prioritise inspection and replacement with limited budgets?
 
+## My Role
+
+I contributed to the GIS-based risk assessment workflow within the project team, working on the spatial analysis and QGIS application layer that turned the underlying vulnerability and contamination-hazard framework into a usable, map-based decision support tool.
+
 ## Approach
 
 RISK-PiNET combines spatial infrastructure data — pipe network geometry, material, and age — with contextual risk layers into a single, map-based vulnerability and contamination-hazard score per pipe segment. The workflow was delivered as a **QGIS-based application**, structured as a sequence of assessment modules (Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost) that walk a user from raw spatial inputs through to a prioritised, map-first risk output — rather than a static spreadsheet ranking.
+
+## Screenshot
+
+{{< project-figure src="/assets/images/risk-pinet-qgis" alt="RISK-PiNET QGIS application showing the Input tab's data-availability checklist, with Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost module tabs across the top" caption="RISK-PiNET QGIS application — the interface through which the geospatial assessment workflow was operationalized." size="small" >}}
 
 ## Outcome / Impact
 
 The work was later formalised and submitted as a peer-reviewed preprint, **"Integrated Risk Assessment of Water Distribution Systems: A Decision Support Framework for Pipe Vulnerability and Contamination Hazard"** (Sharma, Lodhi, **Purohit**, Mopati, Patil, Nasim & Sargaonkar, 2026), currently under journal review on Research Square.
 
 *Source code and detailed implementation materials cannot be shared due to organisational confidentiality requirements.*
-
-## My Role
-
-I contributed to the GIS-based risk assessment workflow within the project team, working on the spatial analysis and QGIS application layer that turned the underlying vulnerability and contamination-hazard framework into a usable, map-based decision support tool.
-
-{{< project-figure src="/assets/images/risk-pinet-qgis" alt="RISK-PiNET QGIS application showing the Input tab's data-availability checklist, with Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost module tabs across the top" caption="RISK-PiNET QGIS application — the interface through which the geospatial assessment workflow was operationalized." size="small" >}}

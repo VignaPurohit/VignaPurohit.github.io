@@ -725,44 +725,6 @@ main { padding-bottom: 80px; }
   overflow: visible;
 }
 
-/* A case-section that embeds a {{< project-figure >}} image (e.g. "My
-   Role" showing an application screenshot) spans the full grid row
-   and lays its text and image out side by side, rather than stacking
-   the image below clamped text like a plain text-only card. */
-.case-section:has(.project-inline-image) {
-  grid-column: 1 / -1;
-}
-
-.case-section:has(.project-inline-image) .case-section-body {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 32px;
-  -webkit-line-clamp: unset;
-  overflow: visible;
-}
-
-.case-section:has(.project-inline-image) .case-section-body > p {
-  flex: 1;
-  min-width: 0;
-  margin: 0;
-}
-
-.case-section:has(.project-inline-image) .project-inline-image {
-  flex-shrink: 0;
-  width: 360px;
-  margin: 0;
-}
-
-@media (max-width: 640px) {
-  .case-section:has(.project-inline-image) .case-section-body {
-    flex-direction: column;
-  }
-  .case-section:has(.project-inline-image) .project-inline-image {
-    width: 100%;
-  }
-}
-
 .case-read-more {
   display: none;
   align-self: flex-start;
