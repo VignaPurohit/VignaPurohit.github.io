@@ -27,8 +27,11 @@
   </section>
 
   <section class="page-section">
-    <div class="container prose">
-      {{ .Content }}
+    <div class="container prose prose-grid">
+      <div class="case-sections">
+        {{ .Content }}
+        {{ if .Store.Get "caseSectionOpen" }}</div>{{ end }}
+      </div>
     </div>
   </section>
 </article>

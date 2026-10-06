@@ -638,6 +638,33 @@ main { padding-bottom: 80px; }
 }
 .prose h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
 .prose h3 { font-size: 1.1rem; margin-top: 1.6em; color: var(--sage-dark); }
+
+/* Project case studies: the render hook (layouts/_default/_markup/
+   render-heading.html) turns every ## heading into its own boxed
+   .case-section, wrapped in the .case-sections grid below - so the
+   page uses the full width instead of one narrow continuous column. */
+.prose-grid { max-width: none; }
+
+.case-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.case-section {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+}
+
+.prose .case-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.7em;
+  padding-top: 0;
+  border-top: none;
+}
 .prose p { color: var(--text); }
 .prose ul, .prose ol { padding-left: 1.3em; margin-bottom: 1em; }
 .prose li { margin-bottom: 6px; }
