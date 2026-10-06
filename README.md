@@ -149,5 +149,5 @@ edit locally → hugo server (preview) → commit → push branch → open PR
 These aren't in any file — they're repo settings:
 
 1. **Settings → Pages → Build and deployment → Source**: set to **"GitHub Actions"** (not "Deploy from a branch"). This repo's Pages source was configured this way as part of the migration — confirm it's still set if Pages ever stops updating.
-2. **Settings → Actions → General → Workflow permissions**: needs "Read and write permissions" (or at least read access + the `pull-requests: write` scope used above) for the PR-comment step in `pr-build.yml` to post comments.
+2. Nothing to do here — already verified working. `pr-build.yml` declares its own `pull-requests: write` permission, and a real test PR confirmed the build, artifact upload, and PR comment all succeed with this repo's default Actions settings.
 3. A **custom domain** is intentionally not configured yet — when you're ready, it's **Settings → Pages → Custom domain**, plus updating `baseURL` in `hugo.toml`.
