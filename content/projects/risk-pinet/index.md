@@ -3,6 +3,7 @@ title: "RISK-PiNET"
 description: "A GIS-based risk assessment modelling tool for water distribution systems, helping identify and prioritise infrastructure vulnerabilities."
 date: 2021-06-01
 image: "/assets/images/risk-pinet-qgis"
+logo: "/assets/images/risk-pinet-logo.png"
 tags: ["GIS Risk Modelling", "QGIS", "Water Infrastructure", "Decision Support"]
 featured: true
 official_url: "https://riskpinet.wordpress.com/"

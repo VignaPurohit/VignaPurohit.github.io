@@ -570,6 +570,22 @@ main { padding-bottom: 80px; }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 
+.project-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+
+.project-title-row h1 { margin: 0; }
+
+.project-logo {
+  height: 44px;
+  width: auto;
+  flex-shrink: 0;
+}
+
 .project-detail-hero .lede { max-width: 70ch; }
 
 .project-meta span {

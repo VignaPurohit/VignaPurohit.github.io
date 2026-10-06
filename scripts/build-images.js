@@ -98,6 +98,15 @@ async function main() {
     });
   }
 
+  // --- RISK-PiNET project logo (transparent PNG - keep as PNG, don't
+  //     run through the lossy JPEG pipeline above, which would flatten
+  //     the transparency onto a white/black background) ---
+  const riskPinetLogoSrc = path.join(SRC, "risk-pinet-logo-200.png");
+  if (fs.existsSync(riskPinetLogoSrc)) {
+    fs.copyFileSync(riskPinetLogoSrc, path.join(OUT_IMG, "risk-pinet-logo.png"));
+    console.log("wrote", "static/assets/images/risk-pinet-logo.png");
+  }
+
   // --- CV + notebooks passthrough ---
   fs.copyFileSync(path.join(SRC, "Vigna-CV.pdf"), path.join(OUT_ASSETS, "Vigna-CV.pdf"));
   fs.copyFileSync(

@@ -7,7 +7,12 @@
       {{ with .Params.tags }}
       <div class="tag-row">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>
       {{ end }}
-      <h1>{{ .Title }}</h1>
+      <div class="project-title-row">
+        {{ with .Params.logo }}
+        <img class="project-logo" src="{{ . }}" alt="{{ $.Title }} logo" loading="eager">
+        {{ end }}
+        <h1>{{ .Title }}</h1>
+      </div>
       <p class="lede">{{ .Params.description }}</p>
 
       <p class="meta project-meta">
