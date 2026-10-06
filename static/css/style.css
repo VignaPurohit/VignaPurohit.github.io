@@ -387,6 +387,8 @@ main { padding-bottom: 80px; }
   font-size: 0.98rem;
   margin-bottom: 4px;
 }
+.timeline-item .org a { border-bottom: 1px solid var(--olive); }
+.timeline-item .org a:hover { color: var(--olive-dark); }
 .timeline-item .meta {
   color: var(--text-muted);
   font-size: 0.85rem;

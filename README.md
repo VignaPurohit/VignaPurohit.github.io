@@ -37,9 +37,6 @@ content/
   projects/
     _index.md                Projects page intro copy
     <slug>/index.md           One case-study file per project — see "Adding a new project" below
-  workshops/
-    _index.md                 Workshops page intro copy
-    <slug>/index.md            One write-up per workshop/training event
 layouts/
   _default/baseof.html       Base HTML shell every page is wrapped in
   index.html                 Homepage (hero + photo collage)
@@ -48,10 +45,8 @@ layouts/
   experience/list.html       Renders content/experience/_index.md's front matter
   projects/list.html         Projects grid — auto-generates a card per file in content/projects/
   projects/single.html       Case-study page template
-  workshops/list.html        Workshops grid — same auto-generation pattern
-  workshops/single.html      Workshop write-up template
   partials/                  Reusable pieces: nav, footer, social-icons, head (SEO), picture
-                              (WebP+JPEG image helper), button, project-card, workshop-card
+                              (WebP+JPEG image helper), button, project-card
 static/
   css/style.css               The site's entire visual design (colors, layout, components)
   assets/                     CV, notebooks, and all photos (already optimized — see below)
@@ -64,7 +59,7 @@ scripts/build-images.js      Optional: regenerates static/assets/images/ from th
 
 ### Why Education/Experience aren't a content collection
 
-Projects and Workshops are genuine Hugo collections — one Markdown file per item, because you'll add new ones over time. Education and Experience are short, mostly-fixed lists, so each lives as a single page whose entries are a **front-matter list** (see `content/education/_index.md`). You edit YAML, not HTML, either way — it's just that degrees/jobs don't need their own URLs.
+Projects is a genuine Hugo collection — one Markdown file per item, because you'll add new ones over time. Education and Experience are short, mostly-fixed lists, so each lives as a single page whose entries are a **front-matter list** (see `content/education/_index.md`). You edit YAML, not HTML, either way — it's just that degrees/jobs don't need their own URLs.
 
 ## Adding a new project
 
@@ -80,7 +75,7 @@ Fill in the front matter:
 title: "My New Project"
 description: "One sentence — this is what shows on the project card."
 date: 2026-01-15
-image: ""              # optional: "/assets/images/gallery/workshop-01" (no file extension)
+image: ""              # optional: "/assets/images/gallery/some-photo" (no file extension)
 tags: ["Tag One", "Tag Two"]
 featured: false
 github_url: "https://github.com/you/repo"
@@ -92,8 +87,6 @@ draft: true             # flip to false (or delete the line) when ready to publi
 Write the case study underneath using the provided `## Question / Context / Data / Approach / Analysis / Results / Outcome / Technical Details / Links` headings — use the ones that make sense for the project and delete the rest. Code blocks (` ```sql `, ` ```python `, …) get automatic syntax highlighting.
 
 **You never need to touch any `layouts/` file to add, edit, or remove a project** — the Projects page card grid and the case-study page are both generated from this one Markdown file.
-
-Adding a workshop entry works the same way, under `content/workshops/`.
 
 ## Building the production site
 

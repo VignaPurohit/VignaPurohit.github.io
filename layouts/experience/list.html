@@ -14,7 +14,7 @@
       {{ range .Params.jobs }}
       <article class="timeline-item">
         <h2 class="role">{{ .role }}</h2>
-        <p class="org">{{ .org }}</p>
+        <p class="org">{{ .org }}{{ with .website }} &middot; <a href="{{ . }}" target="_blank" rel="noopener">Website &rarr;</a>{{ end }}</p>
         <p class="meta"><span>{{ .dates }}</span></p>
 
         {{ with .summary }}<p>{{ . | markdownify }}</p>{{ end }}
@@ -23,16 +23,6 @@
         <ul>
           {{ range . }}<li>{{ . }}</li>{{ end }}
         </ul>
-        {{ end }}
-
-        {{ with .gallery }}
-        <div class="gallery-strip">
-          {{ range . }}
-          <a href="/assets/images/gallery/{{ .file }}.jpg" target="_blank" rel="noopener">
-            {{ partial "picture.html" (dict "src" (printf "/assets/images/gallery/%s" .file) "alt" .alt) }}
-          </a>
-          {{ end }}
-        </div>
         {{ end }}
 
         {{ with .publications }}
