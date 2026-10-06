@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   name = "Vigna Purohit"
   eyebrow = "Geospatial & Data Analytics Professional"
-  description = "Portfolio of Vigna Purohit — geospatial analysis, Earth observation, and data analytics, based between India and Tallinn, Estonia."
+  description = "Portfolio of Vigna Purohit — turning data into real-world impact through geospatial analysis, Earth observation, and data analytics."
   email = "vignapurohit9@gmail.com"
   linkedin = "https://www.linkedin.com/in/vigna-purohit-666838150/"
   github = "https://github.com/VignaPurohit"
