@@ -597,6 +597,12 @@ main { padding-bottom: 80px; }
   width: auto;
 }
 
+/* Project detail title: bigger than the standard .page-hero h1 used
+   on other pages (Education, Experience, Projects list, Workshops),
+   since this one stands alone, centered, as the page's main visual
+   anchor. */
+.project-detail-hero h1 { font-size: clamp(2.75rem, 7vw, 4.5rem); }
+
 .project-detail-hero .lede { max-width: 62ch; }
 
 .project-meta span {
@@ -717,6 +723,44 @@ main { padding-bottom: 80px; }
 .case-section.is-expanded .case-section-body {
   -webkit-line-clamp: unset;
   overflow: visible;
+}
+
+/* A case-section that embeds a {{< project-figure >}} image (e.g. "My
+   Role" showing an application screenshot) spans the full grid row
+   and lays its text and image out side by side, rather than stacking
+   the image below clamped text like a plain text-only card. */
+.case-section:has(.project-inline-image) {
+  grid-column: 1 / -1;
+}
+
+.case-section:has(.project-inline-image) .case-section-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.case-section:has(.project-inline-image) .case-section-body > p {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.case-section:has(.project-inline-image) .project-inline-image {
+  flex-shrink: 0;
+  width: 360px;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .case-section:has(.project-inline-image) .case-section-body {
+    flex-direction: column;
+  }
+  .case-section:has(.project-inline-image) .project-inline-image {
+    width: 100%;
+  }
 }
 
 .case-read-more {
