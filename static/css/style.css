@@ -690,7 +690,23 @@ main { padding-bottom: 80px; }
 }
 
 @media (min-width: 960px) {
-  .case-sections { grid-template-columns: repeat(3, 1fr); }
+  /* 6 sub-columns so each card (span 2) is still a third of the row
+     width, but a leftover row of exactly 2 cards can be centered
+     with mathematically equal space on both sides (see below). */
+  .case-sections { grid-template-columns: repeat(6, 1fr); }
+  .case-section { grid-column: span 2; }
+
+  /* When exactly 2 cards are left over in what would be a row of 3
+     (e.g. 5 total cards), center that pair instead of left-packing
+     it - the first of the pair starts one card-width in, the second
+     follows immediately after, leaving an equal empty gutter at both
+     ends of the row. Generalizes to any project's card count. */
+  .case-section:nth-child(3n+1):nth-last-child(2) {
+    grid-column: 2 / span 2;
+  }
+  .case-section:nth-child(3n+1):nth-last-child(2) ~ .case-section:last-child {
+    grid-column: 4 / span 2;
+  }
 }
 
 .case-section {
