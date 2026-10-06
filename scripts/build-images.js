@@ -89,6 +89,15 @@ async function main() {
     i++;
   }
 
+  // --- RISK-PiNET QGIS application screenshot (full UI, not cropped) ---
+  const riskPinetSrc = path.join(SRC, "risk-pinet.png");
+  if (fs.existsSync(riskPinetSrc)) {
+    await emit(fs.readFileSync(riskPinetSrc), path.join(OUT_IMG, "risk-pinet-qgis"), {
+      width: 1400, // native is 1494px wide; keep text crisp, don't crop
+      quality: 92, // higher than photo quality - this is UI text, not a photo
+    });
+  }
+
   // --- CV + notebooks passthrough ---
   fs.copyFileSync(path.join(SRC, "Vigna-CV.pdf"), path.join(OUT_ASSETS, "Vigna-CV.pdf"));
   fs.copyFileSync(

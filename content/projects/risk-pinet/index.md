@@ -2,9 +2,15 @@
 title: "RISK-PiNET"
 description: "A GIS-based risk assessment modelling tool for water distribution systems, helping identify and prioritise infrastructure vulnerabilities."
 date: 2021-06-01
-image: ""
+image: "/assets/images/risk-pinet-qgis"
+image_alt: "RISK-PiNET QGIS application showing the Input tab's data-availability checklist, with Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost module tabs across the top"
+image_caption: "RISK-PiNET QGIS application — the interface through which the geospatial assessment workflow was operationalized."
+image_width: 1400
+image_height: 1183
 tags: ["GIS Risk Modelling", "QGIS", "Water Infrastructure", "Decision Support"]
 featured: true
+official_url: "https://riskpinet.wordpress.com/"
+documentary_url: "https://www.youtube.com/watch?v=_wOkgtaXMxM&t=7s"
 github_url: ""
 live_url: ""
 project_status: "Completed"
@@ -20,7 +26,7 @@ Developed during my time as a Project Associate at the **National Environmental 
 
 ## Approach
 
-RISK-PiNET combines spatial infrastructure data — pipe network geometry, material, and age — with contextual risk layers into a single, map-based vulnerability and contamination-hazard score per pipe segment. The workflow was delivered as a **QGIS-based application**, giving utility staff an interactive, map-first way to explore and prioritise risk across the network rather than working from a static spreadsheet ranking.
+RISK-PiNET combines spatial infrastructure data — pipe network geometry, material, and age — with contextual risk layers into a single, map-based vulnerability and contamination-hazard score per pipe segment. The workflow was delivered as a **QGIS-based application**, structured as a sequence of assessment modules (Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost) that walk a user from raw spatial inputs through to a prioritised, map-first risk output — rather than a static spreadsheet ranking.
 
 ## My Role
 
@@ -35,4 +41,5 @@ The work was later formalised and submitted as a peer-reviewed preprint, **"Inte
 ## Links
 
 - [Read the preprint on Research Square →](https://doi.org/10.21203/rs.3.rs-8786519/v1)
+- [View Project Team / My Involvement →](#my-role)
 - [See this role in Experience →](/experience/)

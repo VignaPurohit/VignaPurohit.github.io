@@ -15,8 +15,10 @@
         {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2006" }}</span>{{ end }}
       </p>
 
-      {{ if or .Params.github_url .Params.live_url }}
+      {{ if or .Params.official_url .Params.documentary_url .Params.github_url .Params.live_url }}
       <div class="project-links project-detail-links">
+        {{ with .Params.official_url }}<a href="{{ . }}" target="_blank" rel="noopener">Visit Official Project →</a>{{ end }}
+        {{ with .Params.documentary_url }}<a href="{{ . }}" target="_blank" rel="noopener">Watch Documentary →</a>{{ end }}
         {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub repository →</a>{{ end }}
         {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live demo →</a>{{ end }}
       </div>
@@ -25,9 +27,10 @@
   </section>
 
   {{ with .Params.image }}
-  <div class="project-detail-image">
-    {{ partial "picture.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "loading" "eager") }}
-  </div>
+  <figure class="project-detail-image">
+    {{ partial "picture.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "width" $.Params.image_width "height" $.Params.image_height "loading" "eager") }}
+    {{ with $.Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
   {{ end }}
 
   <section class="page-section">

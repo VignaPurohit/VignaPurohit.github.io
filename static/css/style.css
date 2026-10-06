@@ -592,6 +592,13 @@ main { padding-bottom: 80px; }
   box-shadow: var(--shadow-soft);
 }
 
+.project-detail-image figcaption {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 /* Prose: typographic rules for rendered Markdown content (case studies,
    workshop write-ups) — headings/paragraphs/lists/code get the site's
    design tokens instead of browser defaults. */

@@ -4,7 +4,7 @@
   <h3>{{ .Title }}</h3>
   <p>{{ .Params.description | default .Summary }}</p>
   <div class="project-links">
-    <a href="{{ .Permalink }}">Read case study →</a>
+    <a href="{{ .Permalink }}">View Case Study →</a>
     {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub →</a>{{ end }}
     {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live →</a>{{ end }}
   </div>
