@@ -1,0 +1,13 @@
+{{/*
+  Inline figure for use inside a project/workshop case-study body.
+  Usage: {{< project-figure src="/assets/images/foo" alt="..." caption="..." size="small" >}}
+  size: "small" (default, ~420px) or "full" (fills the prose column width)
+*/}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $caption := .Get "caption" }}
+{{ $size := .Get "size" | default "small" }}
+<figure class="project-inline-image project-inline-image--{{ $size }}">
+  {{ partial "picture.html" (dict "src" $src "alt" $alt "loading" "lazy") }}
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

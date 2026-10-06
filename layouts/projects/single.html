@@ -26,13 +26,6 @@
     </div>
   </section>
 
-  {{ with .Params.image }}
-  <figure class="project-detail-image">
-    {{ partial "picture.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "width" $.Params.image_width "height" $.Params.image_height "loading" "eager") }}
-    {{ with $.Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
-  </figure>
-  {{ end }}
-
   <section class="page-section">
     <div class="container prose">
       {{ .Content }}

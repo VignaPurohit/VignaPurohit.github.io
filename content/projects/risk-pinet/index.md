@@ -3,10 +3,6 @@ title: "RISK-PiNET"
 description: "A GIS-based risk assessment modelling tool for water distribution systems, helping identify and prioritise infrastructure vulnerabilities."
 date: 2021-06-01
 image: "/assets/images/risk-pinet-qgis"
-image_alt: "RISK-PiNET QGIS application showing the Input tab's data-availability checklist, with Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost module tabs across the top"
-image_caption: "RISK-PiNET QGIS application — the interface through which the geospatial assessment workflow was operationalized."
-image_width: 1400
-image_height: 1183
 tags: ["GIS Risk Modelling", "QGIS", "Water Infrastructure", "Decision Support"]
 featured: true
 official_url: "https://riskpinet.wordpress.com/"
@@ -32,6 +28,8 @@ RISK-PiNET combines spatial infrastructure data — pipe network geometry, mater
 
 I contributed to the GIS-based risk assessment workflow within the project team, working on the spatial analysis and QGIS application layer that turned the underlying vulnerability and contamination-hazard framework into a usable, map-based decision support tool.
 
+{{< project-figure src="/assets/images/risk-pinet-qgis" alt="RISK-PiNET QGIS application showing the Input tab's data-availability checklist, with Utility, Pipe Condition Assessment, Sewer Hazard, Drain Hazard, Cluster, General Conditions, Risk, and Cost module tabs across the top" caption="RISK-PiNET QGIS application — the interface through which the geospatial assessment workflow was operationalized." size="small" >}}
+
 ## Outcome / Impact
 
 The work was later formalised and submitted as a peer-reviewed preprint, **"Integrated Risk Assessment of Water Distribution Systems: A Decision Support Framework for Pipe Vulnerability and Contamination Hazard"** (Sharma, Lodhi, **Purohit**, Mopati, Patil, Nasim & Sargaonkar, 2026), currently under journal review on Research Square.
@@ -41,5 +39,3 @@ The work was later formalised and submitted as a peer-reviewed preprint, **"Inte
 ## Links
 
 - [Read the preprint on Research Square →](https://doi.org/10.21203/rs.3.rs-8786519/v1)
-- [View Project Team / My Involvement →](#my-role)
-- [See this role in Experience →](/experience/)

@@ -599,6 +599,33 @@ main { padding-bottom: 80px; }
   font-style: italic;
 }
 
+/* Inline figure, placed mid-article via the {{< project-figure >}} shortcode */
+.project-inline-image {
+  margin: 1.8em 0;
+}
+
+.project-inline-image img {
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-inline-image--small img {
+  max-width: 420px;
+  width: 100%;
+}
+
+.project-inline-image--full img {
+  width: 100%;
+}
+
+.project-inline-image figcaption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 /* Prose: typographic rules for rendered Markdown content (case studies,
    workshop write-ups) — headings/paragraphs/lists/code get the site's
    design tokens instead of browser defaults. */
