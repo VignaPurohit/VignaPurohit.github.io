@@ -1,0 +1,11 @@
+{{/* Project card for the Projects list page. Expects a Page (.) */}}
+<article class="project-card">
+  {{ with .Params.tags }}<span class="tag">{{ index . 0 }}</span>{{ end }}
+  <h3>{{ .Title }}</h3>
+  <p>{{ .Params.description | default .Summary }}</p>
+  <div class="project-links">
+    <a href="{{ .Permalink }}">View Case Study →</a>
+    {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub →</a>{{ end }}
+    {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live →</a>{{ end }}
+  </div>
+</article>

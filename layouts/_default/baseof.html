@@ -25,24 +25,23 @@
   </script>
 
   <script>
-    // Subtle scroll-reveal for .reveal elements. Progressive
-    // enhancement only: without JS, or with reduced motion requested,
-    // content is already fully visible (see the base .reveal rule in
-    // style.css) — nothing here is required to read the page.
+    // Project case-study cards: only show "Read more" on cards whose
+    // 12-line-clamped body actually overflows, and expand in place.
     (function () {
-      var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced || !("IntersectionObserver" in window)) return;
-      document.documentElement.classList.add("js-reveal-ready");
-      var items = document.querySelectorAll(".reveal");
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
+      var sections = document.querySelectorAll(".case-section");
+      sections.forEach(function (section) {
+        var body = section.querySelector(".case-section-body");
+        var btn = section.querySelector(".case-read-more");
+        if (!body || !btn) return;
+        if (body.scrollHeight > body.clientHeight + 1) {
+          btn.classList.add("is-visible");
+        }
+        btn.addEventListener("click", function () {
+          var expanded = section.classList.toggle("is-expanded");
+          btn.textContent = expanded ? "Show less" : "Read more";
+          btn.setAttribute("aria-expanded", expanded ? "true" : "false");
         });
-      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-      items.forEach(function (el) { observer.observe(el); });
+      });
     })();
   </script>
 </body>

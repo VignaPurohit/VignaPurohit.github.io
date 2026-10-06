@@ -1,0 +1,21 @@
+{{/*
+  Heading render hook. On Project case-study pages, every level-2
+  heading (## Question, ## Context, ## Approach, ...) starts a new
+  boxed "case-section" card, closing the previous one - so the case
+  study renders as a grid of boxes side by side instead of one long
+  column, with zero changes needed to how a project's Markdown body
+  is written. Everything after the heading, up to the next one, is
+  wrapped in .case-section-body so it can be independently height-
+  clamped (see the "Read more" styling in style.css). Every other
+  page, and every other heading level, just renders as a normal
+  heading.
+*/}}
+{{- if and (eq .Page.Section "projects") (eq .Level 2) -}}
+  {{- if .Page.Store.Get "caseSectionOpen" -}}</div><button class="case-read-more" type="button" aria-expanded="false">Read more</button></div>{{- end -}}
+  <div class="case-section">
+  <h2 id="{{ .Anchor }}">{{ .Text }}</h2>
+  <div class="case-section-body">
+  {{- .Page.Store.Set "caseSectionOpen" true -}}
+{{- else -}}
+  <h{{ .Level }} id="{{ .Anchor }}">{{ .Text }}</h{{ .Level }}>
+{{- end -}}

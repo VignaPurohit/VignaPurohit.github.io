@@ -20,34 +20,29 @@ disableKinds = ["taxonomy", "term"]
   ogImage = "/assets/images/hero-profile.jpg"
 
 [[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menus.main]]
   name = "Education"
   url = "/education/"
-  weight = 10
+  weight = 20
 
 [[menus.main]]
   name = "Experience"
   url = "/experience/"
-  weight = 20
+  weight = 30
 
 [[menus.main]]
-  name = "Work"
+  name = "Projects"
   url = "/projects/"
-  weight = 30
+  weight = 40
 
 [[menus.main]]
   name = "Workshops"
   url = "/workshops/"
-  weight = 40
-
-[[menus.main]]
-  name = "About"
-  url = "/about/"
   weight = 50
-
-[[menus.main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 60
 
 [markup]
   [markup.goldmark]

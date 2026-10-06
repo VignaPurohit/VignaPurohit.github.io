@@ -2,53 +2,39 @@
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">{{ site.Params.eyebrow }}</span>
-        <h1>Understanding places.<br>Building better ways to<br><em>work with spatial data.</em></h1>
+      <div class="hero-copy">
+        <span class="section-rule"></span>
+        <h1>Turning data into<br><span class="line-sage">real-world impact</span></h1>
 
-        <p class="lede">I design geospatial workflows and build the tools that run them — turning satellite imagery, field data, and infrastructure records into decisions people can act on.</p>
+        <p>I work at the intersection of Geospatial analysis, Earth Observation and data analytics, with 7+ years of experience using spatial data to solve real-world problems.</p>
 
-        {{ partial "button.html" (dict "href" "/projects/" "text" "Explore the Work" "style" "primary" "icon" "arrow") }}
-      </div>
+        <p>My work spans the full journey of a geospatial problem — from understanding the question and exploring the data, to designing analytical approaches, developing reproducible workflows, interpreting results, and communicating insights through clear and meaningful visualizations.</p>
 
-      <div class="hero-portrait reveal">
-        <div class="hero-portrait-motif">{{ partial "spatial-motif.html" (dict "animated" true) }}</div>
-        <div class="hero-portrait-frame">
-          {{ partial "picture.html" (dict "src" "/assets/images/hero-profile" "alt" "Vigna Purohit" "width" 800 "height" 1066 "loading" "eager") }}
+        {{ partial "button.html" (dict "href" "/projects/" "text" "Explore My Work" "style" "primary" "icon" "arrow") }}
+
+        <div class="hero-open-label">
+          <span class="section-rule"></span>
+          <span class="eyebrow">Open to global collaborations</span>
         </div>
-        <div class="hero-portrait-tab">Geospatial Analyst &amp; Earth Observation Practitioner</div>
+      </div>
+
+      <div class="hero-collage">
+        <div class="collage-deco-dots" aria-hidden="true"></div>
+        <div class="collage-photo collage-main">
+          {{ partial "picture.html" (dict "src" "/assets/images/hero-profile" "alt" "Vigna Purohit smiling outdoors" "width" 800 "height" 1066 "loading" "eager") }}
+        </div>
+        <div class="collage-photo collage-speaking">
+          {{ partial "picture.html" (dict "src" "/assets/images/hero-speaking" "alt" "Vigna Purohit presenting with a lapel microphone at a workshop" "width" 700 "height" 817) }}
+        </div>
+        <div class="collage-photo collage-laptop">
+          {{ partial "picture.html" (dict "src" "/assets/images/hero-laptop" "alt" "Vigna Purohit working on a laptop at a conference" "width" 700 "height" 988) }}
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="geo-strip">
-    <div class="container">
-      {{ partial "geo-connection.html" . }}
-      <div class="geo-strip-text reveal">
-        <span class="eyebrow">Where I work from</span>
-        <p>Based in Tallinn, Estonia, with roots in Gujarat, India — and open to geospatial and data work wherever it's needed.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="practice-band">
-    <div class="container practice-band-grid">
-      <div class="practice-item reveal">
-        <span class="index-number">01</span>
-        <h3>Geospatial Analysis</h3>
-        <p>Spatial SQL, raster and vector workflows, and reproducible analysis in Python, QGIS, and Google Earth Engine.</p>
-      </div>
-      <div class="practice-item reveal">
-        <span class="index-number">02</span>
-        <h3>Earth Observation &amp; Data</h3>
-        <p>Satellite and sensor data turned into time series, hotspots, and indicators — from MODIS fire detection to sea-ice variability.</p>
-      </div>
-      <div class="practice-item reveal">
-        <span class="index-number">03</span>
-        <h3>Building GIS Solutions</h3>
-        <p>Decision-support tools and applications — like a QGIS-based risk assessment platform for water infrastructure.</p>
-      </div>
-    </div>
+  <div class="hero-band">
+    {{ partial "picture.html" (dict "src" "/assets/images/hero-band" "alt" "" "class" "hero-band-art" "width" 1024 "height" 631) }}
   </div>
 </section>
 {{ end }}
