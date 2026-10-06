@@ -151,3 +151,5 @@ These aren't in any file — they're repo settings:
 1. **Settings → Pages → Build and deployment → Source**: set to **"GitHub Actions"** (not "Deploy from a branch"). This repo's Pages source was configured this way as part of the migration — confirm it's still set if Pages ever stops updating.
 2. **Settings → Actions → General → Workflow permissions**: needs "Read and write permissions" (or at least read access + the `pull-requests: write` scope used above) for the PR-comment step in `pr-build.yml` to post comments.
 3. A **custom domain** is intentionally not configured yet — when you're ready, it's **Settings → Pages → Custom domain**, plus updating `baseURL` in `hugo.toml`.
+
+<!-- test: verifying PR build workflow -->
