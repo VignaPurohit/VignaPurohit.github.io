@@ -1,6 +1,13 @@
 ---
 title: "RISK-PiNET"
 description: "A GIS-based risk assessment modelling tool for water distribution systems, helping identify and prioritise infrastructure vulnerabilities."
+intro: >
+  A GIS-based risk assessment modelling tool for water distribution systems,
+  helping identify and prioritise infrastructure vulnerabilities. Developed
+  during my time as a Project Associate at the National Environmental
+  Engineering and Research Institute (NEERI), a CSIR laboratory, as part of
+  a project team working on environmentally sustainable infrastructure
+  solutions.
 date: 2021-06-01
 image: "/assets/images/risk-pinet-qgis"
 logo: "/assets/images/risk-pinet-logo.png"
@@ -17,10 +24,6 @@ project_status: "Completed"
 ## The Question
 
 Water distribution networks fail in places that are hard to predict from pipe age or material alone — vulnerability and contamination risk depend on where a pipe sits in the network, what's around it, and how a failure there would ripple outward. RISK-PiNET asked: can a GIS-based decision support tool rank pipe segments by combined vulnerability and contamination hazard, so utilities can prioritise inspection and replacement with limited budgets?
-
-## Context
-
-Developed during my time as a Project Associate at the **National Environmental Engineering and Research Institute (NEERI)**, a CSIR laboratory, as part of a project team working on environmentally sustainable infrastructure solutions.
 
 ## Approach
 

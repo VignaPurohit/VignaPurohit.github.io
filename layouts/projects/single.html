@@ -3,33 +3,35 @@
   <section class="page-hero project-detail-hero">
     <div class="container">
       <a href="/projects/" class="back-link">← All projects</a>
-      <span class="section-rule"></span>
-      {{ with .Params.tags }}
-      <div class="tag-row">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>
-      {{ end }}
-      <div class="project-title-row">
-        {{ if .Params.logo }}
-        <h1><img class="project-logo-title" src="{{ .Params.logo }}" alt="{{ .Title }}" loading="eager"></h1>
-        {{ else }}
-        <h1>{{ .Title }}</h1>
+
+      <div class="project-detail-centered">
+        {{ with .Params.tags }}
+        <div class="tag-row">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>
+        {{ end }}
+        <div class="project-title-row">
+          {{ if .Params.logo }}
+          <h1><img class="project-logo-title" src="{{ .Params.logo }}" alt="{{ .Title }}" loading="eager"></h1>
+          {{ else }}
+          <h1>{{ .Title }}</h1>
+          {{ end }}
+        </div>
+        <p class="lede">{{ .Params.intro | default .Params.description }}</p>
+
+        <p class="meta project-meta">
+          {{ with .Params.project_status }}<span>{{ . }}</span>{{ end }}
+          {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2006" }}</span>{{ end }}
+        </p>
+
+        {{ if or .Params.official_url .Params.documentary_url .Params.preprint_url .Params.github_url .Params.live_url }}
+        <div class="project-links project-detail-links">
+          {{ with .Params.official_url }}<a href="{{ . }}" target="_blank" rel="noopener">Visit Official Project →</a>{{ end }}
+          {{ with .Params.documentary_url }}<a href="{{ . }}" target="_blank" rel="noopener">Watch Documentary →</a>{{ end }}
+          {{ with .Params.preprint_url }}<a href="{{ . }}" target="_blank" rel="noopener">Read Preprint →</a>{{ end }}
+          {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub repository →</a>{{ end }}
+          {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live demo →</a>{{ end }}
+        </div>
         {{ end }}
       </div>
-      <p class="lede">{{ .Params.description }}</p>
-
-      <p class="meta project-meta">
-        {{ with .Params.project_status }}<span>{{ . }}</span>{{ end }}
-        {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 2006" }}</span>{{ end }}
-      </p>
-
-      {{ if or .Params.official_url .Params.documentary_url .Params.preprint_url .Params.github_url .Params.live_url }}
-      <div class="project-links project-detail-links">
-        {{ with .Params.official_url }}<a href="{{ . }}" target="_blank" rel="noopener">Visit Official Project →</a>{{ end }}
-        {{ with .Params.documentary_url }}<a href="{{ . }}" target="_blank" rel="noopener">Watch Documentary →</a>{{ end }}
-        {{ with .Params.preprint_url }}<a href="{{ . }}" target="_blank" rel="noopener">Read Preprint →</a>{{ end }}
-        {{ with .Params.github_url }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub repository →</a>{{ end }}
-        {{ with .Params.live_url }}<a href="{{ . }}" target="_blank" rel="noopener">Live demo →</a>{{ end }}
-      </div>
-      {{ end }}
     </div>
   </section>
 

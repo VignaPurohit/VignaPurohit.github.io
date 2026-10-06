@@ -570,20 +570,34 @@ main { padding-bottom: 80px; }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 
-.project-title-row { margin-bottom: 0.5em; }
+/* Project detail header: the back-link stays left as a utility nav
+   element; everything else (tags, title/logo, intro, meta, CTAs) is
+   one centered block. */
+.project-detail-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 28px;
+}
+
+.project-detail-centered .tag-row { justify-content: center; }
+.project-detail-centered .project-links { justify-content: center; }
+
+.project-title-row { margin-bottom: 0.6em; }
 .project-title-row h1 { margin: 0; }
 
 /* When a project has a logo, it stands in for the text title
    entirely (h1 wraps the <img>, so it still reads as the page
-   heading to screen readers/SEO) - sized to match the visual weight
-   of the text h1 it replaces. */
+   heading to screen readers/SEO) - sized to read clearly as a title,
+   not a small icon. */
 .project-logo-title {
-  display: block;
-  height: clamp(48px, 8vw, 76px);
+  display: inline-block;
+  height: clamp(72px, 13vw, 140px);
   width: auto;
 }
 
-.project-detail-hero .lede { max-width: 70ch; }
+.project-detail-hero .lede { max-width: 62ch; }
 
 .project-meta span {
   text-transform: uppercase;
