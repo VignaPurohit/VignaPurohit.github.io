@@ -38,6 +38,15 @@ Maud Rise: 2.63°E, −65.23°S — rising from an abyssal plain of ~5,200 m to 
 - Tracked ocean current, Absolute Dynamic Topography, windstress, and upwelling around the feature
 - Plotted spatial outputs in GrADS and cross-correlated every parameter against the polynya's lifecycle
 
+## Result
+
+Delivered a reproducible, automated processing workflow — reprojection, anomaly and extreme-value detection, area calculation, and multi-parameter correlation — that reruns against new satellite passes to characterise any future Maud Rise polynya event without rebuilding the analysis from scratch.
+
+## Links
+
+- [Read the full internship report (PDF) →](/assets/reports/NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf)
+- [Automation code (CDO, GDAL, Python, GrADS) →](https://github.com/VignaPurohit/VignaPurohit.github.io/tree/main/code/antarctic-sea-ice-variability)
+
 ## Parameter Plots
 
 {{< project-carousel >}}
@@ -62,16 +71,3 @@ Maud Rise: 2.63°E, −65.23°S — rising from an abyssal plain of ~5,200 m to 
 {{< carousel-item src="/assets/images/ncpor-graphs-analysis" alt="Twelve time-series panels plotting sea-ice concentration, pressure, SST, wind, heat flux, moisture flux, and the SAM index against each other" name="Multi-Parameter Time Series" >}}
 {{< carousel-item src="/assets/images/ncpor-sea-ice-climatology" alt="Monthly sea-ice concentration climatology maps over the Maud Rise seamount, August through December" name="Sea-Ice Climatology" >}}
 {{< /project-carousel >}}
-
-## Result
-
-Delivered a reproducible, automated processing workflow — reprojection, anomaly and extreme-value detection, area calculation, and multi-parameter correlation — that reruns against new satellite passes to characterise any future Maud Rise polynya event without rebuilding the analysis from scratch.
-
-## Technical Details
-
-Python (NumPy, GDAL/OGR), CDO, GrADS, QGIS, Ocean Data View (ODV), SigmaPlot; NSIDC sea-ice concentration, ECMWF ERA-Interim, MODIS/VIIRS, multi-sensor sea-ice drift, multi-mission satellite altimetry, NOAA CoastWatch, and ORAS4 reanalysis data products.
-
-## Links
-
-- [Read the full internship report (PDF) →](/assets/reports/NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf)
-- [Automation code (CDO, GDAL, Python, GrADS) →](https://github.com/VignaPurohit/VignaPurohit.github.io/tree/main/code/antarctic-sea-ice-variability)
