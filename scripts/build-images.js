@@ -113,6 +113,9 @@ async function main() {
   const ncporFigures = [
     { src: "ncpor-bathymetry.png", out: "ncpor-bathymetry" },
     { src: "ncpor-polynya-area-chart.png", out: "ncpor-polynya-area-chart" },
+    { src: "ncpor-polynya-photo.png", out: "ncpor-polynya-photo" },
+    { src: "ncpor-wind-pressure.png", out: "ncpor-wind-pressure" },
+    { src: "ncpor-chlorophyll.png", out: "ncpor-chlorophyll" },
   ];
   for (const fig of ncporFigures) {
     const p = path.join(SRC, fig.src);
