@@ -44,5 +44,25 @@
       });
     })();
   </script>
+
+  <script>
+    // Report-figure sliding galleries: prev/next buttons scroll the
+    // track by one slide width instead of relying on drag-to-scroll.
+    (function () {
+      document.querySelectorAll(".image-carousel").forEach(function (carousel) {
+        var track = carousel.querySelector(".carousel-track");
+        var prev = carousel.querySelector(".carousel-btn--prev");
+        var next = carousel.querySelector(".carousel-btn--next");
+        if (!track || !prev || !next) return;
+        var scrollByOne = function (dir) {
+          var slide = track.querySelector(".carousel-slide");
+          var amount = slide ? slide.getBoundingClientRect().width + 18 : 280;
+          track.scrollBy({ left: dir * amount, behavior: "smooth" });
+        };
+        prev.addEventListener("click", function () { scrollByOne(-1); });
+        next.addEventListener("click", function () { scrollByOne(1); });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+{{/*
+  One slide inside a {{< project-carousel >}} gallery.
+  Usage: {{< carousel-item src="/assets/images/foo" alt="..." name="Figure label" >}}
+*/}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $name := .Get "name" }}
+<figure class="carousel-slide">
+  {{ partial "picture.html" (dict "src" $src "alt" $alt "loading" "lazy") }}
+  {{ with $name }}<figcaption class="carousel-slide-name">{{ . }}</figcaption>{{ end }}
+</figure>
