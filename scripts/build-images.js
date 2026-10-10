@@ -107,7 +107,21 @@ async function main() {
     console.log("wrote", "static/assets/images/risk-pinet-logo.png");
   }
 
-  // --- CV + notebooks passthrough ---
+  // --- NCPOR Antarctic sea-ice internship: figures extracted from the
+  //     report (charts/maps with fine text, so re-encode at higher
+  //     quality than the photo pipeline above to keep labels crisp) ---
+  const ncporFigures = [
+    { src: "ncpor-bathymetry.png", out: "ncpor-bathymetry" },
+    { src: "ncpor-polynya-area-chart.png", out: "ncpor-polynya-area-chart" },
+  ];
+  for (const fig of ncporFigures) {
+    const p = path.join(SRC, fig.src);
+    if (fs.existsSync(p)) {
+      await emit(fs.readFileSync(p), path.join(OUT_IMG, fig.out), { width: 1400, quality: 90 });
+    }
+  }
+
+  // --- CV + notebooks + reports passthrough ---
   fs.copyFileSync(path.join(SRC, "Vigna-CV.pdf"), path.join(OUT_ASSETS, "Vigna-CV.pdf"));
   fs.copyFileSync(
     path.join(SRC, "DuckDB_Geospatial.ipynb"),
@@ -116,6 +130,12 @@ async function main() {
   fs.copyFileSync(
     path.join(SRC, "interactiveMap_geonames.ipynb"),
     path.join(OUT_NOTEBOOKS, "interactiveMap_geonames.ipynb")
+  );
+  const OUT_REPORTS = path.join(OUT_ASSETS, "reports");
+  fs.mkdirSync(OUT_REPORTS, { recursive: true });
+  fs.copyFileSync(
+    path.join(SRC, "internship_report.pdf"),
+    path.join(OUT_REPORTS, "NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf")
   );
 
   console.log("\nImage pipeline complete.");

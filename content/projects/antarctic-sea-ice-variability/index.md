@@ -1,9 +1,14 @@
 ---
-title: "Antarctic Sea Ice Variability"
-description: "Time-series analysis of optical and microwave remote sensing data to identify trends and anomalies in Antarctic sea ice melt and formation, at NCPOR, Goa."
-date: 2017-06-01
+title: "Antarctic Sea Ice Variability: A Processing Methodology"
+description: "Identifying and characterising the Maud Rise polynya using a multi-parameter remote sensing and reanalysis workflow spanning sea ice, atmosphere, ocean, and ocean colour."
+intro: >
+  Identifying and characterising the Maud Rise polynya using a multi-parameter
+  remote sensing and reanalysis workflow spanning sea ice, atmosphere, ocean,
+  and ocean colour. A research internship at the National Centre for Polar
+  and Ocean Research (NCPOR), Goa, during my M.Sc Geoinformatics.
+date: 2018-07-01
 image: ""
-tags: ["Remote Sensing", "Polar Research", "Time Series"]
+tags: ["Remote Sensing", "Antarctic Sea Ice", "Polynya Dynamics", "NCPOR"]
 featured: false
 github_url: ""
 live_url: ""
@@ -12,24 +17,37 @@ project_status: "Completed"
 
 ## The Question
 
-How was Antarctic sea ice extent actually changing year to year, and which parameters were driving the melt and formation anomalies observed in 2017?
+A persistent area of open water — a polynya — has repeatedly broken open above the Maud Rise seamount in the Weddell Sea since the 1970s, sometimes for months at a time. What drives these events, and could a reproducible workflow identify, measure, and characterise one as it happened?
 
 ## Context
 
-A research internship at the **National Centre for Polar and Ocean Research (NCPOR)**, Goa, during my M.Sc Geoinformatics.
+A research internship at the **National Centre for Polar and Ocean Research (NCPOR)**, Goa, during my M.Sc Geoinformatics. Objective: develop a processing methodology to study Antarctic sea-ice variability, centred on the Maud Rise seamount.
+
+## Location
+
+{{< project-figure src="/assets/images/ncpor-bathymetry" alt="Bathymetry map of the Maud Rise seamount, Eastern Weddell Sea, showing depth contours from the surface to -5999 m" caption="Maud Rise: 2.63°E, −65.23°S — rising from an abyssal plain of ~5,200 m to a shallowest depth of ~968 m." size="small" >}}
 
 ## Data
 
-Time-series optical and microwave remote sensing data covering the Antarctic region, combined with modelled data on parameters affecting sea ice melt and formation.
+Eleven task-based datasets: NSIDC sea-ice concentration; ECMWF ERA-Interim wind, pressure, SST, and heat fluxes; MODIS/VIIRS chlorophyll and net primary production; multi-sensor sea-ice drift; multi-mission Absolute Dynamic Topography; MW+IR sea-surface temperature; NOAA CoastWatch windstress and upwelling; and ORAS4 ocean current, temperature, and salinity.
 
 ## Approach
 
-Processed the time-series imagery to assess the parameters affecting melt and formation, identifying trends and anomalies across the 2017 record. Automated the satellite image processing workflow using Python, GDAL, and CDO (Climate Data Operators) so the analysis could be re-run as new data arrived rather than redone by hand.
+Reprojected sea-ice concentration from south-polar stereographic to GCS-WGS84 with GDAL; calculated polynya area per date in Python (pixel count at ≤15% concentration × resolution); computed daily/monthly anomalies and extreme-value flags in CDO against a 1979–2016 baseline; plotted in GrADS; and cross-correlated every parameter against the polynya's lifecycle.
+
+## Key Finding
+
+{{< project-figure src="/assets/images/ncpor-polynya-area-chart" alt="Bar chart of Maud Rise polynya area in square kilometres for the 1974, 1975, 1976, and 2017 events, with trend arrows" caption="Polynya area across every significant Maud Rise event identified, 1974–2017." size="small" >}}
+
+## Results
+
+Mapped every significant event back to 1974 (0.23M km²), 1975 (0.38M km²), and 1976 (0.17M km², expanding to ~4.1M km²) — each formed by wind suppressing new ice growth. After an 18-year gap, small events appeared in 1994 and 2016 via melting of pre-existing ice. The 2017 event opened on 10 June at 43,125 km², sustained nine days, and broke down in December under a southward intrusion of warmer water — delivering a methodology reusable for any future Maud Rise polynya.
 
 ## Technical Details
 
-Python, GDAL, CDO; optical and microwave remote sensing products.
+Python (NumPy, GDAL/OGR), CDO, GrADS, QGIS, Ocean Data View (ODV), SigmaPlot; NSIDC, ECMWF ERA-Interim, MODIS/VIIRS, multi-sensor sea-ice drift, multi-mission altimetry, NOAA CoastWatch, and ORAS4 data products.
 
 ## Links
 
+- [Read the full internship report (PDF) →](/assets/reports/NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf)
 - [See this internship in Education →](/education/)
