@@ -116,6 +116,21 @@ async function main() {
     { src: "ncpor-polynya-photo.png", out: "ncpor-polynya-photo" },
     { src: "ncpor-wind-pressure.png", out: "ncpor-wind-pressure" },
     { src: "ncpor-chlorophyll.png", out: "ncpor-chlorophyll" },
+    { src: "ncpor-sea-ice-extent.png", out: "ncpor-sea-ice-extent" },
+    { src: "ncpor-sensible-heat-polynyas.png", out: "ncpor-sensible-heat-polynyas" },
+    { src: "ncpor-latent-heat-polynyas.png", out: "ncpor-latent-heat-polynyas" },
+    { src: "ncpor-reprojection.png", out: "ncpor-reprojection" },
+    { src: "ncpor-heat-flux-anomaly.png", out: "ncpor-heat-flux-anomaly" },
+    { src: "ncpor-extreme-values.png", out: "ncpor-extreme-values" },
+    { src: "ncpor-chlorophyll-log.png", out: "ncpor-chlorophyll-log" },
+    { src: "ncpor-primary-production.png", out: "ncpor-primary-production" },
+    { src: "ncpor-sea-ice-drift.png", out: "ncpor-sea-ice-drift" },
+    { src: "ncpor-adt.png", out: "ncpor-adt" },
+    { src: "ncpor-sst.png", out: "ncpor-sst" },
+    { src: "ncpor-upwelling-windstress.png", out: "ncpor-upwelling-windstress" },
+    { src: "ncpor-ocean-current.png", out: "ncpor-ocean-current" },
+    { src: "ncpor-graphs-analysis.png", out: "ncpor-graphs-analysis" },
+    { src: "ncpor-sea-ice-climatology.png", out: "ncpor-sea-ice-climatology" },
   ];
   for (const fig of ncporFigures) {
     const p = path.join(SRC, fig.src);

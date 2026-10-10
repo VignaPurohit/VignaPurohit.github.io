@@ -46,21 +46,31 @@
   </script>
 
   <script>
-    // Report-figure sliding galleries: prev/next buttons scroll the
-    // track by one slide width instead of relying on drag-to-scroll.
+    // Report-figure sliding galleries: exactly one slide fills the
+    // track at a time; prev/next step to the adjacent slide and a
+    // counter ("3 / 20") tracks position, updated on every scroll
+    // (button clicks, swipe, or keyboard) via a scroll listener.
     (function () {
       document.querySelectorAll(".image-carousel").forEach(function (carousel) {
         var track = carousel.querySelector(".carousel-track");
         var prev = carousel.querySelector(".carousel-btn--prev");
         var next = carousel.querySelector(".carousel-btn--next");
-        if (!track || !prev || !next) return;
-        var scrollByOne = function (dir) {
-          var slide = track.querySelector(".carousel-slide");
-          var amount = slide ? slide.getBoundingClientRect().width + 18 : 280;
-          track.scrollBy({ left: dir * amount, behavior: "smooth" });
+        var counter = carousel.querySelector(".carousel-counter");
+        var slides = carousel.querySelectorAll(".carousel-slide");
+        if (!track || !prev || !next || !slides.length) return;
+
+        var updateCounter = function () {
+          if (!counter) return;
+          var index = Math.round(track.scrollLeft / track.clientWidth);
+          counter.textContent = (index + 1) + " / " + slides.length;
         };
-        prev.addEventListener("click", function () { scrollByOne(-1); });
-        next.addEventListener("click", function () { scrollByOne(1); });
+        var goTo = function (dir) {
+          track.scrollBy({ left: dir * track.clientWidth, behavior: "smooth" });
+        };
+        prev.addEventListener("click", function () { goTo(-1); });
+        next.addEventListener("click", function () { goTo(1); });
+        track.addEventListener("scroll", updateCounter, { passive: true });
+        updateCounter();
       });
     })();
   </script>

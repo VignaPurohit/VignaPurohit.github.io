@@ -662,39 +662,42 @@ main { padding-bottom: 80px; }
 }
 
 /* Sliding report-figure gallery, via {{< project-carousel >}} +
-   {{< carousel-item >}} - a horizontally scroll-snapped track with
-   prev/next buttons (see baseof.html for the scroll-by-one script). */
+   {{< carousel-item >}} - one slide fills the viewport at a time (not
+   a scrollable list), stepped with prev/next buttons (see baseof.html
+   for the scroll-by-one script). A case-section holding a carousel
+   spans the full card-grid row - see .case-section:has() below - so
+   a large figure set gets real room instead of a 1/3-width card. */
 .image-carousel {
-  margin: 1.8em 0;
+  margin: 1.4em 0 0.4em;
+}
+
+.carousel-viewport {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .carousel-track {
   display: flex;
-  gap: 18px;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 2px 2px 8px;
-  -webkit-overflow-scrolling: touch;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.carousel-track::-webkit-scrollbar { height: 6px; }
-.carousel-track::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
-
 .carousel-slide {
-  flex: 0 0 auto;
+  flex: 0 0 100%;
+  min-width: 0;
   scroll-snap-align: start;
-  width: 260px;
   margin: 0;
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 360px;
+  object-fit: contain;
+  background: var(--bg-alt);
   border-radius: 8px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-soft);
@@ -708,6 +711,13 @@ main { padding-bottom: 80px; }
   color: var(--navy);
   text-align: center;
   font-style: normal;
+}
+
+.carousel-counter {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
 }
 
 .carousel-btn {
@@ -726,10 +736,6 @@ main { padding-bottom: 80px; }
   justify-content: center;
 }
 .carousel-btn:hover { background: var(--navy); color: var(--bg); }
-
-@media (max-width: 639px) {
-  .carousel-btn { display: none; }
-}
 
 /* Prose: typographic rules for rendered Markdown content (case studies,
    workshop write-ups) — headings/paragraphs/lists/code get the site's
@@ -779,6 +785,14 @@ main { padding-bottom: 80px; }
   .case-section:nth-child(3n+1):nth-last-child(2) ~ .case-section:last-child {
     grid-column: 4 / span 2;
   }
+}
+
+/* A section holding a report-figure carousel gets the full row width
+   instead of a 1/3-width card, so a large figure gets real room -
+   overrides the span-2 / pair-centering rules above regardless of
+   breakpoint or position in the grid. */
+.case-section:has(.image-carousel) {
+  grid-column: 1 / -1 !important;
 }
 
 .case-section {

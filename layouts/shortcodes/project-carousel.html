@@ -1,16 +1,19 @@
 {{/*
-  Horizontal sliding gallery of report figures, each labelled with its
-  name underneath. Wrap a run of {{< carousel-item >}} slides in this.
-  Usage:
+  One-at-a-time sliding gallery of report figures, each labelled with
+  its name underneath. Wrap a run of {{< carousel-item >}} slides in
+  this. Usage:
     {{< project-carousel >}}
     {{< carousel-item src="..." alt="..." name="..." >}}
     {{< carousel-item src="..." alt="..." name="..." >}}
     {{< /project-carousel >}}
 */}}
 <div class="image-carousel">
-  <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous image">&larr;</button>
-  <div class="carousel-track">
-    {{ .Inner }}
+  <div class="carousel-viewport">
+    <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous image">&larr;</button>
+    <div class="carousel-track">
+      {{ .Inner }}
+    </div>
+    <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next image">&rarr;</button>
   </div>
-  <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next image">&rarr;</button>
+  <div class="carousel-counter"></div>
 </div>
