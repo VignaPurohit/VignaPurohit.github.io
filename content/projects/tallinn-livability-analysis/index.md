@@ -17,11 +17,17 @@ project_status: "Completed"
 
 ## The Question
 
-Which apartment buildings in Tallinn are genuinely livable — based on real walkable access to transit, groceries, gyms, and green or blue space, not straight-line distance on a map? And could a full spatial-data pipeline — ingestion, network routing, scoring, validation, and an interactive map — be built and shipped by one person directing an AI coding agent, instead of a team hand-writing every line? Full data sources and scoring methodology: [methodology summary (PDF) →](/assets/reports/Tallinn-Livability-Methodology.pdf)
+- Which apartment buildings in Tallinn are genuinely livable — based on real walkable access to transit, groceries, gyms, and green or blue space, not straight-line distance on a map?
+- Could a full spatial-data pipeline — ingestion, network routing, scoring, validation, and an interactive map — be built and shipped by one person directing an AI coding agent, instead of a team hand-writing every line?
+- Full data sources and scoring methodology: [methodology summary (PDF) →](/assets/reports/Tallinn-Livability-Methodology.pdf)
 
 ## Approach: Agentic Coding
 
-The entire pipeline — four analysis notebooks plus a report generator — was built by directing **Claude Code** end-to-end: reading Estonia's open-data registries, tracing a dead GTFS feed URL to its replacement, writing the network-routing and scoring logic, and generating the validation charts and PDF report. My role was to steer scope, choose the scoring methodology, review the agent's code and results at each stage, and decide what to cut — including dropping a data source (building energy class) once validation showed it wasn't reliable enough to score on — rather than writing the geospatial code by hand. Notebooks and the methodology write-up: [code repository →](https://github.com/VignaPurohit/VignaPurohit.github.io/tree/main/code/tallinn-livability-analysis)
+- The entire pipeline — four analysis notebooks plus a report generator — was built by directing **Claude Code** end-to-end
+- Reading Estonia's open-data registries, tracing a dead GTFS feed URL to its replacement, writing the network-routing and scoring logic, and generating the validation charts and PDF report
+- My role: steer scope, choose the scoring methodology, review the agent's code and results at each stage, and decide what to cut
+- Dropped a data source (building energy class) once validation showed it wasn't reliable enough to score on, rather than writing the geospatial code by hand
+- Notebooks and the methodology write-up: [code repository →](https://github.com/VignaPurohit/VignaPurohit.github.io/tree/main/code/tallinn-livability-analysis)
 
 ## Validation
 

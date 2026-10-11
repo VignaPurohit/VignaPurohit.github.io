@@ -811,11 +811,12 @@ main { padding-bottom: 80px; }
   }
 }
 
-/* A section holding a report-figure carousel gets the full row width
-   instead of a 1/3-width card, so a large figure gets real room -
+/* A section holding a carousel passed full="true" (a large figure
+   set) gets the full row width instead of a 1/3-width card -
    overrides the span-2 / pair-centering rules above regardless of
-   breakpoint or position in the grid. */
-.case-section:has(.image-carousel) {
+   breakpoint or position in the grid. A plain carousel (no full="true")
+   stays at normal card width and sits alongside other cards. */
+.case-section:has(.image-carousel--full) {
   grid-column: 1 / -1 !important;
 }
 

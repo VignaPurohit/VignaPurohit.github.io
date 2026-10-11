@@ -49,7 +49,7 @@ Delivered a reproducible, automated processing workflow — reprojection, anomal
 
 ## Parameter Plots
 
-{{< project-carousel >}}
+{{< project-carousel full="true" >}}
 {{< carousel-item src="/assets/images/ncpor-sea-ice-extent" alt="Antarctic sea-ice extent maps for March and September, showing minimum and maximum annual coverage" name="Antarctic Sea-Ice Extent (Mar vs Sep)" >}}
 {{< carousel-item src="/assets/images/ncpor-polynya-photo" alt="Aerial photograph of a polynya — a large area of dark open water surrounded by white sea ice floes" name="The Polynya" >}}
 {{< carousel-item src="/assets/images/ncpor-sensible-heat-polynyas" alt="Map of Antarctic coastline showing sensible-heat polynya locations as lighter patches along the ice edge" name="Sensible-Heat Polynyas" >}}

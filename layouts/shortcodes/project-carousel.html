@@ -6,8 +6,11 @@
     {{< carousel-item src="..." alt="..." name="..." >}}
     {{< carousel-item src="..." alt="..." name="..." >}}
     {{< /project-carousel >}}
+  Pass full="true" to make the card span the whole grid row (for a
+  large figure set) instead of sitting at normal card width.
 */}}
-<div class="image-carousel">
+{{ $full := .Get "full" }}
+<div class="image-carousel{{ if eq $full "true" }} image-carousel--full{{ end }}">
   <div class="carousel-viewport">
     <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous image">&larr;</button>
     <div class="carousel-track">
