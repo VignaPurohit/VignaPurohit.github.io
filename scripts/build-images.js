@@ -16,11 +16,11 @@ const SRC = path.join(__dirname, "..", "..", "portfolio_material");
 const OUT_IMG = path.join(__dirname, "..", "static", "assets", "images");
 const OUT_GALLERY = path.join(OUT_IMG, "gallery");
 const OUT_ASSETS = path.join(__dirname, "..", "static", "assets");
-const OUT_NOTEBOOKS = path.join(OUT_ASSETS, "notebooks");
+const OUT_REPORTS = path.join(OUT_ASSETS, "reports");
 
 fs.mkdirSync(OUT_IMG, { recursive: true });
 fs.mkdirSync(OUT_GALLERY, { recursive: true });
-fs.mkdirSync(OUT_NOTEBOOKS, { recursive: true });
+fs.mkdirSync(OUT_REPORTS, { recursive: true });
 
 async function emit(inputBuffer, outBaseNoExt, { width, quality = 82 } = {}) {
   let pipeline = sharp(inputBuffer);
@@ -139,18 +139,34 @@ async function main() {
     }
   }
 
-  // --- CV + notebooks + reports passthrough ---
+  // --- Tallinn livability: report figures, screenshot, and the
+  //     full-size interactive Folium/Leaflet map + methodology PDF ---
+  const TALLINN_SRC = path.join(SRC, "tallinn_livability_source");
+  const tallinnFigures = [
+    { src: "screenshot_cropped.png", out: "tallinn-livability-map-detail", width: 1400, quality: 88 },
+    { src: "chart_final_dist.png", out: "tallinn-score-distribution", width: 1400, quality: 90 },
+    { src: "chart_validation.png", out: "tallinn-validation", width: 1400, quality: 90 },
+    { src: "screenshot-2.png", out: "tallinn-illustration", width: 900, quality: 88 },
+  ];
+  for (const fig of tallinnFigures) {
+    const p = path.join(TALLINN_SRC, fig.src);
+    if (fs.existsSync(p)) {
+      await emit(fs.readFileSync(p), path.join(OUT_IMG, fig.out), { width: fig.width, quality: fig.quality });
+    }
+  }
+  const tallinnPdf = path.join(TALLINN_SRC, "tallinn_livability_methodology.pdf");
+  if (fs.existsSync(tallinnPdf)) {
+    fs.copyFileSync(tallinnPdf, path.join(OUT_ASSETS, "reports", "Tallinn-Livability-Methodology.pdf"));
+    console.log("wrote", "static/assets/reports/Tallinn-Livability-Methodology.pdf");
+  }
+  const tallinnMap = path.join(TALLINN_SRC, "tallinn_livability_map_searchable.html");
+  if (fs.existsSync(tallinnMap)) {
+    fs.copyFileSync(tallinnMap, path.join(OUT_ASSETS, "tallinn-livability-map.html"));
+    console.log("wrote", "static/assets/tallinn-livability-map.html");
+  }
+
+  // --- CV + reports passthrough ---
   fs.copyFileSync(path.join(SRC, "Vigna-CV.pdf"), path.join(OUT_ASSETS, "Vigna-CV.pdf"));
-  fs.copyFileSync(
-    path.join(SRC, "DuckDB_Geospatial.ipynb"),
-    path.join(OUT_NOTEBOOKS, "DuckDB_Geospatial.ipynb")
-  );
-  fs.copyFileSync(
-    path.join(SRC, "interactiveMap_geonames.ipynb"),
-    path.join(OUT_NOTEBOOKS, "interactiveMap_geonames.ipynb")
-  );
-  const OUT_REPORTS = path.join(OUT_ASSETS, "reports");
-  fs.mkdirSync(OUT_REPORTS, { recursive: true });
   fs.copyFileSync(
     path.join(SRC, "internship_report.pdf"),
     path.join(OUT_REPORTS, "NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf")

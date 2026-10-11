@@ -737,6 +737,30 @@ main { padding-bottom: 80px; }
 }
 .carousel-btn:hover { background: var(--navy); color: var(--bg); }
 
+/* Full-size embedded HTML map, via {{< embed-map >}} */
+.embedded-map {
+  margin: 1.8em 0;
+}
+
+.embedded-map iframe {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  display: block;
+}
+
+.embedded-map-caption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+/* A section holding an embedded map also gets the full row width,
+   same as the figure carousel above. */
+.case-section:has(.embedded-map) {
+  grid-column: 1 / -1 !important;
+}
+
 /* Prose: typographic rules for rendered Markdown content (case studies,
    workshop write-ups) — headings/paragraphs/lists/code get the site's
    design tokens instead of browser defaults. */

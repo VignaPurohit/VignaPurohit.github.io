@@ -1,0 +1,20 @@
+name: tallinn-livability
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - geopandas          # core vector geospatial library (reads gpkg, does clip/join/etc.)
+  - pyogrio             # fast GeoPackage/Shapefile reader used under the hood by geopandas
+  - shapely             # geometry operations
+  - pyproj              # coordinate reference system handling / reprojection
+  - fiona               # low-level vector I/O, useful for listing layers in a .gpkg
+  - pandas
+  - matplotlib           # for quick sanity-check plots of clipped layers
+  - jupyter
+  - ipykernel
+  - notebook
+  - openpyxl             # in case any attribute data comes as .xlsx
+  - unidecode            # helps normalize Estonian characters (õ, ä, ö, ü) for join-key matching
+  - pip
+  - pip:
+      - osmnx            # optional, useful later for OSM-based walkability work

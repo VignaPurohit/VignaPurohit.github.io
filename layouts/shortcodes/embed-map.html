@@ -1,0 +1,13 @@
+{{/*
+  Full-size embedded HTML map (e.g. a Folium/Leaflet export), framed to
+  match the site's figure styling, with an "open full screen" link
+  underneath since an iframe this size is cramped on mobile.
+  Usage: {{< embed-map src="/assets/foo.html" title="..." height="640" >}}
+*/}}
+{{ $src := .Get "src" }}
+{{ $title := .Get "title" | default "Embedded map" }}
+{{ $height := .Get "height" | default "640" }}
+<div class="embedded-map">
+  <iframe src="{{ $src }}" title="{{ $title }}" loading="lazy" style="height: {{ $height }}px;"></iframe>
+  <p class="embedded-map-caption"><a href="{{ $src }}" target="_blank" rel="noopener">Open full screen →</a></p>
+</div>
