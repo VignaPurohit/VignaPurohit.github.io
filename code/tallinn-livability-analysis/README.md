@@ -35,6 +35,20 @@ Methodology summary (PDF): [tallinn_livability_methodology.pdf](../../static/ass
 6. **[`05_generate_report.py`](05_generate_report.py)** — renders the charts
    and the PDF methodology summary from the final scored dataset.
 
+## Methodology
+
+- Snapped every building and amenity to the real pedestrian street network, not straight-line distance
+- Ran multi-source Dijkstra routing to find the network-shortest distance from each building to its nearest transit stop, grocery store, gym, and green/blue space
+- Applied distance decay so a location exactly at a factor's typical walking threshold scores halfway, rather than a hard cutoff
+- Normalized each of the four proximity factors to a common 0–100 scale
+- Combined them with a geometric mean / Mazziotta-Pareto aggregation, so one very poor factor can't be fully offset by strong scores elsewhere
+- Classified buildings into five data-driven livability categories with Natural Breaks
+- Evaluated building energy class as a possible fifth factor, then excluded it (see below)
+
+## Result
+
+7,842 Tallinn apartment buildings scored across four equally-weighted proximity factors into five livability categories, validated against local knowledge and assumption sensitivity, and published as a searchable interactive map.
+
 ## Why energy class isn't scored
 
 Estonia's building energy certificate (A–H) and renovation history were
