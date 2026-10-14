@@ -8,6 +8,12 @@ Weddell Sea since the 1970s.
 
 Full write-up: [vignapurohit.github.io/projects/antarctic-sea-ice-variability](https://vignapurohit.github.io/projects/antarctic-sea-ice-variability/)
 
+## In this folder
+
+- **[`scripts/`](scripts/)** — the processing pipeline (see below)
+- **[`reports/`](reports/)** — the full internship report and internship certificate
+- **[`images/`](images/)** — the 20 report figures used in the write-up
+
 ## Workflow
 
 1. **Reproject** sea-ice concentration from south-polar stereographic

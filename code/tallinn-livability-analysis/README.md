@@ -5,22 +5,28 @@ Estonia, built end-to-end with an AI coding agent (Claude Code) steering
 data ingestion, routing, scoring, and validation.
 
 Full write-up: [vignapurohit.github.io/projects/tallinn-livability-analysis](https://vignapurohit.github.io/projects/tallinn-livability-analysis/)
-Methodology summary (PDF): [tallinn_livability_methodology.pdf](../../static/assets/reports/Tallinn-Livability-Methodology.pdf)
+
+## In this folder
+
+- **[`notebooks/`](notebooks/)** — the analysis pipeline (see below) plus `environment.yml`
+- **[`reports/`](reports/)** — the methodology summary PDF
+- **[`images/`](images/)** — the result charts and map screenshot used in the write-up
+- **[`output/`](output/)** — the full interactive Folium/Leaflet map (same file embedded on the site)
 
 ## Pipeline
 
-1. **[`01_data_prep_tallinn.ipynb`](01_data_prep_tallinn.ipynb)** — load apartment
+1. **[`01_data_prep_tallinn.ipynb`](notebooks/01_data_prep_tallinn.ipynb)** — load apartment
    buildings (ETAK building footprints joined to EHR energy-class data via
    Maa- ja Ruumiamet's `etak_ehr_hooned` service), clip to the Tallinn AOI,
    and combine ETAK green/blue space polygons.
-2. **[`tallinn_amenities.py`](tallinn_amenities.py)** — pull transit stops from
+2. **[`tallinn_amenities.py`](notebooks/tallinn_amenities.py)** — pull transit stops from
    the Estonian Public Transport Register (GTFS) and grocery/gym locations
    from OpenStreetMap via the Overpass API.
-3. **[`02_building_quality_score.ipynb`](02_building_quality_score.ipynb)** —
+3. **[`02_building_quality_score.ipynb`](notebooks/02_building_quality_score.ipynb)** —
    an energy-class/building-quality score, evaluated as a possible fifth
    factor and kept as reference only (see "Why energy class isn't scored"
    below).
-4. **[`03_proximity_final_score.ipynb`](03_proximity_final_score.ipynb)** —
+4. **[`03_proximity_final_score.ipynb`](notebooks/03_proximity_final_score.ipynb)** —
    the core of the pipeline: build the OSM walking network, snap buildings
    and amenities to it, run multi-source Dijkstra routing to the nearest
    transit stop / grocery / gym / green-blue space, apply distance decay,
@@ -29,10 +35,10 @@ Methodology summary (PDF): [tallinn_livability_methodology.pdf](../../static/ass
    offset by strong results on the others). Buildings are then split into
    five data-driven livability categories (Natural Breaks) and rendered to
    an interactive Folium/Leaflet map.
-5. **[`04_validation.ipynb`](04_validation.ipynb)** — outlier audit, a
+5. **[`04_validation.ipynb`](notebooks/04_validation.ipynb)** — outlier audit, a
    spatial sanity pass against district-level expectations, and a 300-run
    Monte Carlo sensitivity analysis of the scoring assumptions.
-6. **[`05_generate_report.py`](05_generate_report.py)** — renders the charts
+6. **[`05_generate_report.py`](notebooks/05_generate_report.py)** — renders the charts
    and the PDF methodology summary from the final scored dataset.
 
 ## Methodology
@@ -75,7 +81,7 @@ Tallinn city boundary.
 
 Python, GeoPandas, OSMnx/NetworkX (routing), mapclassify (Natural Breaks),
 SciPy, Folium/Leaflet (interactive map), FPDF (report generation). See
-[`environment.yml`](environment.yml) for the full conda environment.
+[`notebooks/environment.yml`](notebooks/environment.yml) for the full conda environment.
 
 ---
 

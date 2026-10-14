@@ -1,10 +1,12 @@
 /*
  * One-off / re-runnable image pipeline.
- * Reads large source photos from ../portfolio_material and produces
- * cropped, resized, WebP+JPG pairs into static/assets/images/.
- * This is a Node/sharp helper script, separate from Hugo itself —
- * Hugo doesn't need it to build or serve the site, only to regenerate
- * these pre-built images from the original source photos.
+ * Reads large source photos from ../portfolio_material (organized into
+ * a site-assets/ folder plus one subfolder per project, each with its
+ * own images/reports/code) and produces cropped, resized, WebP+JPG
+ * pairs into static/assets/. This is a Node/sharp helper script,
+ * separate from Hugo itself — Hugo doesn't need it to build or serve
+ * the site, only to regenerate these pre-built images from the
+ * original source photos.
  *
  * Run with: npm run images
  */
@@ -13,6 +15,15 @@ const fs = require("fs");
 const sharp = require("sharp");
 
 const SRC = path.join(__dirname, "..", "..", "portfolio_material");
+const SITE_SRC = path.join(SRC, "site-assets");
+const GALLERY_SRC = path.join(SITE_SRC, "gallery");
+const RISK_PINET_SRC = path.join(SRC, "risk-pinet", "images");
+const NCPOR_SRC = path.join(SRC, "antarctic-sea-ice-variability", "images");
+const NCPOR_REPORTS_SRC = path.join(SRC, "antarctic-sea-ice-variability", "reports");
+const TALLINN_SRC = path.join(SRC, "tallinn-livability-analysis", "images");
+const TALLINN_REPORTS_SRC = path.join(SRC, "tallinn-livability-analysis", "reports");
+const TALLINN_OUTPUT_SRC = path.join(SRC, "tallinn-livability-analysis", "output");
+
 const OUT_IMG = path.join(__dirname, "..", "static", "assets", "images");
 const OUT_GALLERY = path.join(OUT_IMG, "gallery");
 const OUT_ASSETS = path.join(__dirname, "..", "static", "assets");
@@ -34,7 +45,7 @@ async function emit(inputBuffer, outBaseNoExt, { width, quality = 82 } = {}) {
 
 async function main() {
   // --- Hero art band: crop out of the mockup, below the text label ---
-  const mockupPath = path.join(SRC, "site front.png");
+  const mockupPath = path.join(SITE_SRC, "site front.png");
   const mockup = sharp(mockupPath);
   const heroBand = await mockup
     .clone()
@@ -43,21 +54,21 @@ async function main() {
   await emit(heroBand, path.join(OUT_IMG, "hero-band"), { width: 1024, quality: 85 });
 
   // --- Hero collage photo 1: main portrait ---
-  const profilePath = path.join(SRC, "profile.png");
+  const profilePath = path.join(SITE_SRC, "profile.png");
   await emit(fs.readFileSync(profilePath), path.join(OUT_IMG, "hero-profile"), {
     width: 800,
     quality: 85,
   });
 
   // --- Hero collage photo 2: speaking with mic (striped sweater) ---
-  const speakingSrc = path.join(SRC, "SSS_5806.jpg");
+  const speakingSrc = path.join(SITE_SRC, "SSS_5806.jpg");
   const speakingCrop = await sharp(speakingSrc)
     .extract({ left: 2260, top: 1010, width: 900, height: 1050 })
     .toBuffer();
   await emit(speakingCrop, path.join(OUT_IMG, "hero-speaking"), { width: 700, quality: 82 });
 
   // --- Hero collage photo 3: laptop / grey jacket ---
-  const laptopSrc = path.join(SRC, "about.png");
+  const laptopSrc = path.join(SITE_SRC, "about.png");
   const laptopCrop = await sharp(laptopSrc)
     .extract({ left: 2680, top: 1780, width: 950, height: 1340 })
     .toBuffer();
@@ -79,7 +90,9 @@ async function main() {
   ];
   let i = 1;
   for (const file of galleryFiles) {
-    const p = path.join(SRC, file);
+    const inSiteAssets = path.join(SITE_SRC, file);
+    const inGallery = path.join(GALLERY_SRC, file);
+    const p = fs.existsSync(inSiteAssets) ? inSiteAssets : inGallery;
     if (!fs.existsSync(p)) {
       console.warn("skip missing", file);
       continue;
@@ -90,7 +103,7 @@ async function main() {
   }
 
   // --- RISK-PiNET QGIS application screenshot (full UI, not cropped) ---
-  const riskPinetSrc = path.join(SRC, "risk-pinet.png");
+  const riskPinetSrc = path.join(RISK_PINET_SRC, "risk-pinet.png");
   if (fs.existsSync(riskPinetSrc)) {
     await emit(fs.readFileSync(riskPinetSrc), path.join(OUT_IMG, "risk-pinet-qgis"), {
       width: 1400, // native is 1494px wide; keep text crisp, don't crop
@@ -101,7 +114,7 @@ async function main() {
   // --- RISK-PiNET project logo (transparent PNG - keep as PNG, don't
   //     run through the lossy JPEG pipeline above, which would flatten
   //     the transparency onto a white/black background) ---
-  const riskPinetLogoSrc = path.join(SRC, "risk-pinet-logo-200.png");
+  const riskPinetLogoSrc = path.join(RISK_PINET_SRC, "risk-pinet-logo-200.png");
   if (fs.existsSync(riskPinetLogoSrc)) {
     fs.copyFileSync(riskPinetLogoSrc, path.join(OUT_IMG, "risk-pinet-logo.png"));
     console.log("wrote", "static/assets/images/risk-pinet-logo.png");
@@ -111,37 +124,41 @@ async function main() {
   //     report (charts/maps with fine text, so re-encode at higher
   //     quality than the photo pipeline above to keep labels crisp) ---
   const ncporFigures = [
-    { src: "ncpor-bathymetry.png", out: "ncpor-bathymetry" },
-    { src: "ncpor-polynya-area-chart.png", out: "ncpor-polynya-area-chart" },
-    { src: "ncpor-polynya-photo.png", out: "ncpor-polynya-photo" },
-    { src: "ncpor-wind-pressure.png", out: "ncpor-wind-pressure" },
-    { src: "ncpor-chlorophyll.png", out: "ncpor-chlorophyll" },
-    { src: "ncpor-sea-ice-extent.png", out: "ncpor-sea-ice-extent" },
-    { src: "ncpor-sensible-heat-polynyas.png", out: "ncpor-sensible-heat-polynyas" },
-    { src: "ncpor-latent-heat-polynyas.png", out: "ncpor-latent-heat-polynyas" },
-    { src: "ncpor-reprojection.png", out: "ncpor-reprojection" },
-    { src: "ncpor-heat-flux-anomaly.png", out: "ncpor-heat-flux-anomaly" },
-    { src: "ncpor-extreme-values.png", out: "ncpor-extreme-values" },
-    { src: "ncpor-chlorophyll-log.png", out: "ncpor-chlorophyll-log" },
-    { src: "ncpor-primary-production.png", out: "ncpor-primary-production" },
-    { src: "ncpor-sea-ice-drift.png", out: "ncpor-sea-ice-drift" },
-    { src: "ncpor-adt.png", out: "ncpor-adt" },
-    { src: "ncpor-sst.png", out: "ncpor-sst" },
-    { src: "ncpor-upwelling-windstress.png", out: "ncpor-upwelling-windstress" },
-    { src: "ncpor-ocean-current.png", out: "ncpor-ocean-current" },
-    { src: "ncpor-graphs-analysis.png", out: "ncpor-graphs-analysis" },
-    { src: "ncpor-sea-ice-climatology.png", out: "ncpor-sea-ice-climatology" },
+    "ncpor-bathymetry",
+    "ncpor-polynya-area-chart",
+    "ncpor-polynya-photo",
+    "ncpor-wind-pressure",
+    "ncpor-chlorophyll",
+    "ncpor-sea-ice-extent",
+    "ncpor-sensible-heat-polynyas",
+    "ncpor-latent-heat-polynyas",
+    "ncpor-reprojection",
+    "ncpor-heat-flux-anomaly",
+    "ncpor-extreme-values",
+    "ncpor-chlorophyll-log",
+    "ncpor-primary-production",
+    "ncpor-sea-ice-drift",
+    "ncpor-adt",
+    "ncpor-sst",
+    "ncpor-upwelling-windstress",
+    "ncpor-ocean-current",
+    "ncpor-graphs-analysis",
+    "ncpor-sea-ice-climatology",
   ];
-  for (const fig of ncporFigures) {
-    const p = path.join(SRC, fig.src);
+  for (const name of ncporFigures) {
+    const p = path.join(NCPOR_SRC, name + ".png");
     if (fs.existsSync(p)) {
-      await emit(fs.readFileSync(p), path.join(OUT_IMG, fig.out), { width: 1400, quality: 90 });
+      await emit(fs.readFileSync(p), path.join(OUT_IMG, name), { width: 1400, quality: 90 });
     }
+  }
+  const ncporReport = path.join(NCPOR_REPORTS_SRC, "internship_report.pdf");
+  if (fs.existsSync(ncporReport)) {
+    fs.copyFileSync(ncporReport, path.join(OUT_REPORTS, "NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf"));
+    console.log("wrote", "static/assets/reports/NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf");
   }
 
   // --- Tallinn livability: report figures, screenshot, and the
   //     full-size interactive Folium/Leaflet map + methodology PDF ---
-  const TALLINN_SRC = path.join(SRC, "tallinn_livability_source");
   const tallinnFigures = [
     { src: "screenshot_cropped.png", out: "tallinn-livability-map-detail", width: 1400, quality: 88 },
     { src: "chart_final_dist.png", out: "tallinn-score-distribution", width: 1400, quality: 90 },
@@ -154,23 +171,19 @@ async function main() {
       await emit(fs.readFileSync(p), path.join(OUT_IMG, fig.out), { width: fig.width, quality: fig.quality });
     }
   }
-  const tallinnPdf = path.join(TALLINN_SRC, "tallinn_livability_methodology.pdf");
+  const tallinnPdf = path.join(TALLINN_REPORTS_SRC, "tallinn_livability_methodology.pdf");
   if (fs.existsSync(tallinnPdf)) {
-    fs.copyFileSync(tallinnPdf, path.join(OUT_ASSETS, "reports", "Tallinn-Livability-Methodology.pdf"));
+    fs.copyFileSync(tallinnPdf, path.join(OUT_REPORTS, "Tallinn-Livability-Methodology.pdf"));
     console.log("wrote", "static/assets/reports/Tallinn-Livability-Methodology.pdf");
   }
-  const tallinnMap = path.join(TALLINN_SRC, "tallinn_livability_map_searchable.html");
+  const tallinnMap = path.join(TALLINN_OUTPUT_SRC, "tallinn_livability_map_searchable.html");
   if (fs.existsSync(tallinnMap)) {
     fs.copyFileSync(tallinnMap, path.join(OUT_ASSETS, "tallinn-livability-map.html"));
     console.log("wrote", "static/assets/tallinn-livability-map.html");
   }
 
-  // --- CV + reports passthrough ---
-  fs.copyFileSync(path.join(SRC, "Vigna-CV.pdf"), path.join(OUT_ASSETS, "Vigna-CV.pdf"));
-  fs.copyFileSync(
-    path.join(SRC, "internship_report.pdf"),
-    path.join(OUT_REPORTS, "NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf")
-  );
+  // --- CV passthrough ---
+  fs.copyFileSync(path.join(SITE_SRC, "Vigna-CV.pdf"), path.join(OUT_ASSETS, "Vigna-CV.pdf"));
 
   console.log("\nImage pipeline complete.");
 }
