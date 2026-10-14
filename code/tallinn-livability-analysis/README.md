@@ -9,9 +9,14 @@ Full write-up: [vignapurohit.github.io/projects/tallinn-livability-analysis](htt
 ## In this folder
 
 - **[`notebooks/`](notebooks/)** — the analysis pipeline (see below) plus `environment.yml`
-- **[`reports/`](reports/)** — the methodology summary PDF
-- **[`images/`](images/)** — the result charts and map screenshot used in the write-up
-- **[`output/`](output/)** — the full interactive Folium/Leaflet map (same file embedded on the site)
+
+The methodology PDF, result charts, and the full interactive map live in
+the site's own asset folder, not copied here a second time:
+[`static/assets/reports/Tallinn-Livability-Methodology.pdf`](../../static/assets/reports/Tallinn-Livability-Methodology.pdf),
+[`static/assets/images/`](../../static/assets/images/) (filenames start
+`tallinn-`), and [`static/assets/tallinn-livability-map.html`](../../static/assets/tallinn-livability-map.html).
+
+![Final score distribution](../../static/assets/images/tallinn-score-distribution.jpg)
 
 ## Pipeline
 

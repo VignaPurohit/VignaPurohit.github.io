@@ -11,8 +11,14 @@ Full write-up: [vignapurohit.github.io/projects/antarctic-sea-ice-variability](h
 ## In this folder
 
 - **[`scripts/`](scripts/)** — the processing pipeline (see below)
-- **[`reports/`](reports/)** — the full internship report and internship certificate
-- **[`images/`](images/)** — the 20 report figures used in the write-up
+- **[`reports/`](reports/)** — the internship certificate (the full report is linked below; it's already served from the site, not duplicated here)
+
+The 20 report figures and the full internship report live in the site's
+own asset folder, not copied here a second time:
+[`static/assets/images/`](../../static/assets/images/) (filenames start
+`ncpor-`) and [`static/assets/reports/NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf`](../../static/assets/reports/NCPOR-Antarctic-Sea-Ice-Internship-Report.pdf).
+
+![Maud Rise bathymetry](../../static/assets/images/ncpor-bathymetry.jpg)
 
 ## Workflow
 
@@ -48,6 +54,7 @@ ORAS4 reanalysis.
 
 Extracted from the internship report's "Tools and codes" section. File
 paths and variable names are kept as originally written; adapt them to
-your own data layout before running.
+your own data layout before running. [`reports/NCPOR-Antarctic-Sea-Ice-Internship-Certificate.pdf`](reports/NCPOR-Antarctic-Sea-Ice-Internship-Certificate.pdf)
+is the internship completion certificate.
 
 This folder lives inside the [portfolio site repo](https://github.com/VignaPurohit/VignaPurohit.github.io/tree/main/code/antarctic-sea-ice-variability) — it isn't part of the Hugo build.
