@@ -1,0 +1,3830 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fc63cae33a178a1cfcb8f914b5b3c519 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fc63cae33a178a1cfcb8f914b5b3c519" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fc63cae33a178a1cfcb8f914b5b3c519 = L.map(
+                "map_fc63cae33a178a1cfcb8f914b5b3c519",
+                {
+                    center: [50.0, 15.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_37e07f8500ecd7f9605ec5e7a30bc095 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, HERE, Garmin, \u0026copy; OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_37e07f8500ecd7f9605ec5e7a30bc095.addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+            var circle_marker_b01c4500c27f775785b108a5955bb325 = L.circleMarker(
+                [51.4582235, 7.0158171],
+                {"bubblingMouseEvents": true, "color": "#b78950", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b78950", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_67aeecd98bf305354d7e7fcefa412bc4 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_71bfab8663ef7a20d75134ec1452f2f3 = $(`<div id="html_71bfab8663ef7a20d75134ec1452f2f3" style="width: 100.0%; height: 100.0%;"><b>Essen</b> (DE)<br>Population: 569,884<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.7C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_67aeecd98bf305354d7e7fcefa412bc4.setContent(html_71bfab8663ef7a20d75134ec1452f2f3);
+            
+        
+
+        circle_marker_b01c4500c27f775785b108a5955bb325.bindPopup(popup_67aeecd98bf305354d7e7fcefa412bc4)
+        ;
+
+        
+    
+    
+            circle_marker_b01c4500c27f775785b108a5955bb325.bindTooltip(
+                `<div>
+                     Essen: +0.9C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e9b78d1c89e1038f4f88e205bbef1d80 = L.circleMarker(
+                [51.2254018, 6.7763137],
+                {"bubblingMouseEvents": true, "color": "#b8894f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b8894f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_2834bfbd89bed021b053ed53dc4039c1 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_fb77599b52adcd0e5b68c98526f15804 = $(`<div id="html_fb77599b52adcd0e5b68c98526f15804" style="width: 100.0%; height: 100.0%;"><b>Dusseldorf</b> (DE)<br>Population: 653,253<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.8C<br>National anomaly percentile: 8%</div>`)[0];
+                popup_2834bfbd89bed021b053ed53dc4039c1.setContent(html_fb77599b52adcd0e5b68c98526f15804);
+            
+        
+
+        circle_marker_e9b78d1c89e1038f4f88e205bbef1d80.bindPopup(popup_2834bfbd89bed021b053ed53dc4039c1)
+        ;
+
+        
+    
+    
+            circle_marker_e9b78d1c89e1038f4f88e205bbef1d80.bindTooltip(
+                `<div>
+                     Dusseldorf: +0.9C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e82d643d222634067ef78c5d01d1a550 = L.circleMarker(
+                [50.938361, 6.959974],
+                {"bubblingMouseEvents": true, "color": "#ba894e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ba894e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a798b5017815bc22bc7c73c3f7cda387 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2d00bc242e5ae00689c2ec72fb6245b4 = $(`<div id="html_2d00bc242e5ae00689c2ec72fb6245b4" style="width: 100.0%; height: 100.0%;"><b>Cologne</b> (DE)<br>Population: 1,069,200<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.7C<br>National anomaly percentile: 15%</div>`)[0];
+                popup_a798b5017815bc22bc7c73c3f7cda387.setContent(html_2d00bc242e5ae00689c2ec72fb6245b4);
+            
+        
+
+        circle_marker_e82d643d222634067ef78c5d01d1a550.bindPopup(popup_a798b5017815bc22bc7c73c3f7cda387)
+        ;
+
+        
+    
+    
+            circle_marker_e82d643d222634067ef78c5d01d1a550.bindTooltip(
+                `<div>
+                     Cologne: +0.9C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fe41239eee5f303c104d5f02d4ced01 = L.circleMarker(
+                [53.0758196, 8.8071646],
+                {"bubblingMouseEvents": true, "color": "#ba894d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ba894d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_24069c275cba1532c7584c707d18a166 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_7283b2112e2c626bdd582684fd1de42d = $(`<div id="html_7283b2112e2c626bdd582684fd1de42d" style="width: 100.0%; height: 100.0%;"><b>Bremen</b> (DE)<br>Population: 551,415<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.2C<br>National anomaly percentile: 23%</div>`)[0];
+                popup_24069c275cba1532c7584c707d18a166.setContent(html_7283b2112e2c626bdd582684fd1de42d);
+            
+        
+
+        circle_marker_7fe41239eee5f303c104d5f02d4ced01.bindPopup(popup_24069c275cba1532c7584c707d18a166)
+        ;
+
+        
+    
+    
+            circle_marker_7fe41239eee5f303c104d5f02d4ced01.bindTooltip(
+                `<div>
+                     Bremen: +0.9C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3eb9f910f469b0b75db9cc89329a056 = L.circleMarker(
+                [51.5142273, 7.4652789],
+                {"bubblingMouseEvents": true, "color": "#bb894d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bb894d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_2cd3769cf29e58a83f3cb7154054e5cf = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_6525ef162afd23ae5c0c5ca5c18b99cf = $(`<div id="html_6525ef162afd23ae5c0c5ca5c18b99cf" style="width: 100.0%; height: 100.0%;"><b>Dortmund</b> (DE)<br>Population: 600,933<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.2C<br>National anomaly percentile: 31%</div>`)[0];
+                popup_2cd3769cf29e58a83f3cb7154054e5cf.setContent(html_6525ef162afd23ae5c0c5ca5c18b99cf);
+            
+        
+
+        circle_marker_d3eb9f910f469b0b75db9cc89329a056.bindPopup(popup_2cd3769cf29e58a83f3cb7154054e5cf)
+        ;
+
+        
+    
+    
+            circle_marker_d3eb9f910f469b0b75db9cc89329a056.bindTooltip(
+                `<div>
+                     Dortmund: +0.9C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2150fbea83686088a3b4d0053774648e = L.circleMarker(
+                [49.453872, 11.077298],
+                {"bubblingMouseEvents": true, "color": "#bb894d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bb894d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_7cad3519929e62d1cddfd4b92e6bec87 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_04a339b810a69670eb8cf15421614391 = $(`<div id="html_04a339b810a69670eb8cf15421614391" style="width: 100.0%; height: 100.0%;"><b>Nuremberg</b> (DE)<br>Population: 526,091<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 9.8C<br>National anomaly percentile: 38%</div>`)[0];
+                popup_7cad3519929e62d1cddfd4b92e6bec87.setContent(html_04a339b810a69670eb8cf15421614391);
+            
+        
+
+        circle_marker_2150fbea83686088a3b4d0053774648e.bindPopup(popup_7cad3519929e62d1cddfd4b92e6bec87)
+        ;
+
+        
+    
+    
+            circle_marker_2150fbea83686088a3b4d0053774648e.bindTooltip(
+                `<div>
+                     Nuremberg: +0.9C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c9ee80bab39661ea26dbc5cdd4eb598 = L.circleMarker(
+                [53.5501721, 10.0013165],
+                {"bubblingMouseEvents": true, "color": "#bf8949", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bf8949", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_d1b6abdcdbb06007eac4a4ae36899fe1 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_533b4c16d6f2864c2c89017b152c1c5e = $(`<div id="html_533b4c16d6f2864c2c89017b152c1c5e" style="width: 100.0%; height: 100.0%;"><b>Hamburg</b> (DE)<br>Population: 1,862,565<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 9.9C<br>National anomaly percentile: 46%</div>`)[0];
+                popup_d1b6abdcdbb06007eac4a4ae36899fe1.setContent(html_533b4c16d6f2864c2c89017b152c1c5e);
+            
+        
+
+        circle_marker_9c9ee80bab39661ea26dbc5cdd4eb598.bindPopup(popup_d1b6abdcdbb06007eac4a4ae36899fe1)
+        ;
+
+        
+    
+    
+            circle_marker_9c9ee80bab39661ea26dbc5cdd4eb598.bindTooltip(
+                `<div>
+                     Hamburg: +1.0C anomaly | pop 1.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f20716bfc7dcb0aed2f09ad92fc0db18 = L.circleMarker(
+                [50.1106444, 8.6820917],
+                {"bubblingMouseEvents": true, "color": "#bf8949", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bf8949", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_81c5d471cbc9859027c9876139404439 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_35646e7146aadb76578b813e7e4403e6 = $(`<div id="html_35646e7146aadb76578b813e7e4403e6" style="width: 100.0%; height: 100.0%;"><b>Frankfurt</b> (DE)<br>Population: 701,350<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 10.8C<br>National anomaly percentile: 54%</div>`)[0];
+                popup_81c5d471cbc9859027c9876139404439.setContent(html_35646e7146aadb76578b813e7e4403e6);
+            
+        
+
+        circle_marker_f20716bfc7dcb0aed2f09ad92fc0db18.bindPopup(popup_81c5d471cbc9859027c9876139404439)
+        ;
+
+        
+    
+    
+            circle_marker_f20716bfc7dcb0aed2f09ad92fc0db18.bindTooltip(
+                `<div>
+                     Frankfurt: +1.0C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1e552fc4700862f0aec820df04e0cbe = L.circleMarker(
+                [48.1371079, 11.5753822],
+                {"bubblingMouseEvents": true, "color": "#c38945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c38945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a9d4ed13d97034e5452d5e74d4426cfa = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_6b99433c816556e31263eb740d0f4ced = $(`<div id="html_6b99433c816556e31263eb740d0f4ced" style="width: 100.0%; height: 100.0%;"><b>Munich</b> (DE)<br>Population: 1,484,226<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 9.6C<br>National anomaly percentile: 62%</div>`)[0];
+                popup_a9d4ed13d97034e5452d5e74d4426cfa.setContent(html_6b99433c816556e31263eb740d0f4ced);
+            
+        
+
+        circle_marker_b1e552fc4700862f0aec820df04e0cbe.bindPopup(popup_a9d4ed13d97034e5452d5e74d4426cfa)
+        ;
+
+        
+    
+    
+            circle_marker_b1e552fc4700862f0aec820df04e0cbe.bindTooltip(
+                `<div>
+                     Munich: +1.0C anomaly | pop 1.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a30bd3fe8fac97e9edf804102892179 = L.circleMarker(
+                [52.3744779, 9.7385532],
+                {"bubblingMouseEvents": true, "color": "#c48945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c48945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_e32f686f6e92b1a39ce25b67bbca6d56 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_49b746bd651c1d16cbf1262cf0741f50 = $(`<div id="html_49b746bd651c1d16cbf1262cf0741f50" style="width: 100.0%; height: 100.0%;"><b>Hanover</b> (DE)<br>Population: 555,372<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 10.0C<br>National anomaly percentile: 69%</div>`)[0];
+                popup_e32f686f6e92b1a39ce25b67bbca6d56.setContent(html_49b746bd651c1d16cbf1262cf0741f50);
+            
+        
+
+        circle_marker_5a30bd3fe8fac97e9edf804102892179.bindPopup(popup_e32f686f6e92b1a39ce25b67bbca6d56)
+        ;
+
+        
+    
+    
+            circle_marker_5a30bd3fe8fac97e9edf804102892179.bindTooltip(
+                `<div>
+                     Hanover: +1.0C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e6f7e330a4cb86f40672a6226efc786 = L.circleMarker(
+                [51.3406321, 12.3747329],
+                {"bubblingMouseEvents": true, "color": "#c68942", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c68942", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_67491d8ceb5f761aa9c129c5a5f7b88a = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_9b6a31eb2553120e3749b0a543ee9446 = $(`<div id="html_9b6a31eb2553120e3749b0a543ee9446" style="width: 100.0%; height: 100.0%;"><b>Leipzig</b> (DE)<br>Population: 628,718<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 10.2C<br>National anomaly percentile: 77%</div>`)[0];
+                popup_67491d8ceb5f761aa9c129c5a5f7b88a.setContent(html_9b6a31eb2553120e3749b0a543ee9446);
+            
+        
+
+        circle_marker_6e6f7e330a4cb86f40672a6226efc786.bindPopup(popup_67491d8ceb5f761aa9c129c5a5f7b88a)
+        ;
+
+        
+    
+    
+            circle_marker_6e6f7e330a4cb86f40672a6226efc786.bindTooltip(
+                `<div>
+                     Leipzig: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ddcc740203c0fad495d1d037c3302f3 = L.circleMarker(
+                [48.7784485, 9.1800132],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c78942", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_b4316aff251e029022354773736462ab = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_077e402c4069265b988a2cd92fd3fe34 = $(`<div id="html_077e402c4069265b988a2cd92fd3fe34" style="width: 100.0%; height: 100.0%;"><b>Stuttgart</b> (DE)<br>Population: 613,392<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 10.1C<br>National anomaly percentile: 85%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_b4316aff251e029022354773736462ab.setContent(html_077e402c4069265b988a2cd92fd3fe34);
+            
+        
+
+        circle_marker_6ddcc740203c0fad495d1d037c3302f3.bindPopup(popup_b4316aff251e029022354773736462ab)
+        ;
+
+        
+    
+    
+            circle_marker_6ddcc740203c0fad495d1d037c3302f3.bindTooltip(
+                `<div>
+                     Stuttgart: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f151344434fe70556179cdecfbc1a9db = L.circleMarker(
+                [51.0493286, 13.7381437],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c78942", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_3df7f13bb098ae6ca64b1f6524156adc = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e824cbb3e1ab57365325fb81479d12db = $(`<div id="html_e824cbb3e1ab57365325fb81479d12db" style="width: 100.0%; height: 100.0%;"><b>Dresden</b> (DE)<br>Population: 572,240<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 9.1C<br>National anomaly percentile: 92%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_3df7f13bb098ae6ca64b1f6524156adc.setContent(html_e824cbb3e1ab57365325fb81479d12db);
+            
+        
+
+        circle_marker_f151344434fe70556179cdecfbc1a9db.bindPopup(popup_3df7f13bb098ae6ca64b1f6524156adc)
+        ;
+
+        
+    
+    
+            circle_marker_f151344434fe70556179cdecfbc1a9db.bindTooltip(
+                `<div>
+                     Dresden: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_005c84ff2c7e174593f1c4eb3cfe35ae = L.circleMarker(
+                [52.5173885, 13.3951309],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ca8a3f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_576995dfa43997afa8ba38bdeaa12209 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_acc5c7b5428c3abf60f8c1adb295c21a = $(`<div id="html_acc5c7b5428c3abf60f8c1adb295c21a" style="width: 100.0%; height: 100.0%;"><b>Berlin</b> (DE)<br>Population: 3,769,962<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 10.1C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_576995dfa43997afa8ba38bdeaa12209.setContent(html_acc5c7b5428c3abf60f8c1adb295c21a);
+            
+        
+
+        circle_marker_005c84ff2c7e174593f1c4eb3cfe35ae.bindPopup(popup_576995dfa43997afa8ba38bdeaa12209)
+        ;
+
+        
+    
+    
+            circle_marker_005c84ff2c7e174593f1c4eb3cfe35ae.bindTooltip(
+                `<div>
+                     Berlin: +1.1C anomaly | pop 3.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff8a36d144cb2672aad3d4c21d709149 = L.circleMarker(
+                [45.8130967, 15.9772795],
+                {"bubblingMouseEvents": true, "color": "#cb8a3e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cb8a3e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_63e290dc715f1cf72649f9bd6dccfd50 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_05ad0c1dffb9741374dfda3cebb15996 = $(`<div id="html_05ad0c1dffb9741374dfda3cebb15996" style="width: 100.0%; height: 100.0%;"><b>Zagreb</b> (HR)<br>Population: 663,592<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 11.9C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_63e290dc715f1cf72649f9bd6dccfd50.setContent(html_05ad0c1dffb9741374dfda3cebb15996);
+            
+        
+
+        circle_marker_ff8a36d144cb2672aad3d4c21d709149.bindPopup(popup_63e290dc715f1cf72649f9bd6dccfd50)
+        ;
+
+        
+    
+    
+            circle_marker_ff8a36d144cb2672aad3d4c21d709149.bindTooltip(
+                `<div>
+                     Zagreb: +1.1C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b40e286be29acedfe4b6e17634249b01 = L.circleMarker(
+                [44.6054434, 33.5220842],
+                {"bubblingMouseEvents": true, "color": "#c48945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c48945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6565e1c41c1098264dfb283766965e24 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_ac252503d30032074c7a533d996d5bf1 = $(`<div id="html_ac252503d30032074c7a533d996d5bf1" style="width: 100.0%; height: 100.0%;"><b>Sevastopol</b> (UA)<br>Population: 509,992<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 13.0C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_6565e1c41c1098264dfb283766965e24.setContent(html_ac252503d30032074c7a533d996d5bf1);
+            
+        
+
+        circle_marker_b40e286be29acedfe4b6e17634249b01.bindPopup(popup_6565e1c41c1098264dfb283766965e24)
+        ;
+
+        
+    
+    
+            circle_marker_b40e286be29acedfe4b6e17634249b01.bindTooltip(
+                `<div>
+                     Sevastopol: +1.0C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0a224382fa1913fe4d14c985ca30faad = L.circleMarker(
+                [49.841952, 24.0315921],
+                {"bubblingMouseEvents": true, "color": "#d08a3a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d08a3a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_78bb4909ac083c8012d32f4744a78218 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_1c6973f8261f239d4269cd186adc972e = $(`<div id="html_1c6973f8261f239d4269cd186adc972e" style="width: 100.0%; height: 100.0%;"><b>Lviv</b> (UA)<br>Population: 728,350<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 8.6C<br>National anomaly percentile: 12%</div>`)[0];
+                popup_78bb4909ac083c8012d32f4744a78218.setContent(html_1c6973f8261f239d4269cd186adc972e);
+            
+        
+
+        circle_marker_0a224382fa1913fe4d14c985ca30faad.bindPopup(popup_78bb4909ac083c8012d32f4744a78218)
+        ;
+
+        
+    
+    
+            circle_marker_0a224382fa1913fe4d14c985ca30faad.bindTooltip(
+                `<div>
+                     Lviv: +1.2C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ed5ec0516e094dcb5dd655f2594c076 = L.circleMarker(
+                [47.8507859, 35.1182867],
+                {"bubblingMouseEvents": true, "color": "#d18a39", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d18a39", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_8ea5dedebffcfe71afd78394a4ce2d30 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_85894ead5cf0a96493622e4fa55c912f = $(`<div id="html_85894ead5cf0a96493622e4fa55c912f" style="width: 100.0%; height: 100.0%;"><b>Zaporizhzhia</b> (UA)<br>Population: 750,685<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 10.7C<br>National anomaly percentile: 25%</div>`)[0];
+                popup_8ea5dedebffcfe71afd78394a4ce2d30.setContent(html_85894ead5cf0a96493622e4fa55c912f);
+            
+        
+
+        circle_marker_3ed5ec0516e094dcb5dd655f2594c076.bindPopup(popup_8ea5dedebffcfe71afd78394a4ce2d30)
+        ;
+
+        
+    
+    
+            circle_marker_3ed5ec0516e094dcb5dd655f2594c076.bindTooltip(
+                `<div>
+                     Zaporizhzhia: +1.2C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_361fca92642cbb91b652aee31ee2ca16 = L.circleMarker(
+                [47.9102734, 33.3917703],
+                {"bubblingMouseEvents": true, "color": "#d28a38", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d28a38", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_3b9ec787d51843a802504b2b6214819a = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_11d7d7f74a2702b208d80ce9789044a9 = $(`<div id="html_11d7d7f74a2702b208d80ce9789044a9" style="width: 100.0%; height: 100.0%;"><b>Kryvyi Rih</b> (UA)<br>Population: 656,700<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 10.3C<br>National anomaly percentile: 38%</div>`)[0];
+                popup_3b9ec787d51843a802504b2b6214819a.setContent(html_11d7d7f74a2702b208d80ce9789044a9);
+            
+        
+
+        circle_marker_361fca92642cbb91b652aee31ee2ca16.bindPopup(popup_3b9ec787d51843a802504b2b6214819a)
+        ;
+
+        
+    
+    
+            circle_marker_361fca92642cbb91b652aee31ee2ca16.bindTooltip(
+                `<div>
+                     Kryvyi Rih: +1.2C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ebab04b1168bacf95e537d879a413887 = L.circleMarker(
+                [50.4500336, 30.5241361],
+                {"bubblingMouseEvents": true, "color": "#d38a37", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38a37", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_e5a6f04f9ed40e32bfcfe05998770478 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e851cefb0893f4b48868679c12d2c2a7 = $(`<div id="html_e851cefb0893f4b48868679c12d2c2a7" style="width: 100.0%; height: 100.0%;"><b>Kyiv</b> (UA)<br>Population: 2,952,301<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 8.9C<br>National anomaly percentile: 50%</div>`)[0];
+                popup_e5a6f04f9ed40e32bfcfe05998770478.setContent(html_e851cefb0893f4b48868679c12d2c2a7);
+            
+        
+
+        circle_marker_ebab04b1168bacf95e537d879a413887.bindPopup(popup_e5a6f04f9ed40e32bfcfe05998770478)
+        ;
+
+        
+    
+    
+            circle_marker_ebab04b1168bacf95e537d879a413887.bindTooltip(
+                `<div>
+                     Kyiv: +1.2C anomaly | pop 3.0M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e595df1ad60f81fd378131f7d5520d3a = L.circleMarker(
+                [46.4843023, 30.7322878],
+                {"bubblingMouseEvents": true, "color": "#d58a36", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d58a36", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_fa7725473ee4c0f4d540bb45b1428266 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_d3f41a81da29f9f5a028357070bd6e56 = $(`<div id="html_d3f41a81da29f9f5a028357070bd6e56" style="width: 100.0%; height: 100.0%;"><b>Odesa</b> (UA)<br>Population: 1,008,852<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 11.8C<br>National anomaly percentile: 62%</div>`)[0];
+                popup_fa7725473ee4c0f4d540bb45b1428266.setContent(html_d3f41a81da29f9f5a028357070bd6e56);
+            
+        
+
+        circle_marker_e595df1ad60f81fd378131f7d5520d3a.bindPopup(popup_fa7725473ee4c0f4d540bb45b1428266)
+        ;
+
+        
+    
+    
+            circle_marker_e595df1ad60f81fd378131f7d5520d3a.bindTooltip(
+                `<div>
+                     Odesa: +1.2C anomaly | pop 1.0M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c36621899aa511bc9287b8802a33754 = L.circleMarker(
+                [48.4680221, 35.0417711],
+                {"bubblingMouseEvents": true, "color": "#d98a31", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d98a31", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_7f1cc509a8cd7628cc2e6335c2e77a40 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_fa5f3eb0b23e0cde17f8e525bc0f9c62 = $(`<div id="html_fa5f3eb0b23e0cde17f8e525bc0f9c62" style="width: 100.0%; height: 100.0%;"><b>Dnipro</b> (UA)<br>Population: 1,080,486<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 9.9C<br>National anomaly percentile: 75%</div>`)[0];
+                popup_7f1cc509a8cd7628cc2e6335c2e77a40.setContent(html_fa5f3eb0b23e0cde17f8e525bc0f9c62);
+            
+        
+
+        circle_marker_9c36621899aa511bc9287b8802a33754.bindPopup(popup_7f1cc509a8cd7628cc2e6335c2e77a40)
+        ;
+
+        
+    
+    
+            circle_marker_9c36621899aa511bc9287b8802a33754.bindTooltip(
+                `<div>
+                     Dnipro: +1.3C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5698d68753059184ae0f92de545c744c = L.circleMarker(
+                [48.0158753, 37.8013407],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#da8a30", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_db52ad701aa414a150d2c1236323dc8d = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e7fc09b812d7ef088ab8fb573d7f5cca = $(`<div id="html_e7fc09b812d7ef088ab8fb573d7f5cca" style="width: 100.0%; height: 100.0%;"><b>Donetsk</b> (UA)<br>Population: 929,063<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 9.4C<br>National anomaly percentile: 88%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_db52ad701aa414a150d2c1236323dc8d.setContent(html_e7fc09b812d7ef088ab8fb573d7f5cca);
+            
+        
+
+        circle_marker_5698d68753059184ae0f92de545c744c.bindPopup(popup_db52ad701aa414a150d2c1236323dc8d)
+        ;
+
+        
+    
+    
+            circle_marker_5698d68753059184ae0f92de545c744c.bindTooltip(
+                `<div>
+                     Donetsk: +1.3C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bcb8cfc1696d04297570107fdb494c04 = L.circleMarker(
+                [49.9923181, 36.2310146],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#db8a2f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_73a0272db4533f86b73baa3c7e591c48 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e06cfaf7b6758146acff74bbee54422e = $(`<div id="html_e06cfaf7b6758146acff74bbee54422e" style="width: 100.0%; height: 100.0%;"><b>Kharkiv</b> (UA)<br>Population: 1,447,652<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 8.6C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_73a0272db4533f86b73baa3c7e591c48.setContent(html_e06cfaf7b6758146acff74bbee54422e);
+            
+        
+
+        circle_marker_bcb8cfc1696d04297570107fdb494c04.bindPopup(popup_73a0272db4533f86b73baa3c7e591c48)
+        ;
+
+        
+    
+    
+            circle_marker_bcb8cfc1696d04297570107fdb494c04.bindTooltip(
+                `<div>
+                     Kharkiv: +1.3C anomaly | pop 1.4M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c372db086ebef98f4896004aff57ae42 = L.circleMarker(
+                [47.4978789, 19.0402383],
+                {"bubblingMouseEvents": true, "color": "#cd8a3d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd8a3d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_1a88e2c9f6f82febc7a5e22d69f72a1a = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_33833384ea20fd9d9dbcaa14028d2f77 = $(`<div id="html_33833384ea20fd9d9dbcaa14028d2f77" style="width: 100.0%; height: 100.0%;"><b>Budapest</b> (HU)<br>Population: 1,686,222<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 11.1C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_1a88e2c9f6f82febc7a5e22d69f72a1a.setContent(html_33833384ea20fd9d9dbcaa14028d2f77);
+            
+        
+
+        circle_marker_c372db086ebef98f4896004aff57ae42.bindPopup(popup_1a88e2c9f6f82febc7a5e22d69f72a1a)
+        ;
+
+        
+    
+    
+            circle_marker_c372db086ebef98f4896004aff57ae42.bindTooltip(
+                `<div>
+                     Budapest: +1.1C anomaly | pop 1.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04f854c0a5557400231cb5e908cc97a8 = L.circleMarker(
+                [54.6870458, 25.2829111],
+                {"bubblingMouseEvents": true, "color": "#be8949", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#be8949", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a2905d707a61213e83df59ab0a9c8771 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_fb54f7992f67c85acc6f87cb4bafc829 = $(`<div id="html_fb54f7992f67c85acc6f87cb4bafc829" style="width: 100.0%; height: 100.0%;"><b>Vilnius</b> (LT)<br>Population: 581,475<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 7.3C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_a2905d707a61213e83df59ab0a9c8771.setContent(html_fb54f7992f67c85acc6f87cb4bafc829);
+            
+        
+
+        circle_marker_04f854c0a5557400231cb5e908cc97a8.bindPopup(popup_a2905d707a61213e83df59ab0a9c8771)
+        ;
+
+        
+    
+    
+            circle_marker_04f854c0a5557400231cb5e908cc97a8.bindTooltip(
+                `<div>
+                     Vilnius: +1.0C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0d527035fbf0d8479a181acbd5e6d06 = L.circleMarker(
+                [59.9133301, 10.7389701],
+                {"bubblingMouseEvents": true, "color": "#818680", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#818680", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_644cb6c0186787d9caed52984eab4396 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_b2cd8a4676b178c7f933f2ad2da23619 = $(`<div id="html_b2cd8a4676b178c7f933f2ad2da23619" style="width: 100.0%; height: 100.0%;"><b>Oslo</b> (NO)<br>Population: 1,110,887<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.3C</b><br>Baseline T2m (daily mean): 5.5C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_644cb6c0186787d9caed52984eab4396.setContent(html_b2cd8a4676b178c7f933f2ad2da23619);
+            
+        
+
+        circle_marker_f0d527035fbf0d8479a181acbd5e6d06.bindPopup(popup_644cb6c0186787d9caed52984eab4396)
+        ;
+
+        
+    
+    
+            circle_marker_f0d527035fbf0d8479a181acbd5e6d06.bindTooltip(
+                `<div>
+                     Oslo: +0.3C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6ca6f3228cfbec1de4c486015b96e77 = L.circleMarker(
+                [51.2211097, 4.3997081],
+                {"bubblingMouseEvents": true, "color": "#b48853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b48853", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_88a8f92f8f7af1017c4502ecae1d2aa4 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_847c7bb49151543775eb0ece3dd6403d = $(`<div id="html_847c7bb49151543775eb0ece3dd6403d" style="width: 100.0%; height: 100.0%;"><b>Antwerp</b> (BE)<br>Population: 525,935<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 11.1C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_88a8f92f8f7af1017c4502ecae1d2aa4.setContent(html_847c7bb49151543775eb0ece3dd6403d);
+            
+        
+
+        circle_marker_d6ca6f3228cfbec1de4c486015b96e77.bindPopup(popup_88a8f92f8f7af1017c4502ecae1d2aa4)
+        ;
+
+        
+    
+    
+            circle_marker_d6ca6f3228cfbec1de4c486015b96e77.bindTooltip(
+                `<div>
+                     Antwerp: +0.9C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3726279b398cf0c96479bdcb09bac252 = L.circleMarker(
+                [50.0874654, 14.4212535],
+                {"bubblingMouseEvents": true, "color": "#bb894d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bb894d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_370637d10fd127593ca0161939f2f464 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_85fb2d6eb680ea77a8dba609eb0f86b9 = $(`<div id="html_85fb2d6eb680ea77a8dba609eb0f86b9" style="width: 100.0%; height: 100.0%;"><b>Prague</b> (CZ)<br>Population: 1,275,406<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 9.7C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_370637d10fd127593ca0161939f2f464.setContent(html_85fb2d6eb680ea77a8dba609eb0f86b9);
+            
+        
+
+        circle_marker_3726279b398cf0c96479bdcb09bac252.bindPopup(popup_370637d10fd127593ca0161939f2f464)
+        ;
+
+        
+    
+    
+            circle_marker_3726279b398cf0c96479bdcb09bac252.bindTooltip(
+                `<div>
+                     Prague: +0.9C anomaly | pop 1.3M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2946ed05b647355e1efaeab92e824eb9 = L.circleMarker(
+                [55.6867243, 12.5700724],
+                {"bubblingMouseEvents": true, "color": "#ae8858", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ae8858", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_5484becd6489d357672f9618747a52ca = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_b58f7172fc91dd1483c1684f34c57375 = $(`<div id="html_b58f7172fc91dd1483c1684f34c57375" style="width: 100.0%; height: 100.0%;"><b>Copenhagen</b> (DK)<br>Population: 613,288<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 9.0C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_5484becd6489d357672f9618747a52ca.setContent(html_b58f7172fc91dd1483c1684f34c57375);
+            
+        
+
+        circle_marker_2946ed05b647355e1efaeab92e824eb9.bindPopup(popup_5484becd6489d357672f9618747a52ca)
+        ;
+
+        
+    
+    
+            circle_marker_2946ed05b647355e1efaeab92e824eb9.bindTooltip(
+                `<div>
+                     Copenhagen: +0.8C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2ee58875e829d933d5a3eb2d35e99e71 = L.circleMarker(
+                [41.3281482, 19.8184435],
+                {"bubblingMouseEvents": true, "color": "#c88941", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c88941", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_83273f38752c482d14202219c5440ece = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_cb54e176752613ae8aaadbaa10bdfe26 = $(`<div id="html_cb54e176752613ae8aaadbaa10bdfe26" style="width: 100.0%; height: 100.0%;"><b>Tirana</b> (AL)<br>Population: 557,422<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 14.9C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_83273f38752c482d14202219c5440ece.setContent(html_cb54e176752613ae8aaadbaa10bdfe26);
+            
+        
+
+        circle_marker_2ee58875e829d933d5a3eb2d35e99e71.bindPopup(popup_83273f38752c482d14202219c5440ece)
+        ;
+
+        
+    
+    
+            circle_marker_2ee58875e829d933d5a3eb2d35e99e71.bindTooltip(
+                `<div>
+                     Tirana: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1ce29b8135e74859e90a18644848fdf = L.circleMarker(
+                [48.2083537, 16.3725042],
+                {"bubblingMouseEvents": true, "color": "#de8b2d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#de8b2d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_fa78141af01d6bc7ac7930cc4b913cb3 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_03a5d3cf6122960a2067516caf69e260 = $(`<div id="html_03a5d3cf6122960a2067516caf69e260" style="width: 100.0%; height: 100.0%;"><b>Vienna</b> (AT)<br>Population: 2,042,036<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 10.6C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_fa78141af01d6bc7ac7930cc4b913cb3.setContent(html_03a5d3cf6122960a2067516caf69e260);
+            
+        
+
+        circle_marker_c1ce29b8135e74859e90a18644848fdf.bindPopup(popup_fa78141af01d6bc7ac7930cc4b913cb3)
+        ;
+
+        
+    
+    
+            circle_marker_c1ce29b8135e74859e90a18644848fdf.bindTooltip(
+                `<div>
+                     Vienna: +1.3C anomaly | pop 2.0M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae5021b03dd21586c322e3151e0ff8b2 = L.circleMarker(
+                [51.1089776, 17.0326689],
+                {"bubblingMouseEvents": true, "color": "#c38945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c38945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_ee89b75633d378e4d4dcf9d2f3fbad27 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_5a8602d41a3220f391743bd941dee399 = $(`<div id="html_5a8602d41a3220f391743bd941dee399" style="width: 100.0%; height: 100.0%;"><b>Wrocław</b> (PL)<br>Population: 893,506<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 9.8C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_ee89b75633d378e4d4dcf9d2f3fbad27.setContent(html_5a8602d41a3220f391743bd941dee399);
+            
+        
+
+        circle_marker_ae5021b03dd21586c322e3151e0ff8b2.bindPopup(popup_ee89b75633d378e4d4dcf9d2f3fbad27)
+        ;
+
+        
+    
+    
+            circle_marker_ae5021b03dd21586c322e3151e0ff8b2.bindTooltip(
+                `<div>
+                     Wrocław: +1.0C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee1e8ae2d33d10e2de81deb77d555e12 = L.circleMarker(
+                [52.4082663, 16.9335199],
+                {"bubblingMouseEvents": true, "color": "#c68942", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c68942", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_c2898dd3e90ff1609dc33fdfe1c536c9 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_18838b684db4c7f9c81abff75c426c54 = $(`<div id="html_18838b684db4c7f9c81abff75c426c54" style="width: 100.0%; height: 100.0%;"><b>Poznan</b> (PL)<br>Population: 530,464<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 9.6C<br>National anomaly percentile: 25%</div>`)[0];
+                popup_c2898dd3e90ff1609dc33fdfe1c536c9.setContent(html_18838b684db4c7f9c81abff75c426c54);
+            
+        
+
+        circle_marker_ee1e8ae2d33d10e2de81deb77d555e12.bindPopup(popup_c2898dd3e90ff1609dc33fdfe1c536c9)
+        ;
+
+        
+    
+    
+            circle_marker_ee1e8ae2d33d10e2de81deb77d555e12.bindTooltip(
+                `<div>
+                     Poznan: +1.1C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1bad5d2aa8c919402216e39a2b84da23 = L.circleMarker(
+                [51.7687323, 19.4569911],
+                {"bubblingMouseEvents": true, "color": "#cb8a3e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cb8a3e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a7a0af6395d18812e8317790457d8a97 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_16642fd4c10b2800b0ba402c05c85fa5 = $(`<div id="html_16642fd4c10b2800b0ba402c05c85fa5" style="width: 100.0%; height: 100.0%;"><b>Łódź</b> (PL)<br>Population: 667,923<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 9.1C<br>National anomaly percentile: 50%</div>`)[0];
+                popup_a7a0af6395d18812e8317790457d8a97.setContent(html_16642fd4c10b2800b0ba402c05c85fa5);
+            
+        
+
+        circle_marker_1bad5d2aa8c919402216e39a2b84da23.bindPopup(popup_a7a0af6395d18812e8317790457d8a97)
+        ;
+
+        
+    
+    
+            circle_marker_1bad5d2aa8c919402216e39a2b84da23.bindTooltip(
+                `<div>
+                     Łódź: +1.1C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05565912a2a834187c1a1bc805698c2d = L.circleMarker(
+                [50.0619474, 19.9368564],
+                {"bubblingMouseEvents": true, "color": "#cb8a3e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cb8a3e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_4b70e9df74e02e62f2128915f0a9be16 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_3bbcabb7d612af342aa325b5c3ef71b9 = $(`<div id="html_3bbcabb7d612af342aa325b5c3ef71b9" style="width: 100.0%; height: 100.0%;"><b>Cracow</b> (PL)<br>Population: 780,796<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 8.8C<br>National anomaly percentile: 75%</div>`)[0];
+                popup_4b70e9df74e02e62f2128915f0a9be16.setContent(html_3bbcabb7d612af342aa325b5c3ef71b9);
+            
+        
+
+        circle_marker_05565912a2a834187c1a1bc805698c2d.bindPopup(popup_4b70e9df74e02e62f2128915f0a9be16)
+        ;
+
+        
+    
+    
+            circle_marker_05565912a2a834187c1a1bc805698c2d.bindTooltip(
+                `<div>
+                     Cracow: +1.1C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c1d6f72260a18d677b0d770de4828c3 = L.circleMarker(
+                [52.2319581, 21.0067249],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d58a36", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_e63e28d45ad751d84fbc879d59d456af = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_d07784acbfe9a93a8d78b9eede58f2fc = $(`<div id="html_d07784acbfe9a93a8d78b9eede58f2fc" style="width: 100.0%; height: 100.0%;"><b>Warsaw</b> (PL)<br>Population: 1,863,845<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 9.3C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_e63e28d45ad751d84fbc879d59d456af.setContent(html_d07784acbfe9a93a8d78b9eede58f2fc);
+            
+        
+
+        circle_marker_5c1d6f72260a18d677b0d770de4828c3.bindPopup(popup_e63e28d45ad751d84fbc879d59d456af)
+        ;
+
+        
+    
+    
+            circle_marker_5c1d6f72260a18d677b0d770de4828c3.bindTooltip(
+                `<div>
+                     Warsaw: +1.2C anomaly | pop 1.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9cb0f5aee980435966e37a6cede1c637 = L.circleMarker(
+                [55.861155, -4.2501687],
+                {"bubblingMouseEvents": true, "color": "#a38762", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a38762", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_03227ec6030bc246fde942602ea6dc97 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_7f59d661118b9c346d293ee29057cf81 = $(`<div id="html_7f59d661118b9c346d293ee29057cf81" style="width: 100.0%; height: 100.0%;"><b>Glasgow</b> (GB)<br>Population: 606,340<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 8.5C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_03227ec6030bc246fde942602ea6dc97.setContent(html_7f59d661118b9c346d293ee29057cf81);
+            
+        
+
+        circle_marker_9cb0f5aee980435966e37a6cede1c637.bindPopup(popup_03227ec6030bc246fde942602ea6dc97)
+        ;
+
+        
+    
+    
+            circle_marker_9cb0f5aee980435966e37a6cede1c637.bindTooltip(
+                `<div>
+                     Glasgow: +0.7C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1360c399ac56076d6e0b027141a547e5 = L.circleMarker(
+                [53.4794892, -2.2451148],
+                {"bubblingMouseEvents": true, "color": "#a6885f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a6885f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_311aa6a2259509dafbc8fabf412a5ab3 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e9b7082a5f2b14fe34213033b86cd1b9 = $(`<div id="html_e9b7082a5f2b14fe34213033b86cd1b9" style="width: 100.0%; height: 100.0%;"><b>Manchester</b> (GB)<br>Population: 503,100<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 9.2C<br>National anomaly percentile: 25%</div>`)[0];
+                popup_311aa6a2259509dafbc8fabf412a5ab3.setContent(html_e9b7082a5f2b14fe34213033b86cd1b9);
+            
+        
+
+        circle_marker_1360c399ac56076d6e0b027141a547e5.bindPopup(popup_311aa6a2259509dafbc8fabf412a5ab3)
+        ;
+
+        
+    
+    
+            circle_marker_1360c399ac56076d6e0b027141a547e5.bindTooltip(
+                `<div>
+                     Manchester: +0.7C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f76b4c347ebc27967f315d73fa570c04 = L.circleMarker(
+                [51.5074456, -0.1277653],
+                {"bubblingMouseEvents": true, "color": "#a8885e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8885e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_ed506c998822ec7cc5cf10df27f8cb1b = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_6f48a04ec9e2edd84935d532b9431080 = $(`<div id="html_6f48a04ec9e2edd84935d532b9431080" style="width: 100.0%; height: 100.0%;"><b>London</b> (GB)<br>Population: 8,908,083<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 10.7C<br>National anomaly percentile: 50%</div>`)[0];
+                popup_ed506c998822ec7cc5cf10df27f8cb1b.setContent(html_6f48a04ec9e2edd84935d532b9431080);
+            
+        
+
+        circle_marker_f76b4c347ebc27967f315d73fa570c04.bindPopup(popup_ed506c998822ec7cc5cf10df27f8cb1b)
+        ;
+
+        
+    
+    
+            circle_marker_f76b4c347ebc27967f315d73fa570c04.bindTooltip(
+                `<div>
+                     London: +0.7C anomaly | pop 8.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b00f357cd02cccb1ce54c02f8acd64b = L.circleMarker(
+                [53.7974185, -1.5437941],
+                {"bubblingMouseEvents": true, "color": "#a8885e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a8885e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_12ea1950485dd08d51d06231b88ec70b = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_68ffeeb0b6f7904bb1228adf57466079 = $(`<div id="html_68ffeeb0b6f7904bb1228adf57466079" style="width: 100.0%; height: 100.0%;"><b>Leeds</b> (GB)<br>Population: 766,399<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 9.5C<br>National anomaly percentile: 75%</div>`)[0];
+                popup_12ea1950485dd08d51d06231b88ec70b.setContent(html_68ffeeb0b6f7904bb1228adf57466079);
+            
+        
+
+        circle_marker_5b00f357cd02cccb1ce54c02f8acd64b.bindPopup(popup_12ea1950485dd08d51d06231b88ec70b)
+        ;
+
+        
+    
+    
+            circle_marker_5b00f357cd02cccb1ce54c02f8acd64b.bindTooltip(
+                `<div>
+                     Leeds: +0.7C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac90a181e0a94e79ae39a1979218f544 = L.circleMarker(
+                [53.3806626, -1.4702278],
+                {"bubblingMouseEvents": true, "color": "#aa885c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#aa885c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6a8df8ff80fb2ec27d911bc93d1c8962 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_d906d937c7a096272751c40aef0ba4b1 = $(`<div id="html_d906d937c7a096272751c40aef0ba4b1" style="width: 100.0%; height: 100.0%;"><b>Sheffield</b> (GB)<br>Population: 547,000<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 9.2C<br>National anomaly percentile: 100%</div>`)[0];
+                popup_6a8df8ff80fb2ec27d911bc93d1c8962.setContent(html_d906d937c7a096272751c40aef0ba4b1);
+            
+        
+
+        circle_marker_ac90a181e0a94e79ae39a1979218f544.bindPopup(popup_6a8df8ff80fb2ec27d911bc93d1c8962)
+        ;
+
+        
+    
+    
+            circle_marker_ac90a181e0a94e79ae39a1979218f544.bindTooltip(
+                `<div>
+                     Sheffield: +0.8C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e9afee8cb7820ad0799072a665002a5 = L.circleMarker(
+                [52.0799838, 4.3113461],
+                {"bubblingMouseEvents": true, "color": "#b48853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b48853", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_9f03a68eec2a0a4884598789c3a5cbe2 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_0a554af6e949154ab319382452e66b9a = $(`<div id="html_0a554af6e949154ab319382452e66b9a" style="width: 100.0%; height: 100.0%;"><b>The Hague</b> (NL)<br>Population: 525,745<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.9C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_9f03a68eec2a0a4884598789c3a5cbe2.setContent(html_0a554af6e949154ab319382452e66b9a);
+            
+        
+
+        circle_marker_0e9afee8cb7820ad0799072a665002a5.bindPopup(popup_9f03a68eec2a0a4884598789c3a5cbe2)
+        ;
+
+        
+    
+    
+            circle_marker_0e9afee8cb7820ad0799072a665002a5.bindTooltip(
+                `<div>
+                     The Hague: +0.9C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2168f20aa36cc0979dde988f614297f4 = L.circleMarker(
+                [51.9244424, 4.47775],
+                {"bubblingMouseEvents": true, "color": "#b48853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b48853", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_e7cea95444c7cd6ac71b14e7c9efa649 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_c8200e6e46f090e2fb402903519dddbc = $(`<div id="html_c8200e6e46f090e2fb402903519dddbc" style="width: 100.0%; height: 100.0%;"><b>Rotterdam</b> (NL)<br>Population: 572,392<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.8C<br>National anomaly percentile: 50%</div>`)[0];
+                popup_e7cea95444c7cd6ac71b14e7c9efa649.setContent(html_c8200e6e46f090e2fb402903519dddbc);
+            
+        
+
+        circle_marker_2168f20aa36cc0979dde988f614297f4.bindPopup(popup_e7cea95444c7cd6ac71b14e7c9efa649)
+        ;
+
+        
+    
+    
+            circle_marker_2168f20aa36cc0979dde988f614297f4.bindTooltip(
+                `<div>
+                     Rotterdam: +0.9C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f94bce3bb8949a16277caa7abf6116f4 = L.circleMarker(
+                [52.3730796, 4.8924534],
+                {"bubblingMouseEvents": true, "color": "#b68851", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b68851", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_f282561ac3c56d36473d5457ca1e25cd = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_51d8237b0127697139417aa3a726c234 = $(`<div id="html_51d8237b0127697139417aa3a726c234" style="width: 100.0%; height: 100.0%;"><b>Amsterdam</b> (NL)<br>Population: 881,933<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.6C<br>National anomaly percentile: 100%</div>`)[0];
+                popup_f282561ac3c56d36473d5457ca1e25cd.setContent(html_51d8237b0127697139417aa3a726c234);
+            
+        
+
+        circle_marker_f94bce3bb8949a16277caa7abf6116f4.bindPopup(popup_f282561ac3c56d36473d5457ca1e25cd)
+        ;
+
+        
+    
+    
+            circle_marker_f94bce3bb8949a16277caa7abf6116f4.bindTooltip(
+                `<div>
+                     Amsterdam: +0.9C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a165ef44562ff12c0270dd650443bfda = L.circleMarker(
+                [59.3251172, 18.0710935],
+                {"bubblingMouseEvents": true, "color": "#918772", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#918772", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_3fe6d7acaf94bbc76afd4f938b065390 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_fc48e59c4663ff382a29a527e7748e1c = $(`<div id="html_fc48e59c4663ff382a29a527e7748e1c" style="width: 100.0%; height: 100.0%;"><b>Stockholm</b> (SE)<br>Population: 984,748<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.5C</b><br>Baseline T2m (daily mean): 7.3C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_3fe6d7acaf94bbc76afd4f938b065390.setContent(html_fc48e59c4663ff382a29a527e7748e1c);
+            
+        
+
+        circle_marker_a165ef44562ff12c0270dd650443bfda.bindPopup(popup_3fe6d7acaf94bbc76afd4f938b065390)
+        ;
+
+        
+    
+    
+            circle_marker_a165ef44562ff12c0270dd650443bfda.bindTooltip(
+                `<div>
+                     Stockholm: +0.5C anomaly | pop 1.0M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a976c901f26b54c288253fe835eca990 = L.circleMarker(
+                [57.7072326, 11.9670171],
+                {"bubblingMouseEvents": true, "color": "#98876c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#98876c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_be4b0ce0129dee7ae232316d4d6d4130 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_f8c964a9ecb761af3e8d5c3db7d3dbfe = $(`<div id="html_f8c964a9ecb761af3e8d5c3db7d3dbfe" style="width: 100.0%; height: 100.0%;"><b>Gothenburg</b> (SE)<br>Population: 607,882<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.6C</b><br>Baseline T2m (daily mean): 8.1C<br>National anomaly percentile: 100%</div>`)[0];
+                popup_be4b0ce0129dee7ae232316d4d6d4130.setContent(html_f8c964a9ecb761af3e8d5c3db7d3dbfe);
+            
+        
+
+        circle_marker_a976c901f26b54c288253fe835eca990.bindPopup(popup_be4b0ce0129dee7ae232316d4d6d4130)
+        ;
+
+        
+    
+    
+            circle_marker_a976c901f26b54c288253fe835eca990.bindTooltip(
+                `<div>
+                     Gothenburg: +0.6C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4cd3e81ee32b5bf0ca11862b24836eb9 = L.circleMarker(
+                [60.1666204, 24.9435408],
+                {"bubblingMouseEvents": true, "color": "#a18764", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a18764", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6d6aa26ca889dc789a5f258c2612dc44 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_1ce31cc8821287367452342be83f5f85 = $(`<div id="html_1ce31cc8821287367452342be83f5f85" style="width: 100.0%; height: 100.0%;"><b>Helsinki</b> (FI)<br>Population: 695,526<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 6.0C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_6d6aa26ca889dc789a5f258c2612dc44.setContent(html_1ce31cc8821287367452342be83f5f85);
+            
+        
+
+        circle_marker_4cd3e81ee32b5bf0ca11862b24836eb9.bindPopup(popup_6d6aa26ca889dc789a5f258c2612dc44)
+        ;
+
+        
+    
+    
+            circle_marker_4cd3e81ee32b5bf0ca11862b24836eb9.bindTooltip(
+                `<div>
+                     Helsinki: +0.7C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3146ab5b13d1e60a2c60b2a2321c3b51 = L.circleMarker(
+                [44.4361414, 26.102684],
+                {"bubblingMouseEvents": true, "color": "#ee871e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee871e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_9cf570e78cd13ece8d484f3e56e1e885 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_b62f68368784ee1a16cc34ea1557d3bb = $(`<div id="html_b62f68368784ee1a16cc34ea1557d3bb" style="width: 100.0%; height: 100.0%;"><b>Bucharest</b> (RO)<br>Population: 1,883,425<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.6C</b><br>Baseline T2m (daily mean): 11.9C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_9cf570e78cd13ece8d484f3e56e1e885.setContent(html_b62f68368784ee1a16cc34ea1557d3bb);
+            
+        
+
+        circle_marker_3146ab5b13d1e60a2c60b2a2321c3b51.bindPopup(popup_9cf570e78cd13ece8d484f3e56e1e885)
+        ;
+
+        
+    
+    
+            circle_marker_3146ab5b13d1e60a2c60b2a2321c3b51.bindTooltip(
+                `<div>
+                     Bucharest: +1.6C anomaly | pop 1.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff3e21df6b8bb2c0bcfb7a0711e49d22 = L.circleMarker(
+                [56.9493977, 24.1051846],
+                {"bubblingMouseEvents": true, "color": "#b28854", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b28854", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_5917b3f9a77776301a37fbfce425b189 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_1aac341d75ac5c8226f8d06ce7ff4408 = $(`<div id="html_1aac341d75ac5c8226f8d06ce7ff4408" style="width: 100.0%; height: 100.0%;"><b>Riga</b> (LV)<br>Population: 588,911<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 7.7C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_5917b3f9a77776301a37fbfce425b189.setContent(html_1aac341d75ac5c8226f8d06ce7ff4408);
+            
+        
+
+        circle_marker_ff3e21df6b8bb2c0bcfb7a0711e49d22.bindPopup(popup_5917b3f9a77776301a37fbfce425b189)
+        ;
+
+        
+    
+    
+            circle_marker_ff3e21df6b8bb2c0bcfb7a0711e49d22.bindTooltip(
+                `<div>
+                     Riga: +0.9C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39e2e8bf090ecb6f473dc60b7e529518 = L.circleMarker(
+                [42.6977028, 23.3217359],
+                {"bubblingMouseEvents": true, "color": "#bd894a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bd894a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_8a27aa88886b9fd26d24eb04a37807b4 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2a320c529c12f91ef71a26d1c21e70e0 = $(`<div id="html_2a320c529c12f91ef71a26d1c21e70e0" style="width: 100.0%; height: 100.0%;"><b>Sofia</b> (BG)<br>Population: 1,286,383<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 9.3C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_8a27aa88886b9fd26d24eb04a37807b4.setContent(html_2a320c529c12f91ef71a26d1c21e70e0);
+            
+        
+
+        circle_marker_39e2e8bf090ecb6f473dc60b7e529518.bindPopup(popup_8a27aa88886b9fd26d24eb04a37807b4)
+        ;
+
+        
+    
+    
+            circle_marker_39e2e8bf090ecb6f473dc60b7e529518.bindTooltip(
+                `<div>
+                     Sofia: +1.0C anomaly | pop 1.3M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6274fc03db0c2c40540973c27edbe743 = L.circleMarker(
+                [53.9024716, 27.5618225],
+                {"bubblingMouseEvents": true, "color": "#be894a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#be894a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_895113861a85ff5b9946c6b3cab431d8 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e4959afdae5bec602e29ab868f18d13f = $(`<div id="html_e4959afdae5bec602e29ab868f18d13f" style="width: 100.0%; height: 100.0%;"><b>Minsk</b> (BY)<br>Population: 1,995,471<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 6.7C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_895113861a85ff5b9946c6b3cab431d8.setContent(html_e4959afdae5bec602e29ab868f18d13f);
+            
+        
+
+        circle_marker_6274fc03db0c2c40540973c27edbe743.bindPopup(popup_895113861a85ff5b9946c6b3cab431d8)
+        ;
+
+        
+    
+    
+            circle_marker_6274fc03db0c2c40540973c27edbe743.bindTooltip(
+                `<div>
+                     Minsk: +1.0C anomaly | pop 2.0M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48f27258db05089b6e1381289c8be0be = L.circleMarker(
+                [53.3493795, -6.2605593],
+                {"bubblingMouseEvents": true, "color": "#a08764", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a08764", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_d29e2838135fc9376dc03bbcdb80b376 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2b73c92fd543ce7ff3d8ff42f4c18483 = $(`<div id="html_2b73c92fd543ce7ff3d8ff42f4c18483" style="width: 100.0%; height: 100.0%;"><b>Dublin</b> (IE)<br>Population: 588,233<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 9.6C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_d29e2838135fc9376dc03bbcdb80b376.setContent(html_2b73c92fd543ce7ff3d8ff42f4c18483);
+            
+        
+
+        circle_marker_48f27258db05089b6e1381289c8be0be.bindPopup(popup_d29e2838135fc9376dc03bbcdb80b376)
+        ;
+
+        
+    
+    
+            circle_marker_48f27258db05089b6e1381289c8be0be.bindTooltip(
+                `<div>
+                     Dublin: +0.7C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e0d6531063360ecf6263c5c951d5fa1 = L.circleMarker(
+                [44.8178131, 20.4568974],
+                {"bubblingMouseEvents": true, "color": "#d88a33", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d88a33", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a0d003211ce5753c4d63dc8d9c57448c = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_90edcc62de8f60d0c23b32d6fc9e9707 = $(`<div id="html_90edcc62de8f60d0c23b32d6fc9e9707" style="width: 100.0%; height: 100.0%;"><b>Belgrade</b> (RS)<br>Population: 1,197,714<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 12.8C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_a0d003211ce5753c4d63dc8d9c57448c.setContent(html_90edcc62de8f60d0c23b32d6fc9e9707);
+            
+        
+
+        circle_marker_5e0d6531063360ecf6263c5c951d5fa1.bindPopup(popup_a0d003211ce5753c4d63dc8d9c57448c)
+        ;
+
+        
+    
+    
+            circle_marker_5e0d6531063360ecf6263c5c951d5fa1.bindTooltip(
+                `<div>
+                     Belgrade: +1.3C anomaly | pop 1.2M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddcdceab7994ea1dd09d58d0d2d4b2c8 = L.circleMarker(
+                [48.8534951, 2.3483915],
+                {"bubblingMouseEvents": true, "color": "#b58852", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b58852", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_1798c455abb6346c82c32c472093b312 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_8b2d7bc4a3b840ecd9f2a79b58829b3f = $(`<div id="html_8b2d7bc4a3b840ecd9f2a79b58829b3f" style="width: 100.0%; height: 100.0%;"><b>Paris</b> (FR)<br>Population: 2,133,111<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 11.6C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_1798c455abb6346c82c32c472093b312.setContent(html_8b2d7bc4a3b840ecd9f2a79b58829b3f);
+            
+        
+
+        circle_marker_ddcdceab7994ea1dd09d58d0d2d4b2c8.bindPopup(popup_1798c455abb6346c82c32c472093b312)
+        ;
+
+        
+    
+    
+            circle_marker_ddcdceab7994ea1dd09d58d0d2d4b2c8.bindTooltip(
+                `<div>
+                     Paris: +0.9C anomaly | pop 2.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_97d044b0f73ed92d34a9179415998e70 = L.circleMarker(
+                [43.2963986, 5.3777888],
+                {"bubblingMouseEvents": true, "color": "#c38945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c38945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_84e28021de1c1f022c6df2598a8cc909 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_d820e59e59c00f8d7577abadf7ef45ff = $(`<div id="html_d820e59e59c00f8d7577abadf7ef45ff" style="width: 100.0%; height: 100.0%;"><b>Marseille</b> (FR)<br>Population: 873,076<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 15.2C<br>National anomaly percentile: 33%</div>`)[0];
+                popup_84e28021de1c1f022c6df2598a8cc909.setContent(html_d820e59e59c00f8d7577abadf7ef45ff);
+            
+        
+
+        circle_marker_97d044b0f73ed92d34a9179415998e70.bindPopup(popup_84e28021de1c1f022c6df2598a8cc909)
+        ;
+
+        
+    
+    
+            circle_marker_97d044b0f73ed92d34a9179415998e70.bindTooltip(
+                `<div>
+                     Marseille: +1.0C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f45400dd54bedcb57748a36a3dfe71b = L.circleMarker(
+                [45.7578137, 4.8320114],
+                {"bubblingMouseEvents": true, "color": "#c88941", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c88941", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_af3f6877084a4c681fd06d9ad9ea8ef8 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_59220ad8e41b171d201bf9771b5991e7 = $(`<div id="html_59220ad8e41b171d201bf9771b5991e7" style="width: 100.0%; height: 100.0%;"><b>Lyon</b> (FR)<br>Population: 522,250<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 11.8C<br>National anomaly percentile: 67%</div>`)[0];
+                popup_af3f6877084a4c681fd06d9ad9ea8ef8.setContent(html_59220ad8e41b171d201bf9771b5991e7);
+            
+        
+
+        circle_marker_8f45400dd54bedcb57748a36a3dfe71b.bindPopup(popup_af3f6877084a4c681fd06d9ad9ea8ef8)
+        ;
+
+        
+    
+    
+            circle_marker_8f45400dd54bedcb57748a36a3dfe71b.bindTooltip(
+                `<div>
+                     Lyon: +1.1C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16c6badc85de4ac5cb595ec214af15a7 = L.circleMarker(
+                [43.6044638, 1.4442433],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38a37", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_c80a290963462d0a726409090866a63a = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_7a5527d79790b342c444709fd8516571 = $(`<div id="html_7a5527d79790b342c444709fd8516571" style="width: 100.0%; height: 100.0%;"><b>Toulouse</b> (FR)<br>Population: 504,078<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 13.7C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_c80a290963462d0a726409090866a63a.setContent(html_7a5527d79790b342c444709fd8516571);
+            
+        
+
+        circle_marker_16c6badc85de4ac5cb595ec214af15a7.bindPopup(popup_c80a290963462d0a726409090866a63a)
+        ;
+
+        
+    
+    
+            circle_marker_16c6badc85de4ac5cb595ec214af15a7.bindTooltip(
+                `<div>
+                     Toulouse: +1.2C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1db805832ce0ecc9879733bfb688eae2 = L.circleMarker(
+                [40.6403167, 22.9352716],
+                {"bubblingMouseEvents": true, "color": "#c38945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c38945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_591377f68222bb3ae6f4e460113ad838 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_bda8caa0ede7c7b64f5e39a4c108ed6b = $(`<div id="html_bda8caa0ede7c7b64f5e39a4c108ed6b" style="width: 100.0%; height: 100.0%;"><b>Thessaloniki</b> (GR)<br>Population: 790,824<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 14.6C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_591377f68222bb3ae6f4e460113ad838.setContent(html_bda8caa0ede7c7b64f5e39a4c108ed6b);
+            
+        
+
+        circle_marker_1db805832ce0ecc9879733bfb688eae2.bindPopup(popup_591377f68222bb3ae6f4e460113ad838)
+        ;
+
+        
+    
+    
+            circle_marker_1db805832ce0ecc9879733bfb688eae2.bindTooltip(
+                `<div>
+                     Thessaloniki: +1.0C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa7921378efca1205859c6d89b59697d = L.circleMarker(
+                [37.9755648, 23.7348324],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c58944", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_48579f3731acbdcf5314bb3e9c9cb36e = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_762ca97738c71b21b49164db310afc2d = $(`<div id="html_762ca97738c71b21b49164db310afc2d" style="width: 100.0%; height: 100.0%;"><b>Athens</b> (GR)<br>Population: 3,090,508<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 17.5C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_48579f3731acbdcf5314bb3e9c9cb36e.setContent(html_762ca97738c71b21b49164db310afc2d);
+            
+        
+
+        circle_marker_aa7921378efca1205859c6d89b59697d.bindPopup(popup_48579f3731acbdcf5314bb3e9c9cb36e)
+        ;
+
+        
+    
+    
+            circle_marker_aa7921378efca1205859c6d89b59697d.bindTooltip(
+                `<div>
+                     Athens: +1.1C anomaly | pop 3.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e2d14637350e158af2ee3d8b4ce3d81 = L.circleMarker(
+                [38.7077507, -9.1365919],
+                {"bubblingMouseEvents": true, "color": "#96876e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#96876e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_db7366feb4e642f80a58cc9d67f0444e = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_8d0229048a6f891a8185e34ef4783fea = $(`<div id="html_8d0229048a6f891a8185e34ef4783fea" style="width: 100.0%; height: 100.0%;"><b>Lisbon</b> (PT)<br>Population: 552,700<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.6C</b><br>Baseline T2m (daily mean): 16.3C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_db7366feb4e642f80a58cc9d67f0444e.setContent(html_8d0229048a6f891a8185e34ef4783fea);
+            
+        
+
+        circle_marker_6e2d14637350e158af2ee3d8b4ce3d81.bindPopup(popup_db7366feb4e642f80a58cc9d67f0444e)
+        ;
+
+        
+    
+    
+            circle_marker_6e2d14637350e158af2ee3d8b4ce3d81.bindTooltip(
+                `<div>
+                     Lisbon: +0.6C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29c1e6ea909f6afea7ee39c9e72237a6 = L.circleMarker(
+                [39.9207759, 32.8540497],
+                {"bubblingMouseEvents": true, "color": "#a38762", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a38762", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_2ab3401b79fba41f282ea78a428490ed = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_536d811a6000640cbde65a8a097594f7 = $(`<div id="html_536d811a6000640cbde65a8a097594f7" style="width: 100.0%; height: 100.0%;"><b>Ankara</b> (TR)<br>Population: 5,864,049<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 11.3C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_2ab3401b79fba41f282ea78a428490ed.setContent(html_536d811a6000640cbde65a8a097594f7);
+            
+        
+
+        circle_marker_29c1e6ea909f6afea7ee39c9e72237a6.bindPopup(popup_2ab3401b79fba41f282ea78a428490ed)
+        ;
+
+        
+    
+    
+            circle_marker_29c1e6ea909f6afea7ee39c9e72237a6.bindTooltip(
+                `<div>
+                     Ankara: +0.7C anomaly | pop 5.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36a8d2f67c88794d1724c14b92c8c353 = L.circleMarker(
+                [40.1825734, 29.0675039],
+                {"bubblingMouseEvents": true, "color": "#ac885a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ac885a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_e98e2dbbd9154e300dfc94df9e1c961f = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_a694b060da196d774e538992c9b9f466 = $(`<div id="html_a694b060da196d774e538992c9b9f466" style="width: 100.0%; height: 100.0%;"><b>Bursa</b> (TR)<br>Population: 3,238,618<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 13.5C<br>National anomaly percentile: 3%</div>`)[0];
+                popup_e98e2dbbd9154e300dfc94df9e1c961f.setContent(html_a694b060da196d774e538992c9b9f466);
+            
+        
+
+        circle_marker_36a8d2f67c88794d1724c14b92c8c353.bindPopup(popup_e98e2dbbd9154e300dfc94df9e1c961f)
+        ;
+
+        
+    
+    
+            circle_marker_36a8d2f67c88794d1724c14b92c8c353.bindTooltip(
+                `<div>
+                     Bursa: +0.8C anomaly | pop 3.2M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09b7af51029095862e5a345c77454178 = L.circleMarker(
+                [40.7653892, 29.9407361],
+                {"bubblingMouseEvents": true, "color": "#ac885a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ac885a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_206a42058a0f3343b204e66c905ca562 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_bb1cc493dc347ddf1d0f96fec302c4ac = $(`<div id="html_bb1cc493dc347ddf1d0f96fec302c4ac" style="width: 100.0%; height: 100.0%;"><b>Kocaeli</b> (TR)<br>Population: 2,079,072<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 12.5C<br>National anomaly percentile: 7%</div>`)[0];
+                popup_206a42058a0f3343b204e66c905ca562.setContent(html_bb1cc493dc347ddf1d0f96fec302c4ac);
+            
+        
+
+        circle_marker_09b7af51029095862e5a345c77454178.bindPopup(popup_206a42058a0f3343b204e66c905ca562)
+        ;
+
+        
+    
+    
+            circle_marker_09b7af51029095862e5a345c77454178.bindTooltip(
+                `<div>
+                     Kocaeli: +0.8C anomaly | pop 2.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4aab89ed7575c66992c9fd2013b89e0b = L.circleMarker(
+                [40.7726291, 30.4038575],
+                {"bubblingMouseEvents": true, "color": "#ac885a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ac885a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6bfaf6d75c12d65632415cb832ac1654 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_845e25cd87192a92b411f1b4fe51de10 = $(`<div id="html_845e25cd87192a92b411f1b4fe51de10" style="width: 100.0%; height: 100.0%;"><b>Sakarya</b> (TR)<br>Population: 1,110,735<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 12.6C<br>National anomaly percentile: 10%</div>`)[0];
+                popup_6bfaf6d75c12d65632415cb832ac1654.setContent(html_845e25cd87192a92b411f1b4fe51de10);
+            
+        
+
+        circle_marker_4aab89ed7575c66992c9fd2013b89e0b.bindPopup(popup_6bfaf6d75c12d65632415cb832ac1654)
+        ;
+
+        
+    
+    
+            circle_marker_4aab89ed7575c66992c9fd2013b89e0b.bindTooltip(
+                `<div>
+                     Sakarya: +0.8C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7317833abba44c2c18ec0fc2b5d213b3 = L.circleMarker(
+                [38.7219011, 35.4873214],
+                {"bubblingMouseEvents": true, "color": "#ad8859", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ad8859", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_f0ed5b80bdc6461cc2044f92e3a78aa6 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_8eb89363a0e254a1461f3973df45958e = $(`<div id="html_8eb89363a0e254a1461f3973df45958e" style="width: 100.0%; height: 100.0%;"><b>Kayseri</b> (TR)<br>Population: 1,389,680<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 9.6C<br>National anomaly percentile: 14%</div>`)[0];
+                popup_f0ed5b80bdc6461cc2044f92e3a78aa6.setContent(html_8eb89363a0e254a1461f3973df45958e);
+            
+        
+
+        circle_marker_7317833abba44c2c18ec0fc2b5d213b3.bindPopup(popup_f0ed5b80bdc6461cc2044f92e3a78aa6)
+        ;
+
+        
+    
+    
+            circle_marker_7317833abba44c2c18ec0fc2b5d213b3.bindTooltip(
+                `<div>
+                     Kayseri: +0.8C anomaly | pop 1.4M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7140ee9265c9b56424c017077e140dc = L.circleMarker(
+                [37.872734, 32.4924376],
+                {"bubblingMouseEvents": true, "color": "#b08856", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b08856", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_9beb926606b272ca13263cd00a41e127 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_9779190d78b4859c7421cff384a70c6a = $(`<div id="html_9779190d78b4859c7421cff384a70c6a" style="width: 100.0%; height: 100.0%;"><b>Konya</b> (TR)<br>Population: 2,161,303<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 12.1C<br>National anomaly percentile: 17%</div>`)[0];
+                popup_9beb926606b272ca13263cd00a41e127.setContent(html_9779190d78b4859c7421cff384a70c6a);
+            
+        
+
+        circle_marker_b7140ee9265c9b56424c017077e140dc.bindPopup(popup_9beb926606b272ca13263cd00a41e127)
+        ;
+
+        
+    
+    
+            circle_marker_b7140ee9265c9b56424c017077e140dc.bindTooltip(
+                `<div>
+                     Konya: +0.8C anomaly | pop 2.2M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8d575d4d195d69753170ab034e54882 = L.circleMarker(
+                [41.0054605, 39.7301463],
+                {"bubblingMouseEvents": true, "color": "#b48853", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b48853", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_fd3ed8639f1db26b643eaa195cdc6af3 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2d9135c0b7aa5c2526d3ed46039544cd = $(`<div id="html_2d9135c0b7aa5c2526d3ed46039544cd" style="width: 100.0%; height: 100.0%;"><b>Trabzon</b> (TR)<br>Population: 816,684<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 13.2C<br>National anomaly percentile: 21%</div>`)[0];
+                popup_fd3ed8639f1db26b643eaa195cdc6af3.setContent(html_2d9135c0b7aa5c2526d3ed46039544cd);
+            
+        
+
+        circle_marker_b8d575d4d195d69753170ab034e54882.bindPopup(popup_fd3ed8639f1db26b643eaa195cdc6af3)
+        ;
+
+        
+    
+    
+            circle_marker_b8d575d4d195d69753170ab034e54882.bindTooltip(
+                `<div>
+                     Trabzon: +0.9C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f373f13b3e73c0a0265a93cff7b5e28b = L.circleMarker(
+                [40.5499106, 34.9537344],
+                {"bubblingMouseEvents": true, "color": "#b68851", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b68851", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_f9ec135f88a101dedfbeb6111476d56b = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_fef7ce2822004a53957a8e7a9722acd4 = $(`<div id="html_fef7ce2822004a53957a8e7a9722acd4" style="width: 100.0%; height: 100.0%;"><b>Çorum</b> (TR)<br>Population: 527,863<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 10.6C<br>National anomaly percentile: 24%</div>`)[0];
+                popup_f9ec135f88a101dedfbeb6111476d56b.setContent(html_fef7ce2822004a53957a8e7a9722acd4);
+            
+        
+
+        circle_marker_f373f13b3e73c0a0265a93cff7b5e28b.bindPopup(popup_f9ec135f88a101dedfbeb6111476d56b)
+        ;
+
+        
+    
+    
+            circle_marker_f373f13b3e73c0a0265a93cff7b5e28b.bindTooltip(
+                `<div>
+                     Çorum: +0.9C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a65b4ee6562eed19886a95a80d13d1a7 = L.circleMarker(
+                [41.006381, 28.9758715],
+                {"bubblingMouseEvents": true, "color": "#b68851", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b68851", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_e3bdf262cb7d2695ddf2251719e350dc = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_65ef7670be89b7b24694c91364a51141 = $(`<div id="html_65ef7670be89b7b24694c91364a51141" style="width: 100.0%; height: 100.0%;"><b>Istanbul</b> (TR)<br>Population: 15,701,602<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 14.7C<br>National anomaly percentile: 28%</div>`)[0];
+                popup_e3bdf262cb7d2695ddf2251719e350dc.setContent(html_65ef7670be89b7b24694c91364a51141);
+            
+        
+
+        circle_marker_a65b4ee6562eed19886a95a80d13d1a7.bindPopup(popup_e3bdf262cb7d2695ddf2251719e350dc)
+        ;
+
+        
+    
+    
+            circle_marker_a65b4ee6562eed19886a95a80d13d1a7.bindTooltip(
+                `<div>
+                     Istanbul: +0.9C anomaly | pop 15.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_035347617a0bbd96c9352268d724681b = L.circleMarker(
+                [39.6473917, 27.8879787],
+                {"bubblingMouseEvents": true, "color": "#bb894d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bb894d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_7cc32b12ceeb5596a6795f7edf683547 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_59c4e2157575247cc5e3eda21c9ce620 = $(`<div id="html_59c4e2157575247cc5e3eda21c9ce620" style="width: 100.0%; height: 100.0%;"><b>Balıkesir</b> (TR)<br>Population: 1,284,517<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.9C</b><br>Baseline T2m (daily mean): 14.0C<br>National anomaly percentile: 31%</div>`)[0];
+                popup_7cc32b12ceeb5596a6795f7edf683547.setContent(html_59c4e2157575247cc5e3eda21c9ce620);
+            
+        
+
+        circle_marker_035347617a0bbd96c9352268d724681b.bindPopup(popup_7cc32b12ceeb5596a6795f7edf683547)
+        ;
+
+        
+    
+    
+            circle_marker_035347617a0bbd96c9352268d724681b.bindTooltip(
+                `<div>
+                     Balıkesir: +0.9C anomaly | pop 1.3M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c44bc3df653929587d2e92db8b65ae6 = L.circleMarker(
+                [38.7568597, 30.5387044],
+                {"bubblingMouseEvents": true, "color": "#bb894c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bb894c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_40c21568499b98aace942cf043cb69e2 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_6d9ed47e2315558e4bf27fb357244c8d = $(`<div id="html_6d9ed47e2315558e4bf27fb357244c8d" style="width: 100.0%; height: 100.0%;"><b>Afyonkarahisar</b> (TR)<br>Population: 747,555<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 10.6C<br>National anomaly percentile: 34%</div>`)[0];
+                popup_40c21568499b98aace942cf043cb69e2.setContent(html_6d9ed47e2315558e4bf27fb357244c8d);
+            
+        
+
+        circle_marker_6c44bc3df653929587d2e92db8b65ae6.bindPopup(popup_40c21568499b98aace942cf043cb69e2)
+        ;
+
+        
+    
+    
+            circle_marker_6c44bc3df653929587d2e92db8b65ae6.bindTooltip(
+                `<div>
+                     Afyonkarahisar: +1.0C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d64e382ec7d4ceabad4b88604110c01e = L.circleMarker(
+                [40.9852301, 37.8797732],
+                {"bubblingMouseEvents": true, "color": "#bc894b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bc894b", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_d77cc47992304e6bf9cf4a17378a8d28 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_511ac7f06fd8fdbb5f8590553f4592ba = $(`<div id="html_511ac7f06fd8fdbb5f8590553f4592ba" style="width: 100.0%; height: 100.0%;"><b>Ordu</b> (TR)<br>Population: 750,588<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 13.2C<br>National anomaly percentile: 38%</div>`)[0];
+                popup_d77cc47992304e6bf9cf4a17378a8d28.setContent(html_511ac7f06fd8fdbb5f8590553f4592ba);
+            
+        
+
+        circle_marker_d64e382ec7d4ceabad4b88604110c01e.bindPopup(popup_d77cc47992304e6bf9cf4a17378a8d28)
+        ;
+
+        
+    
+    
+            circle_marker_d64e382ec7d4ceabad4b88604110c01e.bindTooltip(
+                `<div>
+                     Ordu: +1.0C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd03ed7ae4fd5c3cf10faa0c795889ea = L.circleMarker(
+                [41.2946149, 36.3320596],
+                {"bubblingMouseEvents": true, "color": "#bc894b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bc894b", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a9b4e773ed94970ea6eac544353d06b2 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_f9f9f774bef0a8c371c84ef3f1e8b165 = $(`<div id="html_f9f9f774bef0a8c371c84ef3f1e8b165" style="width: 100.0%; height: 100.0%;"><b>Samsun</b> (TR)<br>Population: 1,295,927<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 12.4C<br>National anomaly percentile: 41%</div>`)[0];
+                popup_a9b4e773ed94970ea6eac544353d06b2.setContent(html_f9f9f774bef0a8c371c84ef3f1e8b165);
+            
+        
+
+        circle_marker_cd03ed7ae4fd5c3cf10faa0c795889ea.bindPopup(popup_a9b4e773ed94970ea6eac544353d06b2)
+        ;
+
+        
+    
+    
+            circle_marker_cd03ed7ae4fd5c3cf10faa0c795889ea.bindTooltip(
+                `<div>
+                     Samsun: +1.0C anomaly | pop 1.3M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58d902146fd683a43f8bc408e8215bf0 = L.circleMarker(
+                [38.6125793, 27.4333969],
+                {"bubblingMouseEvents": true, "color": "#c18948", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c18948", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_282ace211442512e377dbce291f701d8 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_219e83144526c46e87e04d09494ca884 = $(`<div id="html_219e83144526c46e87e04d09494ca884" style="width: 100.0%; height: 100.0%;"><b>Manisa</b> (TR)<br>Population: 1,475,353<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 15.6C<br>National anomaly percentile: 45%</div>`)[0];
+                popup_282ace211442512e377dbce291f701d8.setContent(html_219e83144526c46e87e04d09494ca884);
+            
+        
+
+        circle_marker_58d902146fd683a43f8bc408e8215bf0.bindPopup(popup_282ace211442512e377dbce291f701d8)
+        ;
+
+        
+    
+    
+            circle_marker_58d902146fd683a43f8bc408e8215bf0.bindTooltip(
+                `<div>
+                     Manisa: +1.0C anomaly | pop 1.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_853f0be3e0fcae173d8d32325ba6599f = L.circleMarker(
+                [38.4192537, 27.128469],
+                {"bubblingMouseEvents": true, "color": "#c18947", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c18947", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6ec9ca14484ec4a7b9efa74c901fb7a3 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_b042843de83f3bded7c2405387b2ff1a = $(`<div id="html_b042843de83f3bded7c2405387b2ff1a" style="width: 100.0%; height: 100.0%;"><b>İzmir</b> (TR)<br>Population: 4,493,242<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 16.0C<br>National anomaly percentile: 48%</div>`)[0];
+                popup_6ec9ca14484ec4a7b9efa74c901fb7a3.setContent(html_b042843de83f3bded7c2405387b2ff1a);
+            
+        
+
+        circle_marker_853f0be3e0fcae173d8d32325ba6599f.bindPopup(popup_6ec9ca14484ec4a7b9efa74c901fb7a3)
+        ;
+
+        
+    
+    
+            circle_marker_853f0be3e0fcae173d8d32325ba6599f.bindTooltip(
+                `<div>
+                     İzmir: +1.0C anomaly | pop 4.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1abb787636f4de8b768a38d54b8e9331 = L.circleMarker(
+                [39.7503574, 37.0145173],
+                {"bubblingMouseEvents": true, "color": "#c28946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c28946", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_63d033f158bacbf2c0421b4e516d39e1 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_08d371ded00f3701676d2acc9482dc86 = $(`<div id="html_08d371ded00f3701676d2acc9482dc86" style="width: 100.0%; height: 100.0%;"><b>Sivas</b> (TR)<br>Population: 621,224<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 8.4C<br>National anomaly percentile: 52%</div>`)[0];
+                popup_63d033f158bacbf2c0421b4e516d39e1.setContent(html_08d371ded00f3701676d2acc9482dc86);
+            
+        
+
+        circle_marker_1abb787636f4de8b768a38d54b8e9331.bindPopup(popup_63d033f158bacbf2c0421b4e516d39e1)
+        ;
+
+        
+    
+    
+            circle_marker_1abb787636f4de8b768a38d54b8e9331.bindTooltip(
+                `<div>
+                     Sivas: +1.0C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ec2f420d2f8ad28b2832b2e732b0d7a = L.circleMarker(
+                [36.7978381, 34.6298391],
+                {"bubblingMouseEvents": true, "color": "#c78942", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c78942", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_1e5947c19e1ca6fab85b43a9d116f206 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_415676ed0ac574b26d74ca478b7820e1 = $(`<div id="html_415676ed0ac574b26d74ca478b7820e1" style="width: 100.0%; height: 100.0%;"><b>Mersin</b> (TR)<br>Population: 1,773,852<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 20.0C<br>National anomaly percentile: 55%</div>`)[0];
+                popup_1e5947c19e1ca6fab85b43a9d116f206.setContent(html_415676ed0ac574b26d74ca478b7820e1);
+            
+        
+
+        circle_marker_4ec2f420d2f8ad28b2832b2e732b0d7a.bindPopup(popup_1e5947c19e1ca6fab85b43a9d116f206)
+        ;
+
+        
+    
+    
+            circle_marker_4ec2f420d2f8ad28b2832b2e732b0d7a.bindTooltip(
+                `<div>
+                     Mersin: +1.1C anomaly | pop 1.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_453efd6895540cc7dcc8aa447e47eab9 = L.circleMarker(
+                [38.3487153, 38.3190674],
+                {"bubblingMouseEvents": true, "color": "#c78941", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c78941", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_2ac746f1faf5707e6b467ac34c342869 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_e3f749119c9d7a52163cd0d62b57b7e2 = $(`<div id="html_e3f749119c9d7a52163cd0d62b57b7e2" style="width: 100.0%; height: 100.0%;"><b>Malatya</b> (TR)<br>Population: 781,305<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 12.0C<br>National anomaly percentile: 59%</div>`)[0];
+                popup_2ac746f1faf5707e6b467ac34c342869.setContent(html_e3f749119c9d7a52163cd0d62b57b7e2);
+            
+        
+
+        circle_marker_453efd6895540cc7dcc8aa447e47eab9.bindPopup(popup_2ac746f1faf5707e6b467ac34c342869)
+        ;
+
+        
+    
+    
+            circle_marker_453efd6895540cc7dcc8aa447e47eab9.bindTooltip(
+                `<div>
+                     Malatya: +1.1C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d37bf88ab98362808b2d755f34d88abf = L.circleMarker(
+                [39.7743941, 30.519116],
+                {"bubblingMouseEvents": true, "color": "#ca8a3f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ca8a3f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_78579b91260d7d7cc882437574da3c57 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_13c3609a5821aaf4bfb792cd0be2f931 = $(`<div id="html_13c3609a5821aaf4bfb792cd0be2f931" style="width: 100.0%; height: 100.0%;"><b>Eskisehir</b> (TR)<br>Population: 888,828<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 11.2C<br>National anomaly percentile: 62%</div>`)[0];
+                popup_78579b91260d7d7cc882437574da3c57.setContent(html_13c3609a5821aaf4bfb792cd0be2f931);
+            
+        
+
+        circle_marker_d37bf88ab98362808b2d755f34d88abf.bindPopup(popup_78579b91260d7d7cc882437574da3c57)
+        ;
+
+        
+    
+    
+            circle_marker_d37bf88ab98362808b2d755f34d88abf.bindTooltip(
+                `<div>
+                     Eskisehir: +1.1C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4eae9c46958513cdac83db4fb22ef4a = L.circleMarker(
+                [39.4199106, 29.9857886],
+                {"bubblingMouseEvents": true, "color": "#cb8a3e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cb8a3e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_f76d40a48aaca11043d1a82d0b8e5a40 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_1755fd4d60fc9935431c5063b7049f4d = $(`<div id="html_1755fd4d60fc9935431c5063b7049f4d" style="width: 100.0%; height: 100.0%;"><b>Kütahya</b> (TR)<br>Population: 573,642<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 9.8C<br>National anomaly percentile: 66%</div>`)[0];
+                popup_f76d40a48aaca11043d1a82d0b8e5a40.setContent(html_1755fd4d60fc9935431c5063b7049f4d);
+            
+        
+
+        circle_marker_e4eae9c46958513cdac83db4fb22ef4a.bindPopup(popup_f76d40a48aaca11043d1a82d0b8e5a40)
+        ;
+
+        
+    
+    
+            circle_marker_e4eae9c46958513cdac83db4fb22ef4a.bindTooltip(
+                `<div>
+                     Kütahya: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85dde24bd254db1884d48837c586afe6 = L.circleMarker(
+                [38.6747164, 39.2227135],
+                {"bubblingMouseEvents": true, "color": "#ce8a3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce8a3c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_f8a01adf9ef4281506c8fab7fa7d8783 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_a2f84fa20e557625a1bfe0b841dfc467 = $(`<div id="html_a2f84fa20e557625a1bfe0b841dfc467" style="width: 100.0%; height: 100.0%;"><b>Elazığ</b> (TR)<br>Population: 578,789<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 13.1C<br>National anomaly percentile: 69%</div>`)[0];
+                popup_f8a01adf9ef4281506c8fab7fa7d8783.setContent(html_a2f84fa20e557625a1bfe0b841dfc467);
+            
+        
+
+        circle_marker_85dde24bd254db1884d48837c586afe6.bindPopup(popup_f8a01adf9ef4281506c8fab7fa7d8783)
+        ;
+
+        
+    
+    
+            circle_marker_85dde24bd254db1884d48837c586afe6.bindTooltip(
+                `<div>
+                     Elazığ: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0378aecbf9dae30c9bf7998d16139d78 = L.circleMarker(
+                [36.2025471, 36.1602908],
+                {"bubblingMouseEvents": true, "color": "#ce8a3b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ce8a3b", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_299fe12754721162f2c875dc1f921e41 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_5472f7e69f8fa40ab185fd43e6f245fc = $(`<div id="html_5472f7e69f8fa40ab185fd43e6f245fc" style="width: 100.0%; height: 100.0%;"><b>Hatay</b> (TR)<br>Population: 1,544,640<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 17.6C<br>National anomaly percentile: 72%</div>`)[0];
+                popup_299fe12754721162f2c875dc1f921e41.setContent(html_5472f7e69f8fa40ab185fd43e6f245fc);
+            
+        
+
+        circle_marker_0378aecbf9dae30c9bf7998d16139d78.bindPopup(popup_299fe12754721162f2c875dc1f921e41)
+        ;
+
+        
+    
+    
+            circle_marker_0378aecbf9dae30c9bf7998d16139d78.bindTooltip(
+                `<div>
+                     Hatay: +1.2C anomaly | pop 1.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95db6b897439ccd73d2c8079cbd35135 = L.circleMarker(
+                [37.8483767, 27.8435878],
+                {"bubblingMouseEvents": true, "color": "#d28a38", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d28a38", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_30d8c4cac5f6344cea8d633096747306 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_34cbcd7b329bf53849a80c77bc4f897b = $(`<div id="html_34cbcd7b329bf53849a80c77bc4f897b" style="width: 100.0%; height: 100.0%;"><b>Aydin</b> (TR)<br>Population: 1,119,084<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 17.6C<br>National anomaly percentile: 76%</div>`)[0];
+                popup_30d8c4cac5f6344cea8d633096747306.setContent(html_34cbcd7b329bf53849a80c77bc4f897b);
+            
+        
+
+        circle_marker_95db6b897439ccd73d2c8079cbd35135.bindPopup(popup_30d8c4cac5f6344cea8d633096747306)
+        ;
+
+        
+    
+    
+            circle_marker_95db6b897439ccd73d2c8079cbd35135.bindTooltip(
+                `<div>
+                     Aydin: +1.2C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9208c1065c81dacd2ee5457612f099bd = L.circleMarker(
+                [36.8865728, 30.7030242],
+                {"bubblingMouseEvents": true, "color": "#d38a37", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d38a37", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_59addaf3298d3b4857cc0a499f1238ed = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_8af0bfc0983c95d4caa06f336d9827e6 = $(`<div id="html_8af0bfc0983c95d4caa06f336d9827e6" style="width: 100.0%; height: 100.0%;"><b>Antalya</b> (TR)<br>Population: 2,722,103<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 17.9C<br>National anomaly percentile: 79%</div>`)[0];
+                popup_59addaf3298d3b4857cc0a499f1238ed.setContent(html_8af0bfc0983c95d4caa06f336d9827e6);
+            
+        
+
+        circle_marker_9208c1065c81dacd2ee5457612f099bd.bindPopup(popup_59addaf3298d3b4857cc0a499f1238ed)
+        ;
+
+        
+    
+    
+            circle_marker_9208c1065c81dacd2ee5457612f099bd.bindTooltip(
+                `<div>
+                     Antalya: +1.2C anomaly | pop 2.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c348ada89aeaa7a5e4c5c7bef637273e = L.circleMarker(
+                [37.7827875, 29.0966476],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d88a33", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_7eb8866f39edb7ac1954d8d806b94fbf = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_325192aa8824e31f878928ffbd6c8dd7 = $(`<div id="html_325192aa8824e31f878928ffbd6c8dd7" style="width: 100.0%; height: 100.0%;"><b>Denizli</b> (TR)<br>Population: 1,051,056<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 15.2C<br>National anomaly percentile: 83%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_7eb8866f39edb7ac1954d8d806b94fbf.setContent(html_325192aa8824e31f878928ffbd6c8dd7);
+            
+        
+
+        circle_marker_c348ada89aeaa7a5e4c5c7bef637273e.bindPopup(popup_7eb8866f39edb7ac1954d8d806b94fbf)
+        ;
+
+        
+    
+    
+            circle_marker_c348ada89aeaa7a5e4c5c7bef637273e.bindTooltip(
+                `<div>
+                     Denizli: +1.2C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a02ff850ca2ecd6ff91784c97fe575e = L.circleMarker(
+                [36.9863599, 35.3252861],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#da8a31", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_26e9d470591d514a8f334db5d9fe58b9 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2cb64086ef0a37e5a4d42e50df243e5d = $(`<div id="html_2cb64086ef0a37e5a4d42e50df243e5d" style="width: 100.0%; height: 100.0%;"><b>Adana</b> (TR)<br>Population: 2,258,718<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 18.5C<br>National anomaly percentile: 86%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_26e9d470591d514a8f334db5d9fe58b9.setContent(html_2cb64086ef0a37e5a4d42e50df243e5d);
+            
+        
+
+        circle_marker_6a02ff850ca2ecd6ff91784c97fe575e.bindPopup(popup_26e9d470591d514a8f334db5d9fe58b9)
+        ;
+
+        
+    
+    
+            circle_marker_6a02ff850ca2ecd6ff91784c97fe575e.bindTooltip(
+                `<div>
+                     Adana: +1.3C anomaly | pop 2.3M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4933869998814e242153322644c22d37 = L.circleMarker(
+                [37.7602985, 38.2772986],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dc8a2f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_752cf56fc29e18068c88acf6f80eb17c = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_a2d82ee888bd78cd6a7f3d363f2c14d4 = $(`<div id="html_a2d82ee888bd78cd6a7f3d363f2c14d4" style="width: 100.0%; height: 100.0%;"><b>Adıyaman</b> (TR)<br>Population: 632,459<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 15.3C<br>National anomaly percentile: 90%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_752cf56fc29e18068c88acf6f80eb17c.setContent(html_a2d82ee888bd78cd6a7f3d363f2c14d4);
+            
+        
+
+        circle_marker_4933869998814e242153322644c22d37.bindPopup(popup_752cf56fc29e18068c88acf6f80eb17c)
+        ;
+
+        
+    
+    
+            circle_marker_4933869998814e242153322644c22d37.bindTooltip(
+                `<div>
+                     Adıyaman: +1.3C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bbde3179da2a38e593400ee057fd7a58 = L.circleMarker(
+                [37.1596239, 38.791929],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dd8b2e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_bcc80b6ba4f795075ad65fb5668f964b = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_9ba37ba5d8ca785cacb7d2dc2600f713 = $(`<div id="html_9ba37ba5d8ca785cacb7d2dc2600f713" style="width: 100.0%; height: 100.0%;"><b>Şanlıurfa</b> (TR)<br>Population: 2,143,020<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 17.4C<br>National anomaly percentile: 93%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_bcc80b6ba4f795075ad65fb5668f964b.setContent(html_9ba37ba5d8ca785cacb7d2dc2600f713);
+            
+        
+
+        circle_marker_bbde3179da2a38e593400ee057fd7a58.bindPopup(popup_bcc80b6ba4f795075ad65fb5668f964b)
+        ;
+
+        
+    
+    
+            circle_marker_bbde3179da2a38e593400ee057fd7a58.bindTooltip(
+                `<div>
+                     Şanlıurfa: +1.3C anomaly | pop 2.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e85eb28e28f438359f9af4ba37dd3121 = L.circleMarker(
+                [37.0628317, 37.3792617],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e18b2b", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_68d5f6a9dc5cbfd5d396ffbbd2f440f7 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_1388ef9166fe15cd7a794fc1a2ec0755 = $(`<div id="html_1388ef9166fe15cd7a794fc1a2ec0755" style="width: 100.0%; height: 100.0%;"><b>Gaziantep</b> (TR)<br>Population: 2,164,134<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 16.5C<br>National anomaly percentile: 97%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_68d5f6a9dc5cbfd5d396ffbbd2f440f7.setContent(html_1388ef9166fe15cd7a794fc1a2ec0755);
+            
+        
+
+        circle_marker_e85eb28e28f438359f9af4ba37dd3121.bindPopup(popup_68d5f6a9dc5cbfd5d396ffbbd2f440f7)
+        ;
+
+        
+    
+    
+            circle_marker_e85eb28e28f438359f9af4ba37dd3121.bindTooltip(
+                `<div>
+                     Gaziantep: +1.3C anomaly | pop 2.2M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9e40e802461e5198ae2323bf379b637 = L.circleMarker(
+                [37.5812744, 36.927509],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ed8b20", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_63e1ecb6e243d6b891db5a1db3a9c7d6 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_f8a214ff8fd2aeae17d203f6ef051fb1 = $(`<div id="html_f8a214ff8fd2aeae17d203f6ef051fb1" style="width: 100.0%; height: 100.0%;"><b>Kahramanmaraş</b> (TR)<br>Population: 1,112,634<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.5C</b><br>Baseline T2m (daily mean): 14.7C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_63e1ecb6e243d6b891db5a1db3a9c7d6.setContent(html_f8a214ff8fd2aeae17d203f6ef051fb1);
+            
+        
+
+        circle_marker_a9e40e802461e5198ae2323bf379b637.bindPopup(popup_63e1ecb6e243d6b891db5a1db3a9c7d6)
+        ;
+
+        
+    
+    
+            circle_marker_a9e40e802461e5198ae2323bf379b637.bindTooltip(
+                `<div>
+                     Kahramanmaraş: +1.5C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1826ebb0319f79c89fb7dad6056aadd6 = L.circleMarker(
+                [45.4641943, 9.1896346],
+                {"bubblingMouseEvents": true, "color": "#bb894c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bb894c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_dbe6422f6183ac38dfa441896e26824d = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_646bc7b3c270d036ac13e736075924c0 = $(`<div id="html_646bc7b3c270d036ac13e736075924c0" style="width: 100.0%; height: 100.0%;"><b>Milan</b> (IT)<br>Population: 1,396,827<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 13.6C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_dbe6422f6183ac38dfa441896e26824d.setContent(html_646bc7b3c270d036ac13e736075924c0);
+            
+        
+
+        circle_marker_1826ebb0319f79c89fb7dad6056aadd6.bindPopup(popup_dbe6422f6183ac38dfa441896e26824d)
+        ;
+
+        
+    
+    
+            circle_marker_1826ebb0319f79c89fb7dad6056aadd6.bindTooltip(
+                `<div>
+                     Milan: +1.0C anomaly | pop 1.4M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59c36d5abc524277574d7dc35e881e4f = L.circleMarker(
+                [40.8358846, 14.2487679],
+                {"bubblingMouseEvents": true, "color": "#bf8949", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bf8949", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_ec5b4c5ba3a8cfabc8e8adefbd6d2f19 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_4c130c0bcabad8ca7e732a0958b45f27 = $(`<div id="html_4c130c0bcabad8ca7e732a0958b45f27" style="width: 100.0%; height: 100.0%;"><b>Naples</b> (IT)<br>Population: 922,719<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 17.3C<br>National anomaly percentile: 20%</div>`)[0];
+                popup_ec5b4c5ba3a8cfabc8e8adefbd6d2f19.setContent(html_4c130c0bcabad8ca7e732a0958b45f27);
+            
+        
+
+        circle_marker_59c36d5abc524277574d7dc35e881e4f.bindPopup(popup_ec5b4c5ba3a8cfabc8e8adefbd6d2f19)
+        ;
+
+        
+    
+    
+            circle_marker_59c36d5abc524277574d7dc35e881e4f.bindTooltip(
+                `<div>
+                     Naples: +1.0C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0a3ec29b5fa427875206896d091a99e = L.circleMarker(
+                [38.1112268, 13.3524434],
+                {"bubblingMouseEvents": true, "color": "#c88941", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c88941", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_12e1a8a284c39905682ca41f9de17c5c = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_17433214fe93516f7cf8d9996ecff790 = $(`<div id="html_17433214fe93516f7cf8d9996ecff790" style="width: 100.0%; height: 100.0%;"><b>Palermo</b> (IT)<br>Population: 631,479<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 16.7C<br>National anomaly percentile: 40%</div>`)[0];
+                popup_12e1a8a284c39905682ca41f9de17c5c.setContent(html_17433214fe93516f7cf8d9996ecff790);
+            
+        
+
+        circle_marker_b0a3ec29b5fa427875206896d091a99e.bindPopup(popup_12e1a8a284c39905682ca41f9de17c5c)
+        ;
+
+        
+    
+    
+            circle_marker_b0a3ec29b5fa427875206896d091a99e.bindTooltip(
+                `<div>
+                     Palermo: +1.1C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8a7712430fd779afbcd2112207c1c14 = L.circleMarker(
+                [44.40726, 8.9338624],
+                {"bubblingMouseEvents": true, "color": "#d08a3a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d08a3a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6bd2d64e3e181876a6a5a466710486c7 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_dc8ea53c1924b07f7e7b3fc593b97f8d = $(`<div id="html_dc8ea53c1924b07f7e7b3fc593b97f8d" style="width: 100.0%; height: 100.0%;"><b>Genoa</b> (IT)<br>Population: 567,904<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 12.1C<br>National anomaly percentile: 60%</div>`)[0];
+                popup_6bd2d64e3e181876a6a5a466710486c7.setContent(html_dc8ea53c1924b07f7e7b3fc593b97f8d);
+            
+        
+
+        circle_marker_d8a7712430fd779afbcd2112207c1c14.bindPopup(popup_6bd2d64e3e181876a6a5a466710486c7)
+        ;
+
+        
+    
+    
+            circle_marker_d8a7712430fd779afbcd2112207c1c14.bindTooltip(
+                `<div>
+                     Genoa: +1.2C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e762d4f68eb79d82c67e01eda7cd096f = L.circleMarker(
+                [41.8933203, 12.4829321],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d88a32", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_444cd720185b746e3fc80bcc86b8c002 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_3d4ca5587d4d733d8aa127d06357aa0e = $(`<div id="html_3d4ca5587d4d733d8aa127d06357aa0e" style="width: 100.0%; height: 100.0%;"><b>Rome</b> (IT)<br>Population: 2,802,048<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 15.5C<br>National anomaly percentile: 80%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_444cd720185b746e3fc80bcc86b8c002.setContent(html_3d4ca5587d4d733d8aa127d06357aa0e);
+            
+        
+
+        circle_marker_e762d4f68eb79d82c67e01eda7cd096f.bindPopup(popup_444cd720185b746e3fc80bcc86b8c002)
+        ;
+
+        
+    
+    
+            circle_marker_e762d4f68eb79d82c67e01eda7cd096f.bindTooltip(
+                `<div>
+                     Rome: +1.3C anomaly | pop 2.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_beab842741ad8f7b8479b51cfbe4db9c = L.circleMarker(
+                [45.0677551, 7.6824892],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dd8b2e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_0b02967569fca3ff27f916ce560ca014 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_08c06acd625301a60c45af0eead0d1d3 = $(`<div id="html_08c06acd625301a60c45af0eead0d1d3" style="width: 100.0%; height: 100.0%;"><b>Turin</b> (IT)<br>Population: 861,341<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 12.6C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_0b02967569fca3ff27f916ce560ca014.setContent(html_08c06acd625301a60c45af0eead0d1d3);
+            
+        
+
+        circle_marker_beab842741ad8f7b8479b51cfbe4db9c.bindPopup(popup_0b02967569fca3ff27f916ce560ca014)
+        ;
+
+        
+    
+    
+            circle_marker_beab842741ad8f7b8479b51cfbe4db9c.bindTooltip(
+                `<div>
+                     Turin: +1.3C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47b73b2755bf96f4a585333533893a7f = L.circleMarker(
+                [47.0245117, 28.8322923],
+                {"bubblingMouseEvents": true, "color": "#d48a37", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d48a37", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_42d48956b8c32189ab2d2453389fda68 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_de2089679c8f5987cd7b0b82e9aa44bb = $(`<div id="html_de2089679c8f5987cd7b0b82e9aa44bb" style="width: 100.0%; height: 100.0%;"><b>Chișinău</b> (MD)<br>Population: 750,000<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 10.7C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_42d48956b8c32189ab2d2453389fda68.setContent(html_de2089679c8f5987cd7b0b82e9aa44bb);
+            
+        
+
+        circle_marker_47b73b2755bf96f4a585333533893a7f.bindPopup(popup_42d48956b8c32189ab2d2453389fda68)
+        ;
+
+        
+    
+    
+            circle_marker_47b73b2755bf96f4a585333533893a7f.bindTooltip(
+                `<div>
+                     Chișinău: +1.2C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90c3d45b5180bb62e3c9a969104e638e = L.circleMarker(
+                [57.6263877, 39.8933705],
+                {"bubblingMouseEvents": true, "color": "#9e8766", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9e8766", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_21ee5f1f3b0b43980875921b21e93c62 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_33556d45c788a3caf811ea79c5bc2de0 = $(`<div id="html_33556d45c788a3caf811ea79c5bc2de0" style="width: 100.0%; height: 100.0%;"><b>Yaroslavl</b> (RU)<br>Population: 567,443<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.6C</b><br>Baseline T2m (daily mean): 4.9C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_21ee5f1f3b0b43980875921b21e93c62.setContent(html_33556d45c788a3caf811ea79c5bc2de0);
+            
+        
+
+        circle_marker_90c3d45b5180bb62e3c9a969104e638e.bindPopup(popup_21ee5f1f3b0b43980875921b21e93c62)
+        ;
+
+        
+    
+    
+            circle_marker_90c3d45b5180bb62e3c9a969104e638e.bindTooltip(
+                `<div>
+                     Yaroslavl: +0.6C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb4c8895896563d6c6eda53d9d0e3bb7 = L.circleMarker(
+                [55.7505412, 37.6174782],
+                {"bubblingMouseEvents": true, "color": "#a28763", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a28763", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_3aa5903ec2f24d7e52073d9e7957c33d = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_09e415d22ddd7f3824979bb5f92aa93e = $(`<div id="html_09e415d22ddd7f3824979bb5f92aa93e" style="width: 100.0%; height: 100.0%;"><b>Moscow</b> (RU)<br>Population: 12,700,000<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 5.9C<br>National anomaly percentile: 12%</div>`)[0];
+                popup_3aa5903ec2f24d7e52073d9e7957c33d.setContent(html_09e415d22ddd7f3824979bb5f92aa93e);
+            
+        
+
+        circle_marker_bb4c8895896563d6c6eda53d9d0e3bb7.bindPopup(popup_3aa5903ec2f24d7e52073d9e7957c33d)
+        ;
+
+        
+    
+    
+            circle_marker_bb4c8895896563d6c6eda53d9d0e3bb7.bindTooltip(
+                `<div>
+                     Moscow: +0.7C anomaly | pop 12.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c9e5691407039d621abb43350eaed89 = L.circleMarker(
+                [55.7997662, 37.9373707],
+                {"bubblingMouseEvents": true, "color": "#a28763", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a28763", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6a9eaa5e97c9d92df2c1954e948dbbf5 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_4d1901a1add52aa6ba2a1217c7682c42 = $(`<div id="html_4d1901a1add52aa6ba2a1217c7682c42" style="width: 100.0%; height: 100.0%;"><b>Balashikha</b> (RU)<br>Population: 507,307<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 5.9C<br>National anomaly percentile: 25%</div>`)[0];
+                popup_6a9eaa5e97c9d92df2c1954e948dbbf5.setContent(html_4d1901a1add52aa6ba2a1217c7682c42);
+            
+        
+
+        circle_marker_9c9e5691407039d621abb43350eaed89.bindPopup(popup_6a9eaa5e97c9d92df2c1954e948dbbf5)
+        ;
+
+        
+    
+    
+            circle_marker_9c9e5691407039d621abb43350eaed89.bindTooltip(
+                `<div>
+                     Balashikha: +0.7C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e07e2c3fe2010e62f111648bb5f36bf = L.circleMarker(
+                [54.6295687, 39.7425039],
+                {"bubblingMouseEvents": true, "color": "#b18855", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b18855", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_055bef63b4b5fea92f8a147d653877d9 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_f50b2f1e2f248a913a6b956d94762a87 = $(`<div id="html_f50b2f1e2f248a913a6b956d94762a87" style="width: 100.0%; height: 100.0%;"><b>Ryazan</b> (RU)<br>Population: 534,801<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.8C</b><br>Baseline T2m (daily mean): 6.3C<br>National anomaly percentile: 38%</div>`)[0];
+                popup_055bef63b4b5fea92f8a147d653877d9.setContent(html_f50b2f1e2f248a913a6b956d94762a87);
+            
+        
+
+        circle_marker_9e07e2c3fe2010e62f111648bb5f36bf.bindPopup(popup_055bef63b4b5fea92f8a147d653877d9)
+        ;
+
+        
+    
+    
+            circle_marker_9e07e2c3fe2010e62f111648bb5f36bf.bindTooltip(
+                `<div>
+                     Ryazan: +0.8C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36a2002f3652388d8f3e8b9b05fd5c31 = L.circleMarker(
+                [59.938732, 30.316229],
+                {"bubblingMouseEvents": true, "color": "#bc894b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bc894b", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_6da845a6d2b23b90ecdf94c87656e24e = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_d14ccdd1ade0fe83900289b43a49f6a5 = $(`<div id="html_d14ccdd1ade0fe83900289b43a49f6a5" style="width: 100.0%; height: 100.0%;"><b>Saint Petersburg</b> (RU)<br>Population: 5,652,922<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 5.3C<br>National anomaly percentile: 50%</div>`)[0];
+                popup_6da845a6d2b23b90ecdf94c87656e24e.setContent(html_d14ccdd1ade0fe83900289b43a49f6a5);
+            
+        
+
+        circle_marker_36a2002f3652388d8f3e8b9b05fd5c31.bindPopup(popup_6da845a6d2b23b90ecdf94c87656e24e)
+        ;
+
+        
+    
+    
+            circle_marker_36a2002f3652388d8f3e8b9b05fd5c31.bindTooltip(
+                `<div>
+                     Saint Petersburg: +1.0C anomaly | pop 5.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_426f7f0905971b4e0bd8d85f4a60df0a = L.circleMarker(
+                [51.6605982, 39.2005858],
+                {"bubblingMouseEvents": true, "color": "#cb8a3e", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cb8a3e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_0d9b7d6c9af0bee44cff117b17058916 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2d86c5ec2b76f6cb5460cd3340cfeb22 = $(`<div id="html_2d86c5ec2b76f6cb5460cd3340cfeb22" style="width: 100.0%; height: 100.0%;"><b>Voronezh</b> (RU)<br>Population: 1,050,602<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 7.6C<br>National anomaly percentile: 62%</div>`)[0];
+                popup_0d9b7d6c9af0bee44cff117b17058916.setContent(html_2d86c5ec2b76f6cb5460cd3340cfeb22);
+            
+        
+
+        circle_marker_426f7f0905971b4e0bd8d85f4a60df0a.bindPopup(popup_0d9b7d6c9af0bee44cff117b17058916)
+        ;
+
+        
+    
+    
+            circle_marker_426f7f0905971b4e0bd8d85f4a60df0a.bindTooltip(
+                `<div>
+                     Voronezh: +1.1C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c74afec0d84e25f167753a66f18dc8f6 = L.circleMarker(
+                [52.6051488, 39.5963775],
+                {"bubblingMouseEvents": true, "color": "#d48a36", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d48a36", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_7010b99838d46f0934a8e0696653be6d = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_c2f50065c226a729e2125d8a4142fd5b = $(`<div id="html_c2f50065c226a729e2125d8a4142fd5b" style="width: 100.0%; height: 100.0%;"><b>Lipetsk</b> (RU)<br>Population: 503,216<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 7.1C<br>National anomaly percentile: 75%</div>`)[0];
+                popup_7010b99838d46f0934a8e0696653be6d.setContent(html_c2f50065c226a729e2125d8a4142fd5b);
+            
+        
+
+        circle_marker_c74afec0d84e25f167753a66f18dc8f6.bindPopup(popup_7010b99838d46f0934a8e0696653be6d)
+        ;
+
+        
+    
+    
+            circle_marker_c74afec0d84e25f167753a66f18dc8f6.bindTooltip(
+                `<div>
+                     Lipetsk: +1.2C anomaly | pop 0.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9de14a7efea6b157fae6d1c6ddadf900 = L.circleMarker(
+                [45.0351532, 38.9772396],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d68a35", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_f9a5ad6daab3e288c5f643b16016b983 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_f5e80f90f4977d78da41029ea011304f = $(`<div id="html_f5e80f90f4977d78da41029ea011304f" style="width: 100.0%; height: 100.0%;"><b>Krasnodar</b> (RU)<br>Population: 948,827<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.2C</b><br>Baseline T2m (daily mean): 12.7C<br>National anomaly percentile: 88%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_f9a5ad6daab3e288c5f643b16016b983.setContent(html_f5e80f90f4977d78da41029ea011304f);
+            
+        
+
+        circle_marker_9de14a7efea6b157fae6d1c6ddadf900.bindPopup(popup_f9a5ad6daab3e288c5f643b16016b983)
+        ;
+
+        
+    
+    
+            circle_marker_9de14a7efea6b157fae6d1c6ddadf900.bindTooltip(
+                `<div>
+                     Krasnodar: +1.2C anomaly | pop 0.9M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1543f135878ceb8573184e750fa2a6e = L.circleMarker(
+                [47.2222596, 39.7198736],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d88a33", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_607870b24dac7eb057a44284a2cc8eed = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_713883e27af830cfb298448e1c7dad3b = $(`<div id="html_713883e27af830cfb298448e1c7dad3b" style="width: 100.0%; height: 100.0%;"><b>Rostov-on-Don</b> (RU)<br>Population: 1,114,806<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 10.8C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_607870b24dac7eb057a44284a2cc8eed.setContent(html_713883e27af830cfb298448e1c7dad3b);
+            
+        
+
+        circle_marker_b1543f135878ceb8573184e750fa2a6e.bindPopup(popup_607870b24dac7eb057a44284a2cc8eed)
+        ;
+
+        
+    
+    
+            circle_marker_b1543f135878ceb8573184e750fa2a6e.bindTooltip(
+                `<div>
+                     Rostov-on-Don: +1.3C anomaly | pop 1.1M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d23208df226aa76cbe6cde38c3c37a0b = L.circleMarker(
+                [37.3886303, -5.9953403],
+                {"bubblingMouseEvents": true, "color": "#a28763", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a28763", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_3d1fd46359b1690ef0d09f8a1853ab8d = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_2c36d0f82f608c1edcb80846ed32f82d = $(`<div id="html_2c36d0f82f608c1edcb80846ed32f82d" style="width: 100.0%; height: 100.0%;"><b>Seville</b> (ES)<br>Population: 688,714<br>Anomaly (2021-2024 vs 1991-2020): <b>+0.7C</b><br>Baseline T2m (daily mean): 18.9C<br>National anomaly percentile: 0%</div>`)[0];
+                popup_3d1fd46359b1690ef0d09f8a1853ab8d.setContent(html_2c36d0f82f608c1edcb80846ed32f82d);
+            
+        
+
+        circle_marker_d23208df226aa76cbe6cde38c3c37a0b.bindPopup(popup_3d1fd46359b1690ef0d09f8a1853ab8d)
+        ;
+
+        
+    
+    
+            circle_marker_d23208df226aa76cbe6cde38c3c37a0b.bindTooltip(
+                `<div>
+                     Seville: +0.7C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57e450dab62bab7e35163e09d5b8364e = L.circleMarker(
+                [40.416782, -3.703507],
+                {"bubblingMouseEvents": true, "color": "#c38945", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c38945", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_917245b7e2f9ca48f468f60bae7c5a2e = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_d3b01a98f5b4a67d7259b7ab9b6ff19f = $(`<div id="html_d3b01a98f5b4a67d7259b7ab9b6ff19f" style="width: 100.0%; height: 100.0%;"><b>Madrid</b> (ES)<br>Population: 3,477,497<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.0C</b><br>Baseline T2m (daily mean): 14.7C<br>National anomaly percentile: 20%</div>`)[0];
+                popup_917245b7e2f9ca48f468f60bae7c5a2e.setContent(html_d3b01a98f5b4a67d7259b7ab9b6ff19f);
+            
+        
+
+        circle_marker_57e450dab62bab7e35163e09d5b8364e.bindPopup(popup_917245b7e2f9ca48f468f60bae7c5a2e)
+        ;
+
+        
+    
+    
+            circle_marker_57e450dab62bab7e35163e09d5b8364e.bindTooltip(
+                `<div>
+                     Madrid: +1.0C anomaly | pop 3.5M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0800723005c20e5c687bf29a33b826c4 = L.circleMarker(
+                [39.4697065, -0.3763353],
+                {"bubblingMouseEvents": true, "color": "#c68943", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c68943", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_5ffb5c1106e40bbe3de6446ec9d874f9 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_18a9f6d24b1116c6098acb9e7be8a808 = $(`<div id="html_18a9f6d24b1116c6098acb9e7be8a808" style="width: 100.0%; height: 100.0%;"><b>Valencia</b> (ES)<br>Population: 841,558<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 17.0C<br>National anomaly percentile: 40%</div>`)[0];
+                popup_5ffb5c1106e40bbe3de6446ec9d874f9.setContent(html_18a9f6d24b1116c6098acb9e7be8a808);
+            
+        
+
+        circle_marker_0800723005c20e5c687bf29a33b826c4.bindPopup(popup_5ffb5c1106e40bbe3de6446ec9d874f9)
+        ;
+
+        
+    
+    
+            circle_marker_0800723005c20e5c687bf29a33b826c4.bindTooltip(
+                `<div>
+                     Valencia: +1.1C anomaly | pop 0.8M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59b5cc4c77fa9020233050dab696d13c = L.circleMarker(
+                [41.6521342, -0.8809428],
+                {"bubblingMouseEvents": true, "color": "#c98940", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c98940", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 0.5}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_92a029bc538547fdfdbaa72f48e5d099 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_beb6ec504b532f43abdaeb9e882aa488 = $(`<div id="html_beb6ec504b532f43abdaeb9e882aa488" style="width: 100.0%; height: 100.0%;"><b>Zaragoza</b> (ES)<br>Population: 666,453<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.1C</b><br>Baseline T2m (daily mean): 15.6C<br>National anomaly percentile: 60%</div>`)[0];
+                popup_92a029bc538547fdfdbaa72f48e5d099.setContent(html_beb6ec504b532f43abdaeb9e882aa488);
+            
+        
+
+        circle_marker_59b5cc4c77fa9020233050dab696d13c.bindPopup(popup_92a029bc538547fdfdbaa72f48e5d099)
+        ;
+
+        
+    
+    
+            circle_marker_59b5cc4c77fa9020233050dab696d13c.bindTooltip(
+                `<div>
+                     Zaragoza: +1.1C anomaly | pop 0.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ffd4f5a5e085113979b53989bd910a2a = L.circleMarker(
+                [36.7213028, -4.4216366],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d88a33", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_a86b7de0db70091e4804c59691815495 = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_7804370d50400490d0069370d9038f43 = $(`<div id="html_7804370d50400490d0069370d9038f43" style="width: 100.0%; height: 100.0%;"><b>Málaga</b> (ES)<br>Population: 597,173<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 16.6C<br>National anomaly percentile: 80%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_a86b7de0db70091e4804c59691815495.setContent(html_7804370d50400490d0069370d9038f43);
+            
+        
+
+        circle_marker_ffd4f5a5e085113979b53989bd910a2a.bindPopup(popup_a86b7de0db70091e4804c59691815495)
+        ;
+
+        
+    
+    
+            circle_marker_ffd4f5a5e085113979b53989bd910a2a.bindTooltip(
+                `<div>
+                     Málaga: +1.3C anomaly | pop 0.6M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cead7112a6d03d117de1cb51faaef557 = L.circleMarker(
+                [41.3825802, 2.177073],
+                {"bubblingMouseEvents": true, "color": "#ff4444", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#db8a30", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 2}
+            ).addTo(map_fc63cae33a178a1cfcb8f914b5b3c519);
+        
+    
+        var popup_c17d9e0f57a8bef374ac6c2b7403bbbe = L.popup({
+  "maxWidth": 240,
+});
+
+        
+            
+                var html_4fc94df49295dfa2c046efbbaba558fb = $(`<div id="html_4fc94df49295dfa2c046efbbaba558fb" style="width: 100.0%; height: 100.0%;"><b>Barcelona</b> (ES)<br>Population: 1,713,247<br>Anomaly (2021-2024 vs 1991-2020): <b>+1.3C</b><br>Baseline T2m (daily mean): 15.4C<br>National anomaly percentile: 100%<br><b style=color:#ff6666>Top 20% national anomaly</b></div>`)[0];
+                popup_c17d9e0f57a8bef374ac6c2b7403bbbe.setContent(html_4fc94df49295dfa2c046efbbaba558fb);
+            
+        
+
+        circle_marker_cead7112a6d03d117de1cb51faaef557.bindPopup(popup_c17d9e0f57a8bef374ac6c2b7403bbbe)
+        ;
+
+        
+    
+    
+            circle_marker_cead7112a6d03d117de1cb51faaef557.bindTooltip(
+                `<div>
+                     Barcelona: +1.3C anomaly | pop 1.7M
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

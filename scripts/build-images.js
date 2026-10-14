@@ -23,6 +23,9 @@ const NCPOR_REPORTS_SRC = path.join(SRC, "antarctic-sea-ice-variability", "repor
 const TALLINN_SRC = path.join(SRC, "tallinn-livability-analysis", "images");
 const TALLINN_REPORTS_SRC = path.join(SRC, "tallinn-livability-analysis", "reports");
 const TALLINN_OUTPUT_SRC = path.join(SRC, "tallinn-livability-analysis", "output");
+const TEMP_ANOMALY_SRC = path.join(SRC, "temperature-anomaly-europe", "images");
+const TEMP_ANOMALY_REPORTS_SRC = path.join(SRC, "temperature-anomaly-europe", "reports");
+const TEMP_ANOMALY_OUTPUT_SRC = path.join(SRC, "temperature-anomaly-europe", "output");
 
 const OUT_IMG = path.join(__dirname, "..", "static", "assets", "images");
 const OUT_GALLERY = path.join(OUT_IMG, "gallery");
@@ -180,6 +183,31 @@ async function main() {
   if (fs.existsSync(tallinnMap)) {
     fs.copyFileSync(tallinnMap, path.join(OUT_ASSETS, "tallinn-livability-map.html"));
     console.log("wrote", "static/assets/tallinn-livability-map.html");
+  }
+
+  // --- European city temperature anomaly: report figures, the interactive
+  //     per-city Folium map, and the climate analysis report PDF ---
+  const tempAnomalyFigures = [
+    { src: "temperature-anomaly-map-2024.png", out: "temperature-anomaly-map-2024", width: 1400, quality: 90 },
+    { src: "temperature-anomaly-distribution.png", out: "temperature-anomaly-distribution", width: 1400, quality: 90 },
+    { src: "temperature-anomaly-top-cities.png", out: "temperature-anomaly-top-cities", width: 1400, quality: 90 },
+    { src: "temperature-anomaly-validation.png", out: "temperature-anomaly-validation", width: 1400, quality: 90 },
+  ];
+  for (const fig of tempAnomalyFigures) {
+    const p = path.join(TEMP_ANOMALY_SRC, fig.src);
+    if (fs.existsSync(p)) {
+      await emit(fs.readFileSync(p), path.join(OUT_IMG, fig.out), { width: fig.width, quality: fig.quality });
+    }
+  }
+  const tempAnomalyPdf = path.join(TEMP_ANOMALY_REPORTS_SRC, "European-City-Temperature-Anomaly-Report.pdf");
+  if (fs.existsSync(tempAnomalyPdf)) {
+    fs.copyFileSync(tempAnomalyPdf, path.join(OUT_REPORTS, "European-City-Temperature-Anomaly-Report.pdf"));
+    console.log("wrote", "static/assets/reports/European-City-Temperature-Anomaly-Report.pdf");
+  }
+  const tempAnomalyMap = path.join(TEMP_ANOMALY_OUTPUT_SRC, "europe_temperature_anomaly_cities_map.html");
+  if (fs.existsSync(tempAnomalyMap)) {
+    fs.copyFileSync(tempAnomalyMap, path.join(OUT_ASSETS, "europe-temperature-anomaly-map.html"));
+    console.log("wrote", "static/assets/europe-temperature-anomaly-map.html");
   }
 
   // --- CV passthrough ---
